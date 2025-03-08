@@ -1,8 +1,11 @@
 <template>
   <div class="exercise">
-    <h1>Page d'exercice</h1>
+    <h1>Page d'exercice </h1>
   </div>
 </template>
+
+<script setup lang="ts">
+</script>
 
 <style>
 @media (min-width: 1024px) {

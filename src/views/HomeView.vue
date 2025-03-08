@@ -1,6 +1,3 @@
-<script setup lang="ts">
-</script>
-
 <template>
   <RouterLink to="/">Go to Home</RouterLink>
   <RouterLink to="/about">Go to About</RouterLink>
@@ -14,3 +11,6 @@
   <RouterLink to="/quizz">Go to Quizz</RouterLink>
   <RouterLink to="/review">Go to Review</RouterLink>
 </template>
+
+<script setup lang="ts">
+</script>

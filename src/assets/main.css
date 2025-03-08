@@ -2,16 +2,7 @@
 @import './reset.css';
 
 #app {
-  margin: 2em;
-}
-
-h1 {
-  display: inline-block;
-  color: var(--title-color);
-  background-color: var(--card-color);
-}
-
-main {
+  margin: 1em;
+  color: var(--text-color);
   font-family: Ubuntu, sans-serif;
-  background-color: var(--card-color);
 }

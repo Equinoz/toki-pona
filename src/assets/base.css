@@ -6,7 +6,7 @@
   --text-color: #000007;
   --icon-button-color: #C23EE6;
   --underline-color: #3EE6C2;
-  --background-color: #031014;
+  --background-color: #06222A;
   --subject-color: #E63E62;
   --predicate-color: #3EE6C2;
   --object-color: #C23EE6;
@@ -24,8 +24,13 @@
 }
 
 @font-face {
+  font-family: "Dosis";
+  src: url("@/../fonts/Dosis/Dosis-Regular.ttf");
+}
+
+@font-face {
   font-family: "Ubuntu";
-  src: url("@/public/fonts/Ubuntu-Regular.ttf");
+  src: url("@/../fonts/Ubuntu/Ubuntu-Regular.ttf");
 }
 
 body {
