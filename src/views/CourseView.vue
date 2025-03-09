@@ -7,7 +7,7 @@
     <Course5 v-else-if="idCourse == '5'" />
     <Course6 v-else />
 
-    <footer>
+    <footer class="multiple-buttons">
       <!-- TODO Ajouter des icones -->
       <div class="button" @click="redirectToHome">sommaire</div>
       <div class="button" @click="redirectToExercise">exercices</div>
@@ -19,6 +19,7 @@
   import router from '@/router'
 
   import { useGlossaryStore } from '@/stores/glossaryStore'
+  import { useExercisesStore } from '@/stores/exercisesStore'
 
   import Course1 from '@/components/Course1.vue'
   import Course2 from '@/components/Course2.vue'
@@ -28,6 +29,7 @@
   import Course6 from '@/components/Course6.vue'
 
   const { addWordsToGlossaryById } = useGlossaryStore()
+  const { setExercisesById } = useExercisesStore()
 
   const props = defineProps({
     idCourse: String
@@ -37,6 +39,8 @@
     switch (props.idCourse) {
       case '3':
         return 9
+      case '4':
+        return 17
       default:
         return null
     }
@@ -48,29 +52,15 @@
 
   const redirectToExercise = () => {
     const wordId = getWordIdByCourse()
-    if (wordId) {
+    if (wordId && props.idCourse) {
       addWordsToGlossaryById(wordId)
+      setExercisesById([parseInt(props.idCourse, 10)])
     }
+
     router.push('/exercise')
   }
 </script>
 
-<style>
-  footer {
-    display: flex;
-    justify-content: space-between;
-    margin-top: var(--gap-sm);
-    margin-bottom: var(--gap-lg);
-  }
-
-  .button {
-    background-color: var(--underline-color);
-    width: 40%;
-    color: var(--text-color);
-    font-size: var(--text-button-size);
-    padding: var(--gap-sm);
-    font-weight: bold;
-    border-radius: var(--border-radius);
-    text-align: center;
-  }
+<style scoped>
+  @import "@/assets/footerStyle.css";
 </style>

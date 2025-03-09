@@ -6,24 +6,25 @@ import type { Word } from '@/models/Word'
 
 import { words } from '@/datas/words'
 
-export interface GlossaryStore {
+interface Store {
   words: Word[]
 }
 
 export const useGlossaryStore = defineStore('glossary', () => {
-  const state = useStorage<GlossaryStore | null>('glossary', null, undefined, {
+  const state = useStorage<Store | null>('glossary', null, undefined, {
     serializer: StorageSerializers.object,
   })
 
-  const isGlossaryAvailable = computed(() => (state.value) ? state.value.words.length > 0 : false)
+  const isGlossaryAvailable = computed(() => state.value ? state.value.words.length > 0 : false)
 
   function getGlossary() {
     return state.value?.words
   }
 
+  // TODO gérer deux ids de fin et de début
   function addWordsToGlossaryById(id: number) {
     if (!state.value) {
-      state.value = { words: new Array<Word>() }
+      state.value = { words: [] }
     }
     const index = words.map((x) => x.id).indexOf(id)
     if (~index) {
@@ -31,5 +32,9 @@ export const useGlossaryStore = defineStore('glossary', () => {
     }
   }
 
-  return { state, isGlossaryAvailable, getGlossary, addWordsToGlossaryById }
+  function reset() {
+    state.value = null
+  }
+
+  return { isGlossaryAvailable, getGlossary, addWordsToGlossaryById, reset }
 })

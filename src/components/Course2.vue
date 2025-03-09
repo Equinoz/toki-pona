@@ -12,7 +12,7 @@
 <script setup lang="ts">
 </script>
 
-<style>
+<style scoped>
 /* @media (min-width: 1024px) {
   .course {
     min-height: 100vh;

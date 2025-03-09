@@ -7,9 +7,9 @@
     <main>
       <h2>vocabulaire</h2>
       <p class="content">
-        <span class="new-word">mi</span> pronon de la première personne (je, moi, nous)<br />
-        <span class="new-word">sina</span> pronon de la seconde personne (tu, toi, vous)<br />
-        <span class="new-word">ona</span> pronon de la troisième personne (il.s, elle.s, eux)<br />
+        <span class="new-word">mi</span> pronom de la première personne (je, moi, nous)<br />
+        <span class="new-word">sina</span> pronom de la seconde personne (tu, toi, vous)<br />
+        <span class="new-word">ona</span> pronom de la troisième personne (il.s, elle.s, eux)<br />
         <span class="new-word">jan</span> être humain, personne, quelqu'un<br />
         <span class="new-word">ijo</span> chose, quelque chose, phénomène, objet, matière, machin, un être<br />
         <span class="new-word">suli</span> grand, lourd, gros, long, important, adulte<br />
@@ -38,7 +38,7 @@
       <h3>exemples</h3>
       <div class="content">
         <p class="example">
-          <span class="subject">mi</span> li <span class="predicate">toki</span><br />
+          <span class="subject">mi</span> li <span class="predicate">moku</span><br />
           <span class="tab"></span>
           <span class="subject">je</span> <span class="predicate">mange</span>
         </p>

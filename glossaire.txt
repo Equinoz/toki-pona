@@ -1,5 +1,4 @@
 a
-akesi
 ala
 alasa
 ali
@@ -16,13 +15,10 @@ insa
 jaki
 jelo
 jo
-kala
 kalama
 kama
-kasi
 ken
 kepeken
-kili
 kin
 kiwen
 ko
@@ -50,7 +46,6 @@ meli
 mije
 moli
 monsi
-mu
 mun
 musi
 mute
@@ -74,7 +69,6 @@ pi
 pilin
 pimeja
 pini
-pipi
 poka
 poki
 pona
@@ -90,7 +84,6 @@ sin
 sinpin
 sitelen
 sona
-soweli
 suno
 supa
 suwi
@@ -107,7 +100,6 @@ uta
 utala
 walo
 wan
-waso
 wawa
 weka
 wile
