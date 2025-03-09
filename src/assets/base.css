@@ -16,11 +16,30 @@
 
 /* Font sizes */
 :root {
+  --text-size: 1em;
   --large-text-size: 25;
   --main-title-size: 35;
+  --title-size: 2.5em;
+  --subtitle-size: 2em;
+  --subsubtitle-size: 1.5em;
+  --text-button-size: 1.2em;
   --small-main-title-size: 26;
   --button-text-size-md: 20;
   --button-text-size-sm: 18;
+  --line-height: 1.8em;
+}
+
+/* spacing */
+:root {
+  --gap-lg: 2.5em;
+  --gap: 2em;
+  --gap-sm: 1em;
+  --gap-xs: 0.5em;
+}
+
+/* styles */
+:root {
+  --border-radius: 0.4em;
 }
 
 @font-face {

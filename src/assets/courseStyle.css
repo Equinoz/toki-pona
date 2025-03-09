@@ -1,0 +1,82 @@
+header {
+  display: flex;
+  justify-content: center;
+  margin-bottom: var(--gap);
+}
+
+h1, main {
+  border-radius: var(--border-radius);
+}
+
+h1, h2, h3 {
+  color: var(--title-color);
+  font-family: Dosis, sans-serif;
+  font-weight: bold;
+}
+
+h1 {
+  background-color: var(--card-color);
+  display: inline-block;
+  margin: auto;
+  padding: var(--gap-xs);
+  font-size: var(--title-size);
+  text-decoration: underline;
+  text-decoration-color: var(--underline-color);
+}
+
+h2 {
+  font-size: var(--subtitle-size);
+  padding-bottom: var(--gap-xs);
+}
+
+h3 {
+  font-size: var(--subsubtitle-size);
+  padding-bottom: var(--gap-xs);
+}
+
+main {
+  background-color: var(--card-color);
+  padding: var(--gap-sm);
+  line-height: var(--line-height);
+}
+
+.content, ul {
+  margin-bottom: var(--gap-sm);
+}
+
+.new-word {
+  font-weight: bold;
+}
+
+.subject {
+  color: var(--subject-color);
+  font-weight: bold;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 2px;
+}
+
+.predicate {
+  color: var(--predicate-color);
+  font-weight: bold;
+  text-decoration: underline dashed;
+  text-underline-offset: 4px;
+}
+
+.example {
+  margin: var(--gap-xs);
+  margin-left: var(--gap-xs);
+  padding-left: var(--gap-xs);
+  border-left: 4px solid var(--underline-color);
+}
+
+.tab {
+  display: inline-block;
+  width: var(--gap-xs);
+  height: var(--gap-sm);
+}
+
+ul {
+  margin-left: var(--gap);
+  list-style-type: disc;
+}
