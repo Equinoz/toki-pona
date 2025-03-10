@@ -7,6 +7,7 @@
     <main>
       <h2>vocabulaire</h2>
       <p class="content">
+        TODO possesifs!!!
         <span class="new-word">soweli</span> animal, mammifère terrestre<br />
         <span class="new-word">akesi</span> animal non-mignon, reptile, batracien, amphibien<br />
         <span class="new-word">pipi</span> insecte, araignée, fourmi<br />

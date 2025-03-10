@@ -1,13 +1,18 @@
 <template>
   <div class="course">
-    <Course1 v-if="idCourse == '1'" />
+    <Course0 v-if="idCourse == '0'" />
+    <Course1 v-else-if="idCourse == '1'" />
     <Course2 v-else-if="idCourse == '2'" />
     <Course3 v-else-if="idCourse == '3'" />
     <Course4 v-else-if="idCourse == '4'" />
     <Course5 v-else-if="idCourse == '5'" />
     <Course6 v-else />
 
-    <footer class="multiple-buttons">
+    <footer v-if="singleButton">
+      <!-- TODO Ajouter des icones -->
+      <div class="button" @click="redirectToHome">sommaire</div>
+    </footer>
+    <footer v-else class="multiple-buttons">
       <!-- TODO Ajouter des icones -->
       <div class="button" @click="redirectToHome">sommaire</div>
       <div class="button" @click="redirectToExercise">exercices</div>
@@ -16,11 +21,13 @@
 </template>
 
 <script setup lang="ts">
+  import { computed } from 'vue'
   import router from '@/router'
 
   import { useGlossaryStore } from '@/stores/glossaryStore'
   import { useExercisesStore } from '@/stores/exercisesStore'
 
+  import Course0 from '@/components/Course0.vue'
   import Course1 from '@/components/Course1.vue'
   import Course2 from '@/components/Course2.vue'
   import Course3 from '@/components/Course3.vue'
@@ -34,6 +41,8 @@
   const props = defineProps({
     idCourse: String
   })
+
+  const singleButton = computed(() => props.idCourse == '0' || props.idCourse == '1' || props.idCourse == '2' || props.idCourse == '20')
 
   const getWordIdByCourse = () => {
     switch (props.idCourse) {

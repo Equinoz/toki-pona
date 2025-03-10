@@ -1,7 +1,7 @@
 <template>
   <div class="course-details">
     <header>
-      <h1>vocabulaire</h1>
+      <h1>introduction</h1>
     </header>
 
     <main>

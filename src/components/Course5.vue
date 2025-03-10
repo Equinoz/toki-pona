@@ -1,13 +1,12 @@
 <template>
   <div class="course-details">
     <header>
-      <h1>couleurs</h1>
+      <h1>personnes / lieux</h1>
     </header>
     
     <main>
       <h2>vocabulaire</h2>
       <p class="content">
-        lipu
         <span class="new-word">mi</span> pronom de la première personne (je, moi, nous)<br />
         <span class="new-word">sina</span> pronom de la seconde personne (tu, toi, vous)<br />
         <span class="new-word">ona</span> pronom de la troisième personne (il.s, elle.s, eux)<br />

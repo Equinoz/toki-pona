@@ -31,7 +31,6 @@
       </div>
       <h3>notes</h3>
       <ul>
-        <li>en toki pona, on ne met pas de lettre capitale en début de phrase.</li>
         <li>le toki pona n'a ni nombre, ni temps des verbes.</li>
         <li>en toki pona on n'utilise pas les articles définis ou indéfinis. <span class="new-word">jan</span> signifie "une personne" ou "la personne" selon les situations.</li>
       </ul>
