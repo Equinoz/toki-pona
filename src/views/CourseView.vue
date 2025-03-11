@@ -50,6 +50,8 @@
         return 9
       case '4':
         return 17
+      case '5':
+        return 25
       default:
         return null
     }

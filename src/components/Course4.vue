@@ -66,9 +66,6 @@
   </div>
 </template>
 
-<script setup lang="ts">
-</script>
-
 <style scoped>
   @import "@/assets/courseStyle.css";
 </style>

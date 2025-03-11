@@ -24,7 +24,6 @@ kiwen
 ko
 kon
 kule
-kulupu
 kute
 la
 lape
@@ -39,11 +38,7 @@ lon
 luka
 lukin
 lupa
-ma
-mama
 mani
-meli
-mije
 moli
 monsi
 mun
@@ -58,7 +53,6 @@ nimi
 noka
 o
 oko
-olin
 open
 pakala
 pali
@@ -92,8 +86,6 @@ taso
 tawa
 telo
 tenpo
-toki
-tomo
 tu
 unpa
 uta
