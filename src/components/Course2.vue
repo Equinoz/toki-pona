@@ -5,69 +5,42 @@
     </header>
 
     <main>
-      <h2>un micro-langage</h2>
-      <p class="content">le "toki pona" est un micro-langage délibéremment minimaliste, inventé par la linguiste et traductrice canadienne Sonja Lang et publié sur internet en 2001.</p>
-      <p class="content">le toki pona, qui signifie "langue du bien", est largement inspiré de la philosophie du Tao. elle se caractérise par la simplicité extrême de sa phonologie, de sa grammaire et de son vocabulaire, (initiallement 120 mots) ce qui la rend facile à apprendre.</p>
-      <p class="content">un de ses éléments essentiels est le contexte : un nombre si réduit de mots donne forcément des discussions très généralistes ou vagues qui ne se comprennent que dans un contexte clair.</p>
-      <p class="content">le principe du toki pona est de revenir à l'essentiel, de supprimer le superflu et de n'exprimer que le nécessaire et ce de façon à être le plus inclusif et le plus accessible possible. c'est une langue qui emprunte énormément à plusieurs langues très différentes pour tenter de créer une familiarité presque universelle.</p>
-      <h2>l'alphabet</h2>
-      <p class="content">l'alphabet du toki pona se compose de 5 voyelles (a, e, i, o ,u) et de 9 consommes (j, p, t, k, m, n, s, l, w). les mots ne prennent pas de majuscules, même en début de phrase.</p>
-      <p class="content">pour écrire en toki pona on peut utiliser autre chose que l'alphabet latin : un système de hiéroglyphes nommé "sitelen pona". a chaque mot correspond un glyphe. les sitelen pona feront peut-être l'objet d'une mise à jour ultérieure de l'appli.</p>
-      <h2>ce qu'on ne peut pas dire en toki pona</h2>
-      <p class="content">clairement, on ne peut pas utiliser le toki pona pour orchestrer une opération de neuro-chirurugie ! mais... en français non plus. en réalité dans ce genre de situations particulièrement techniques, une grande place est donnée au jargon. toutes les langues ont leurs limites en vérité.</p>
-      <p class="content">bien sûr, le toki pona est encore plus limité que les autres langues. il n'est pas possible d'écrire de la documentation technique, de décrire des plans architecturaux, de traduire un texte juridique... certaines choses ne sont pas impossibles, mais rendues particulièrement compliquées.</p>
-      <p class="content">mais ce n'est pas tout...</p>
-      <p class="content">comme le toki pona oblige à se recentrer sur l'essentiel, il est bien plus difficile de parler pour ne rien dire. sans mots-valises, la pratique de la langue de bois est quasi-impossible, difficile de justifier une guerre pour des raisons financières et économiques ou d'expliquer que l'on soit obligé de licencier des centaines de personnes à cause d'une conjonction économique défavorable... au contraire, les arguments doivent être vraiment solides !</p>
-      <h2>ce que l'on peut dire en toki pona</h2>
-      <p class="content">bien que le toki pona soit très facile à apprendre, pour vraiment en maîtriser les subtilités il peut être nécessaire de la pratiquer durant plusieurs années. les bases sont étonnamment simples à maitriser, mais comme toute langue, elle nécessite de la pratique pour bien se l'approprier.</p>
-      <p class="content">cependant, avec les rudiments du langage (qui ne s'acquièrent qu'en quelques heures), il est tout à fait possible de demander où se trouve un hotel, commander à manger dans un restaurant, faire des achats... le potentiel de communication avec des individus qui parlent une langue natale totalement différente est immense !</p>
-      <p class="content">peut-être plus important encore, il est aussi très facile de saluer une personne, de la remercier, lui proposer de l'aide, faire une blague ou comprendre le motif de son mal-être... l'essentiel de ce qui fait de nous des êtres humains donc.</p>
-      <h2>en résumé</h2>
-      <p class="content">le toki pona, bien que très minimaliste, peut être particulièrement expressif. sa grande simplicité lui permet d'être appris par à peu près n'importe qui, quelque soit sa culture, son niveau d'instruction, le temps dont l'on dispose : c'est l'anti-Babel. c'est une passerelle qui permet de franchir la barrière de la langue.</p>
-      <p class="content">je persiste à penser qu'en favorisant la communication entre les différents peuples ils se connaitraient mieux, se comprendraient mieux, s'apprécièraient mutuellement à leur juste valeur et que ça calmerait les intentions guerrières : on a rarement envie d'aller taper sur quelqu'un que l'on connaît et que l'on sait apprécier.</p>
+      <h2>120 mots</h2>
+      <p class="content">le vocabulaire de base du toki pona ne contient même pas 120 mots. (il y en a 122 dans ce cours). il existe bien de nouveaux mots, les nimisin, mais leur emploi n'est pas forcément systématique, leur utilité parfois discutable et le principe même du nimisin va un peu à l'encontre de l'idée initiale qui est de réduire les choses au minimum pour rendre le toki pona le plus accessible possible. en pratique les nimisin sont souvent surtout des blagues entre tokiponistes.</p>
+      <p class="content">si on ne tient pas compte des nimisin, 120 mots c'est bien peu pour exprimer tout le vocabulaire d'une langue comme le français par exemple. même si on supprime tous les synonymes, on est encore très loin du compte. c'est ici que deux éléments cruciaux interviennent pour préciser le sens d'un mot :</p>
+      <ul>
+        <li>le contexte</li>
+        <li>l'adjonction d'un ou plusieurs mots au premier mot pour mieux le définir</li>
+      </ul>
+      <h2>passes-moi le miel !</h2>
+      <p class="content">mise en situation : je suis en train de prendre mon petit déjeuner et je souhaite demander à ma moitié de me passer le miel. je vais utiliser le mot "moku" qui signifie nourriture, manger, avaler, boisson...</p>
+      <p>en utilisant le mot "moku", comment vais-je faire la différence entre du miel et une bière impériale stout à 9°* ? je vais donc préciser : "moku jelo" pour "aliment jaune" si ce qui, selon moi, caractérise le mieux le miel est sa couleur, ou "moku sewi" pour "aliment sucré" si je préfère faire référence à son goût doux et sucré.</p>
+      <p class="content">mais difficile de distinguer le miel d'une omelette pour la première expression ou d'un pot de nutella pour la seconde. je peux dire "moku jelo suwi", mais là aussi, entre du miel et un bonbon jaune en forme de banane la confusion est encore possible...</p>
+      <p class="content">par contre avec "moku jelo suwi pi pipi", "l'aliment jaune sucré des insectes (sous-entendu abeilles)" plus de confusion possible surtout si je tiens un pot de miel de la forêt dans la main !**</p>
+      <p class="content">parce que c'est bien là toute l'importance du contexte : "moku jelo suwi pi pipi" est un peu long à dire, mais si je lui demande de me passer simplement "moku" pendant qu'elle étale le miel sur sa propre tartine, il sera assez évident que c'est bien du miel dont je parle...</p>
+      <p class="content">dans les faits, il y a de nombreuses précisions qui ne sont pas forcément nécessaires au quotidien. entre les combinaisons de mots et le contexte, de nombreuses choses peuvent être précisées en toki pona.</p>
+      <h2>et la politesse, bordel ?</h2>
+      <p class="content">il n'y a pas de mot pour dire "merci" ou "s'il te plaît" en toki pona. impossible d'être poli ou aimable donc.</p>
+      <p class="content">sauf... si on se pose la question cinq minutes : c'est quoi être poli au final ? chez les champions de la politesse, les japonais, je suis parfois surpris de constater que dans certaines situations les japonais se dispensent très bien de formule de politesse, là où en français elle serait indispensable. et pourtant leur système de politesse est bien plus élaboré que le nôtre !</p>
+      <p class="content">la politesse est avant tout culturelle. on ne peut pas dire "merci" en toki pona. par contre on peut très bien expliquer en quoi nous sommes reconnaissants dans une situation donnée. on ne peut pas dire "bonjour" non plus, mais on peut dire pourquoi nous sommes contents de voir notre interlocuteur. les formules de politesse prononcées systématiquement et sans intention n'ont pas réellement d'utilité. si on souhaite être poli en toki pona, on peut l'être et de façon bien plus sincère qu'avec des phrases toutes faites.</p>
+      <p class="content">mais si je veux que ma moitié accepte finalement de me passer ce miel, ce serait peut-être un peu longuet de lui décrire tous les matins à quel point sa disponibilité et sa bonne volonté me sont précieuses au quotidien et que je voudrais m'efforcer de lui être aussi agréable que ce qu'elle peut être en cet instant précis... dans un cas comme cela, il semble évident qu'un petit sourire sincère vaut bien tous les "s't'plaît" désinvoltes du monde !</p>
+      <h2>tokiponisation</h2>
+      <p class="content">dernier point concernant le vocabulaire en toki pona : l'utilisation de noms propres. 120 mots ce n'est même pas assez pour désigner tous les pays du monde. Pour tout ce qui est noms propres, on procède à la "tokiponisation" de ces noms : on les adapte aux règles phonétiques du toki pona.</p>
+      <ul>
+        <li>chaque syllabe se compose d'une consonne, d'une voyelle et d'un <span class="new-word">n</span> optionnel</li>
+        <li>la première syllabe du mot peut ne pas avoir de consonne initiale</li>
+        <li>les syllabes <span class="new-word">ti</span> et <span class="new-word">tin</span> deviennent <span class="new-word">si</span> et <span class="new-word">sin</span></li>
+        <li>la consonne <span class="new-word">w</span> ne se place jamais directement avant le <span class="new-word">o</span> ou le <span class="new-word">u</span>.</li>
+        <li>la consonne <span class="new-word">j</span> ne se place jamais directement avant le <span class="new-word">i</span></li>
+      </ul>
+      <p class="content">C'est ainsi que "France" devient "Kanse", "Inli" devient "Anglais", "Chine" devient "Sonko", "Bretagne" devient "Peson"...</p>
+      <h2>---</h2>
+      <p class="content">* ça peut se dire en toki pona : moku telo pan nasa pimeja wawa pi luka tu tu nanpa</p>
+      <p class="content">** moku jelo suwi pi pipi pi kasi suli mute !</p>
     </main>
   </div>
 </template>
 
 <style scoped>
-  header {
-    display: flex;
-    justify-content: center;
-    margin-bottom: var(--gap);
-  }
-
-  h1, main {
-    border-radius: var(--border-radius);
-  }
-
-  h1, h2 {
-    color: var(--title-color);
-    font-family: Dosis, sans-serif;
-    font-weight: bold;
-  }
-
-  h1 {
-    background-color: var(--card-color);
-    display: inline-block;
-    margin: auto;
-    padding: var(--gap-xs);
-    font-size: var(--title-size);
-    text-decoration: underline;
-    text-decoration-color: var(--underline-color);
-  }
-
-  h2 {
-    font-size: var(--subtitle-size);
-    padding-bottom: var(--gap-xs);
-  }
-
-  main {
-    background-color: var(--card-color);
-    padding: var(--gap-sm);
-    line-height: var(--line-height);
-  }
-
-  .content {
-    margin-bottom: var(--gap-sm);
-  }
+  @import "@/assets/courseStyle.css";
 </style>
