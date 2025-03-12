@@ -16,30 +16,30 @@
 
 /* Font sizes */
 :root {
-  --text-size: 1em;
+  --text-size: 1rem;
   --large-text-size: 25;
   --main-title-size: 35;
-  --title-size: 2.5em;
-  --subtitle-size: 2em;
-  --subsubtitle-size: 1.5em;
-  --text-button-size: 1.2em;
+  --title-size: 2.5rem;
+  --subtitle-size: 2rem;
+  --subsubtitle-size: 1.5rem;
+  --text-button-size: 1.2rem;
   --small-main-title-size: 26;
   --button-text-size-md: 20;
   --button-text-size-sm: 18;
-  --line-height: 1.8em;
+  --line-height: 1.8rem;
 }
 
 /* spacing */
 :root {
-  --gap-lg: 2.5em;
-  --gap: 2em;
-  --gap-sm: 1em;
-  --gap-xs: 0.5em;
+  --gap-lg: 2.5rem;
+  --gap: 2rem;
+  --gap-sm: 1rem;
+  --gap-xs: 0.5rem;
 }
 
 /* styles */
 :root {
-  --border-radius: 0.4em;
+  --border-radius: 0.4rem;
 }
 
 @font-face {

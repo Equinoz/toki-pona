@@ -1,11 +1,15 @@
-footer {
+.buttons {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  width: 100%;
   margin-top: var(--gap-sm);
   margin-bottom: var(--gap-lg);
 }
 
-.multiple-buttons {
+.row {
+  flex-direction: row;
   justify-content: space-between;
 }
 

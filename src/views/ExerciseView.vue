@@ -18,7 +18,7 @@
       </div>
     </main>
 
-    <footer>
+    <footer class="buttons">
       <!-- TODO Ajouter des icones -->
       <div class="button" @click="redirectToHome">sommaire</div>
     </footer>
@@ -29,11 +29,11 @@
   import { ref, onMounted } from 'vue'
   import router from '@/router'
 
-  import { useExercisesStore } from '@/stores/exercisesStore'
+  import { useMainStore } from '@/stores/mainStore'
 
   import type { Exercise } from '@/models/Exercise'
 
-  const { getCurrentExercises } = useExercisesStore()
+  const { getCurrentExercises } = useMainStore()
 
   const exercises = ref([] as { value: Exercise; spoiler: boolean }[])
 
@@ -52,7 +52,7 @@
 </script>
 
 <style scoped>
-  @import "@/assets/footerStyle.css";
+  @import "@/assets/buttonsStyle.css";
 
   header {
     display: flex;
@@ -97,5 +97,12 @@
 
   .answer {
     padding-left: var(--gap-sm);
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: var(--gap-sm);
+    margin-bottom: var(--gap-lg);
   }
 </style>

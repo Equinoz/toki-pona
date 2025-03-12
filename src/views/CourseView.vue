@@ -8,14 +8,10 @@
     <Course5 v-else-if="idCourse == '5'" />
     <Course6 v-else />
 
-    <footer v-if="singleButton">
+    <footer class="buttons" :class="{ row: !singleButton }">
       <!-- TODO Ajouter des icones -->
       <div class="button" @click="redirectToHome">sommaire</div>
-    </footer>
-    <footer v-else class="multiple-buttons">
-      <!-- TODO Ajouter des icones -->
-      <div class="button" @click="redirectToHome">sommaire</div>
-      <div class="button" @click="redirectToExercise">exercices</div>
+      <div v-if="!singleButton" class="button" @click="redirectToExercise">exercices</div>
     </footer>
   </div>
 </template>
@@ -24,8 +20,7 @@
   import { computed } from 'vue'
   import router from '@/router'
 
-  import { useGlossaryStore } from '@/stores/glossaryStore'
-  import { useExercisesStore } from '@/stores/exercisesStore'
+  import { useMainService } from '@/services/mainService'
 
   import Course0 from '@/components/Course0.vue'
   import Course1 from '@/components/Course1.vue'
@@ -35,8 +30,7 @@
   import Course5 from '@/components/Course5.vue'
   import Course6 from '@/components/Course6.vue'
 
-  const { addWordsToGlossaryById } = useGlossaryStore()
-  const { setExercisesById } = useExercisesStore()
+  const { setExercises } = useMainService()
 
   const props = defineProps({
     idCourse: String
@@ -44,28 +38,13 @@
 
   const singleButton = computed(() => props.idCourse == '0' || props.idCourse == '1' || props.idCourse == '2' || props.idCourse == '20')
 
-  const getWordIdByCourse = () => {
-    switch (props.idCourse) {
-      case '3':
-        return 9
-      case '4':
-        return 17
-      case '5':
-        return 25
-      default:
-        return null
-    }
-  }
-
   const redirectToHome = () => {
     router.push('/')
   }
 
   const redirectToExercise = () => {
-    const wordId = getWordIdByCourse()
-    if (wordId && props.idCourse) {
-      addWordsToGlossaryById(wordId)
-      setExercisesById([parseInt(props.idCourse, 10)])
+    if (props.idCourse) {
+      setExercises(parseInt(props.idCourse, 10))
     }
 
     router.push('/exercise')
@@ -73,5 +52,5 @@
 </script>
 
 <style scoped>
-  @import "@/assets/footerStyle.css";
+  @import "@/assets/buttonsStyle.css";
 </style>

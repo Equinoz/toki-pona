@@ -9,9 +9,9 @@
 </template>
 
 <script setup lang="ts">
-  import { useGlossaryStore } from '@/stores/glossaryStore'
+  import { useMainStore } from '@/stores/mainStore'
 
-  const { getGlossary } = useGlossaryStore()
+  const { getGlossary } = useMainStore()
 </script>
 
 <style scoped>
