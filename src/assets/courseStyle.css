@@ -63,6 +63,13 @@ main {
   text-underline-offset: 4px;
 }
 
+.object {
+  color: var(--object-color);
+  font-weight: bold;
+  text-decoration: underline dotted;
+  text-underline-offset: 4px;
+}
+
 .example {
   margin: var(--gap-xs);
   margin-left: var(--gap-xs);

@@ -9,7 +9,6 @@ awen
 e
 en
 esun
-ike
 ilo
 insa
 jaki
@@ -43,20 +42,16 @@ moli
 monsi
 mun
 musi
-mute
 nanpa
 nasa
 nasin
 nena
-ni
 nimi
 noka
 o
 oko
 open
-pakala
 pali
-palisa
 pan
 pana
 pi
@@ -64,8 +59,6 @@ pilin
 pimeja
 pini
 poka
-poki
-pona
 pu
 sama
 seli
@@ -89,9 +82,7 @@ tenpo
 tu
 unpa
 uta
-utala
 walo
 wan
-wawa
 weka
 wile

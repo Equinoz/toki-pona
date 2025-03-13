@@ -6,7 +6,9 @@
     <Course3 v-else-if="idCourse == '3'" />
     <Course4 v-else-if="idCourse == '4'" />
     <Course5 v-else-if="idCourse == '5'" />
-    <Course6 v-else />
+    <Course6 v-else-if="idCourse == '6'" />
+    <Course7 v-else-if="idCourse == '7'" />
+    <Course8 v-else />
 
     <footer class="buttons" :class="{ row: !singleButton }">
       <!-- TODO Ajouter des icones -->
@@ -29,6 +31,8 @@
   import Course4 from '@/components/Course4.vue'
   import Course5 from '@/components/Course5.vue'
   import Course6 from '@/components/Course6.vue'
+  import Course7 from '@/components/Course7.vue'
+  import Course8 from '@/components/Course8.vue'
 
   const { setExercises } = useMainService()
 

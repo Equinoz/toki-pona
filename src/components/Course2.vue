@@ -33,10 +33,15 @@
         <li>les syllabes <span class="new-word">ti</span> et <span class="new-word">tin</span> deviennent <span class="new-word">si</span> et <span class="new-word">sin</span></li>
         <li><span class="new-word">wo</span> devient <span class="new-word">o</span>, <span class="new-word">wu</span> devient <span class="new-word">u</span>.</li>
         <li><span class="new-word">ji</span> devient <span class="new-word">i</span></li>
+        <li>le <span class="new-word">r</span> anglais devient <span class="new-word">w</span></li>
+        <li>le <span class="new-word">r</span> battu ou roulé devient <span class="new-word">l</span></li>
+        <li>le <span class="new-word">r</span> français/allemand devient <span class="new-word">k</span></li>
         <li>préserver le nombre de syllabes est plus important que préserver les consonnes</li>
         <li>pour tokiponiser son propre nom, il ne faut pas hésiter à briser une ou deux règles si le résultat final est celui qui nous plaît le plus</li>
       </ul>
       <p class="content">C'est ainsi que "France" devient "Kanse", "Inli" devient "Anglais", "Chine" devient "Sonko", "Bretagne" devient "Peson"...</p>
+      <h2>120 mots qui forment un tout</h2>
+      <p class="content">avec si peu de mots il est évident qu'il est nécessaire de tous les connaître pour pouvoir utiliser la langue : si un mot manque, inévitablement c'est rapidement tout un champ lexical qui manque...</p>
       <h2>---</h2>
       <p class="content">* ça peut se dire en toki pona : moku telo pan nasa pimeja wawa pi luka tu tu nanpa</p>
       <p class="content">** moku jelo suwi pi pipi pi kasi suli mute !</p>

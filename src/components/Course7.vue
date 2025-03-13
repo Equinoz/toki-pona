@@ -1,7 +1,7 @@
 <template>
   <div class="course-details">
     <header>
-      <h1>premières phrases</h1>
+      <h1>compléments d'objet</h1>
     </header>
     
     <main>
@@ -26,18 +26,19 @@
           <span class="subject">sujet</span> li <span class="predicate">prédicat</span>
         </p>
         le <span class="subject">sujet</span> de la phrase, correspond à ce qui est ou qui fait.<br />
-        le <span class="predicate">prédicat</span> est ce que le sujet est (adjectif) ou fait (verbe).<br />
+        le <span class="predicate">prédicat</span> est ce que le sujet est ou fait.<br />
         La particule <span class="new-word">li</span> désigne le prédicat.
       </div>
       <h3>notes</h3>
       <ul>
+        <li>en toki pona, on ne met pas de lettre capitale en début de phrase.</li>
         <li>le toki pona n'a ni nombre, ni temps des verbes.</li>
-        <li>en toki pona on n'utilise pas les articles définis ou indéfinis. <span class="new-word">jan</span> signifie "une personne" ou "les personnes" selon les situations.</li>
+        <li>en toki pona on n'utilise pas les articles définis ou indéfinis. <span class="new-word">jan</span> signifie "une personne" ou "la personne" selon les situations.</li>
       </ul>
       <h3>exemples</h3>
       <div class="content">
         <p class="example">
-          <span class="subject">mi</span> li <span class="predicate">moku</span><br />
+          <span class="subject">mi</span> li <span class="predicate">toki</span><br />
           <span class="tab"></span>
           <span class="subject">je</span> <span class="predicate">mange</span>
         </p>
@@ -72,6 +73,9 @@
     </main>
   </div>
 </template>
+
+<script setup lang="ts">
+</script>
 
 <style scoped>
   @import "@/assets/courseStyle.css";

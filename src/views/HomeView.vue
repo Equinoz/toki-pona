@@ -1,6 +1,5 @@
 <template>
   <div v-if="debug" class="debug">
-    <div><RouterLink to="/">Go to Home</RouterLink></div>
     <div><RouterLink to="/course/0">Go to Introduction</RouterLink></div>
     <div><RouterLink to="/course/1">Go to Prononciation</RouterLink></div>
     <div><RouterLink to="/course/2">Go to Vocabulaire</RouterLink></div>
@@ -8,6 +7,8 @@
     <div><RouterLink to="/course/4">Go to Animaux/plantes</RouterLink></div>
     <div><RouterLink to="/course/5">Go to Personnes/lieux</RouterLink></div>
     <div><RouterLink to="/course/6">Go to Modificateurs</RouterLink></div>
+    <div><RouterLink to="/course/7">Go to COD</RouterLink></div>
+    <div><RouterLink to="/course/8">Go to Négation</RouterLink></div>
     <div><RouterLink to="/end">Go to End</RouterLink></div>
     <div><RouterLink to="/review">Go to Review</RouterLink></div>
     <div><RouterLink to="/exercise">Go to Exercises</RouterLink></div>
