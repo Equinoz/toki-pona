@@ -49,4 +49,10 @@ export const exercises = [
   { id: 45, type: "langToTp" as TypeExercise, idsCourse: [4, 5, 6], question: "les puces sont pénibles", answer: "pipi li ike" },
   { id: 46, type: "langToTp" as TypeExercise, idsCourse: [4, 5, 6], question: "le grand lion va manger", answer: "soweli suli li moku" },
   { id: 47, type: "langToTp" as TypeExercise, idsCourse: [4, 5, 6], question: "l'aigle attaque", answer: "waso wawa li utala" },
+  { id: 48, type: "tpToLang" as TypeExercise, idsCourse: [7], question: "moku ni li wawa e jan", answer: "cette nourriture renforce les gens" },
+  { id: 49, type: "tpToLang" as TypeExercise, idsCourse: [7], question: "ijo li kute e mi", answer: "quelque chose m'écoute" },
+  { id: 50, type: "tpToLang" as TypeExercise, idsCourse: [7], question: "jan mute li moku e kala", answer: "beaucoup de gens mangent du poisson" },
+  { id: 51, type: "langToTp" as TypeExercise, idsCourse: [7], question: "cette femme parle d'arbres", answer: "meli ni li toki e kasi suli" },
+  { id: 52, type: "langToTp" as TypeExercise, idsCourse: [7], question: "les enfants cassent des boîtes", answer: "jan lili li pakala e poki" },
+  { id: 53, type: "langToTp" as TypeExercise, idsCourse: [7], question: "les parents réparent la maison", answer: "mama li pona e tomo" },
 ]

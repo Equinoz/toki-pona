@@ -7,67 +7,76 @@
     <main>
       <h2>vocabulaire</h2>
       <p class="content">
-        <span class="new-word">mi</span> pronom de la première personne (je, moi, nous)<br />
-        <span class="new-word">sina</span> pronom de la seconde personne (tu, toi, vous)<br />
-        <span class="new-word">ona</span> pronom de la troisième personne (il.s, elle.s, eux)<br />
-        <span class="new-word">jan</span> être humain, personne, quelqu'un<br />
-        <span class="new-word">ijo</span> chose, quelque chose, phénomène, objet, matière, machin, un être<br />
-        <span class="new-word">suli</span> grand, lourd, gros, long, important, adulte<br />
-        <span class="new-word">lili</span> petit, un peu, jeune<br />
-        <span class="new-word">moku</span> nourriture, manger, boire, consommer, avaler
+        <span class="new-word">telo</span> eau, liquide, fluide, substance mouillée, boisson<br />
+        <span class="new-word">seli</span> feu, chaleur, élément de cuisson, réaction chimique, chaud<br />
+        <span class="new-word">kiwen</span> objet dur, métal, pierre, caillou, dur comme la pierre<br />
+        <span class="new-word">lawa</span> tête, dominer, diriger, guider, mener, posséder, régler, principal<br />
+        <span class="new-word">sitelen</span> image, représentation, symbole, marque, écriture, dessiner, écrire<br />
+        <span class="new-word">pali</span> acte, activité, travail, faire, fabriquer, travailler, construire, préparer, agir sur<br />
+        <span class="new-word">kute</span> oreille, entendre, écouter, obéir, faire attention à
       </p>
       <h3>particule</h3>
-      <p class="content"><span class="new-word">li</span> particule (sépare le sujet du prédicat)<br /></p>
-      <h2>leçon</h2>
-      <h3>structure de base</h3>
-      <div class="content">
-        la structure de phrase la plus basique en toki pona est :
-        <p class="example">
-          <span class="subject">sujet</span> li <span class="predicate">prédicat</span>
-        </p>
-        le <span class="subject">sujet</span> de la phrase, correspond à ce qui est ou qui fait.<br />
-        le <span class="predicate">prédicat</span> est ce que le sujet est ou fait.<br />
-        La particule <span class="new-word">li</span> désigne le prédicat.
-      </div>
+      <p class="content"><span class="new-word">e</span> particule (introduit le complément d'objet direct)<br /></p>
       <h3>notes</h3>
-      <ul>
-        <li>en toki pona, on ne met pas de lettre capitale en début de phrase.</li>
-        <li>le toki pona n'a ni nombre, ni temps des verbes.</li>
-        <li>en toki pona on n'utilise pas les articles définis ou indéfinis. <span class="new-word">jan</span> signifie "une personne" ou "la personne" selon les situations.</li>
-      </ul>
-      <h3>exemples</h3>
       <div class="content">
+        <span class="new-word">pali</span> ne correspond pas à tous les usages de "faire" en français. lorsqu'un on utilise un mot comme verbe, l'action de faire est sous-entendue.
         <p class="example">
-          <span class="subject">mi</span> li <span class="predicate">toki</span><br />
+          <span class="subject">mi</span> <span class="predicate">ni</span><br />
           <span class="tab"></span>
-          <span class="subject">je</span> <span class="predicate">mange</span>
-        </p>
-        <p class="example">
-          <span class="subject">ijo</span> li <span class="predicate">suli</span><br />
-          <span class="tab"></span>
-          <span class="subject">l'objet</span> est <span class="predicate">lourd</span>
-        </p>
-        <p class="example">
-          <span class="subject">moku</span> li <span class="predicate">lili</span><br />
-          <span class="tab"></span>
-          <span class="subject">la pizza</span> est <span class="predicate">petite</span>
+          <span class="subject">j'ai</span> <span class="predicate">fait cela</span>
         </p>
       </div>
-      <h3>omission de la particule li</h3>
-      <p class="content">
-        lorsque le sujet est <span class="new-word">mi</span> ou <span class="new-word">sina</span> (et uniquement dans ces deux cas-là), il y a peu d'ambiguïté : on peut omettre la particule <span class="new-word">li</span>.
-      </p>
+      <h2>leçon</h2>
+      <h3>compléments d'objet direct</h3>
+      <div class="content">
+        la particule <span class="new-word">e</span> désigne le complément d'objet : c'est ce qui est influencé par le prédicat.
+        <p class="example">
+          <span class="subject">sujet</span> li <span class="predicate">prédicat</span> e <span class="object">COD</span><br />
+        </p>
+        <p class="example">
+          <span class="subject">jan</span> li <span class="predicate">pali</span> e <span class="object">tomo</span><br />
+          <span class="tab"></span>
+          <span class="subject">les gens</span> <span class="predicate">construisent</span> <span class="object">une maison</span><br />
+        </p>
+      </div>
       <h3>exemples</h3>
       <div class="content">
         <p class="example">
-          <span class="subject">mi</span> <span class="predicate">lili</span><br />
+          <span class="subject">mi</span> <span class="predicate">kute</span> e <span class="object">jan lawa</span><br />
           <span class="tab"></span>
-          <span class="subject">je</span> suis <span class="predicate">petit</span>
+          <span class="subject">nous</span> <span class="predicate">écoutons</span> <span class="object">le chef</span><br />
         </p>
         <p class="example">
-          <span class="subject">sina</span> <span class="predicate">moku</span><br />
+          <span class="subject">soweli</span> li <span class="predicate">moku</span> e <span class="object">soweli lili</span><br />
           <span class="tab"></span>
-          <span class="subject">tu</span> <span class="predicate">manges</span>
+          <span class="subject">le chat</span> <span class="predicate">mangera</span> <span class="object">la souris</span><br />
+        </p>
+      </div>
+      <h3>exprimer des idées complexes</h3>
+      <p class="content">pour exprimer des idées complexes en toki pona, il est conseillé de les diviser en plusieurs phrases pour plus de clarté. il est possible d'utiliser <span class="new-word">ni</span> et <span class="new-word">ona</span> pour se référer à des idées déjà exprimées ou qui vont l'être. <span class="new-word">ni</span> est un peu plus général que <span class="new-word">ona</span>. dans ce cas on utilisera les deux points pour faire la connexion entre les deux phrases.</p>
+      <div class="content">
+        <p class="example">
+          j'entends les enfants manger des pommes<br />
+          <span class="tab"></span>
+          <span class="subject">mi</span> <span class="predicate">kute</span> e <span class="object">ni</span> : <span class="subject">jan lili</span> li <span class="predicate">moku</span> e <span class="object">kili</span>
+        </p>
+      </div>
+      <h3>exemples</h3>
+      <div class="content">
+        <p class="example">
+          <span class="subject">jan pali</span> li <span class="predicate">sitelen</span> e <span class="object">sitelen pali</span><br />
+          <span class="tab"></span>
+          <span class="subject">les ouvriers</span> <span class="predicate">dessinent</span> <span class="object">un plan</span><br />
+        </p>
+        <p class="example">
+          <span class="subject">mije</span> li <span class="predicate">moku</span> e <span class="object">telo kili</span><br />
+          <span class="tab"></span>
+          <span class="subject">les hommes</span> <span class="predicate">boivent</span> <span class="object">du jus de pomme</span><br />
+        </p>
+        <p class="example">
+          <span class="subject">kulupu</span> li <span class="predicate">toki</span> e <span class="object">toki pona</span><br />
+          <span class="tab"></span>
+          <span class="subject">l'assemblée</span> <span class="predicate">s'exprime</span> <span class="object">en toki pona</span><br />
         </p>
       </div>
     </main>

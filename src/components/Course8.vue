@@ -7,18 +7,15 @@
     <main>
       <h2>vocabulaire</h2>
       <p class="content">
-        TODO taso
-        <span class="new-word">mi</span> pronom de la première personne (je, moi, nous)<br />
-        <span class="new-word">sina</span> pronom de la seconde personne (tu, toi, vous)<br />
-        <span class="new-word">ona</span> pronom de la troisième personne (il.s, elle.s, eux)<br />
-        <span class="new-word">jan</span> être humain, personne, quelqu'un<br />
-        <span class="new-word">ijo</span> chose, quelque chose, phénomène, objet, matière, machin, un être<br />
-        <span class="new-word">suli</span> grand, lourd, gros, long, important, adulte<br />
-        <span class="new-word">lili</span> petit, un peu, jeune<br />
-        <span class="new-word">moku</span> nourriture, manger, boire, consommer, avaler
+        <span class="new-word">ala</span> aucun, zéro, rien, non, ne, pas<br />
+        <span class="new-word">kon</span> air, atmosphère, vent, souffle, essence, esprit, réalité caché, agent invisible<br />
+        <span class="new-word">lipu</span> objet plat, feuille, page, livre, document, carte, papier, site web<br />
+        <span class="new-word">jo</span> possession, avoir, contenir, porter, tenir<br />
+        <span class="new-word">alasa</span> chasser, cueillir, fouiller, chercher, essayer, tenter<br />
+        <span class="new-word">lape</span> repos, dormir, dormant, se reposant<br />
+        <span class="new-word">lukin</span> vision, regard, regarder, voir, examiner, observer, lire, surveiller, chercher à, essayer de<br />
+        <span class="new-word">taso</span> mais, cependant, seulement
       </p>
-      <h3>particule</h3>
-      <p class="content"><span class="new-word">li</span> particule (sépare le sujet du prédicat)<br /></p>
       <h2>leçon</h2>
       <h3>structure de base</h3>
       <div class="content">
