@@ -8,64 +8,56 @@
       <h2>vocabulaire</h2>
       <p class="content">
         <span class="new-word">ala</span> aucun, zéro, rien, non, ne, pas<br />
+        <span class="new-word">ale/ali</span> tout, abondance, la vie, l'univers, tous, abondants, innombrables, nombre 100<br />
         <span class="new-word">kon</span> air, atmosphère, vent, souffle, essence, esprit, réalité caché, agent invisible<br />
         <span class="new-word">lipu</span> objet plat, feuille, page, livre, document, carte, papier, site web<br />
         <span class="new-word">jo</span> possession, avoir, contenir, porter, tenir<br />
         <span class="new-word">alasa</span> chasser, cueillir, fouiller, chercher, essayer, tenter<br />
-        <span class="new-word">lape</span> repos, dormir, dormant, se reposant<br />
         <span class="new-word">lukin</span> vision, regard, regarder, voir, examiner, observer, lire, surveiller, chercher à, essayer de<br />
         <span class="new-word">taso</span> mais, cependant, seulement
       </p>
       <h2>leçon</h2>
-      <h3>structure de base</h3>
+      <h3>négation</h3>
       <div class="content">
-        la structure de phrase la plus basique en toki pona est :
+        en toki pona on exprime la négation et ajoutant simplement <span class="new-word">ala</span> après le verbe.
         <p class="example">
-          <span class="subject">sujet</span> li <span class="predicate">prédicat</span>
-        </p>
-        le <span class="subject">sujet</span> de la phrase, correspond à ce qui est ou qui fait.<br />
-        le <span class="predicate">prédicat</span> est ce que le sujet est ou fait.<br />
-        La particule <span class="new-word">li</span> désigne le prédicat.
-      </div>
-      <h3>notes</h3>
-      <ul>
-        <li>en toki pona, on ne met pas de lettre capitale en début de phrase.</li>
-        <li>le toki pona n'a ni nombre, ni temps des verbes.</li>
-        <li>en toki pona on n'utilise pas les articles définis ou indéfinis. <span class="new-word">jan</span> signifie "une personne" ou "la personne" selon les situations.</li>
-      </ul>
-      <h3>exemples</h3>
-      <div class="content">
-        <p class="example">
-          <span class="subject">mi</span> li <span class="predicate">toki</span><br />
+          <span class="subject">mi</span> <span class="predicate">alasa ala</span><br />
           <span class="tab"></span>
-          <span class="subject">je</span> <span class="predicate">mange</span>
+          <span class="subject">je</span> ne <span class="predicate">chasse pas</span>
         </p>
         <p class="example">
-          <span class="subject">ijo</span> li <span class="predicate">suli</span><br />
+          <span class="subject">ona</span> li <span class="predicate">lukin ala</span><br />
           <span class="tab"></span>
-          <span class="subject">l'objet</span> est <span class="predicate">lourd</span>
-        </p>
-        <p class="example">
-          <span class="subject">moku</span> li <span class="predicate">lili</span><br />
-          <span class="tab"></span>
-          <span class="subject">la pizza</span> est <span class="predicate">petite</span>
+          <span class="subject">elles</span> <span class="predicate">ne voient pas</span>
         </p>
       </div>
-      <h3>omission de la particule li</h3>
-      <p class="content">
-        lorsque le sujet est <span class="new-word">mi</span> ou <span class="new-word">sina</span> (et uniquement dans ces deux cas-là), il y a peu d'ambiguïté : on peut omettre la particule <span class="new-word">li</span>.
-      </p>
-      <h3>exemples</h3>
+      <h3>ale/ali</h3>
       <div class="content">
+        <span class="new-word">ale</span> et <span class="new-word">ali</span> sont deux prononciations du même mot : initialement la prononciation était <span class="new-word">ale</span>, mais en raison de sa sonorité trop proche de <span class="new-word">ala</span>, <span class="new-word">ali</span> a été introduit. ici nous utiliserons uniquement <span class="new-word">ali</span>, mais il est bon de savoir que <span class="new-word">ale</span> existe.
         <p class="example">
-          <span class="subject">mi</span> <span class="predicate">lili</span><br />
+          <span class="subject">ali</span> li <span class="predicate">pona</span><br />
           <span class="tab"></span>
-          <span class="subject">je</span> suis <span class="predicate">petit</span>
+          <span class="subject">tout</span> va <span class="predicate">bien</span>
         </p>
         <p class="example">
-          <span class="subject">sina</span> <span class="predicate">moku</span><br />
+          <span class="subject">ma ali</span> li <span class="predicate">pona</span><br />
           <span class="tab"></span>
-          <span class="subject">tu</span> <span class="predicate">manges</span>
+          <span class="subject">tous les pays</span> sont <span class="predicate">bons</span>
+        </p>
+      </div>
+      <h3>taso</h3>
+      <div class="content">
+        <span class="new-word">taso</span> est utilisé au début d'une phrase pour dire cependant, mais.
+        <p class="example">
+          <span class="subject">mi</span> <span class="predicate">pona</span>. taso <span class="subject">ona</span> <span class="predicate">ike</span><br />
+          <span class="tab"></span>
+          <span class="subject">je</span> suis <span class="predicate">heureux</span> mais <span class="subject">il</span> est <span class="predicate">triste</span>
+        </p>
+        il peut aussi être utilisé de façon tout à fait classique
+        <p class="example">
+          <span class="subject">sina</span> <span class="predicate">taso</span><br />
+          <span class="tab"></span>
+          <span class="subject">tu</span> es <span class="predicate">seule</span>
         </p>
       </div>
     </main>
