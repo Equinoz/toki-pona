@@ -1,11 +1,16 @@
 <template>
   <div class="exercise">
+    <div v-if="debugMode" class="debug-datas">
+      Debug : courses : {{ getProgress() }}, number of exercises : {{ getCurrentExercises().length }}
+    </div>
+
     <header>
       <h1>exercices</h1>
     </header>
 
     <main>
       <div v-for="exercise in exercises" :key="exercise.value.id">
+        <span v-if="debugMode" class="debug-elt">id : {{ exercise.value.id }}</span>
         <h3 v-if="exercise.value.type == 'langToTp'">traduis du français vers le toki pona</h3>
         <h3 v-else>traduis du toki pona vers le français</h3>
         <div class="exercise" v-if="exercise.spoiler" @click="toggleExercise(exercise)">
@@ -20,7 +25,7 @@
 
     <footer class="buttons">
       <!-- TODO Ajouter des icones -->
-      <div class="button" @click="redirectToHome">sommaire</div>
+      <div class="button" @click="redirectToHome">accueil</div>
     </footer>
   </div>
 </template>
@@ -28,12 +33,15 @@
 <script setup lang="ts">
   import { ref, onMounted } from 'vue'
   import router from '@/router'
+  import { storeToRefs } from 'pinia'
 
+  import { useDebugStore } from '@/stores/debugStore'
   import { useMainStore } from '@/stores/mainStore'
 
   import type { Exercise } from '@/models/Exercise'
 
-  const { getCurrentExercises } = useMainStore()
+  const { debugMode } = storeToRefs(useDebugStore())
+  const { getProgress, getCurrentExercises } = useMainStore()
 
   const exercises = ref([] as { value: Exercise; spoiler: boolean }[])
 
@@ -53,6 +61,20 @@
 
 <style scoped>
   @import "@/assets/buttonsStyle.css";
+
+  .debug-datas, .debug-elt {
+    background-color: green;
+    border-radius: var(--border-radius);
+  }
+
+  .debug-datas {
+    margin: 1rem;
+    padding: 1rem;
+  }
+
+  .debug-elt {
+    padding: 0.5rem;
+  }
 
   header {
     display: flex;

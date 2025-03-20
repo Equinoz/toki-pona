@@ -57,6 +57,9 @@ const router = createRouter({
       component: () => import('../views/QuizzView.vue'),
     },
   ],
+  scrollBehavior () {
+    return { top: 0 }
+  },
 })
 
 export default router

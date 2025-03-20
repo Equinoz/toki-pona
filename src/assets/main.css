@@ -2,8 +2,11 @@
 @import './reset.css';
 
 #app {
-  margin: var(--gap-sm);
   color: var(--text-color);
   font-size: var(--text-size);
   font-family: Ubuntu, sans-serif;
+}
+
+#router {
+  margin: var(--gap-sm);
 }

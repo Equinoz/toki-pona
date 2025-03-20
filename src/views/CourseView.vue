@@ -12,7 +12,7 @@
 
     <footer class="buttons" :class="{ row: !singleButton }">
       <!-- TODO Ajouter des icones -->
-      <div class="button" @click="redirectToHome">sommaire</div>
+      <div class="button" @click="redirectToHome">accueil</div>
       <div v-if="!singleButton" class="button" @click="redirectToExercise">exercices</div>
     </footer>
   </div>
