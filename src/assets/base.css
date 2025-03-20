@@ -44,12 +44,12 @@
 
 @font-face {
   font-family: "Dosis";
-  src: url("@/../fonts/Dosis/Dosis-Regular.ttf");
+  src: url("@/../public/fonts/Dosis/Dosis-Regular.ttf");
 }
 
 @font-face {
   font-family: "Ubuntu";
-  src: url("@/../fonts/Ubuntu/Ubuntu-Regular.ttf");
+  src: url("@/../public/fonts/Ubuntu/Ubuntu-Regular.ttf");
 }
 
 body {

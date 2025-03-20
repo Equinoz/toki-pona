@@ -16,7 +16,7 @@ export const useDebugStore = defineStore('debug', () => {
   }
 
   const debugMode = computed(() => {
-    return state.value?.debugMode
+    return state.value?.debugMode && import.meta.env.VITE_DEBUG == 'true'
   })
 
   function toggleMode() {
