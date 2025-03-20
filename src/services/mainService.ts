@@ -1,12 +1,12 @@
 import { LEVELS_BY_COURSES_ID } from '@/config'
 import { useMainStore } from '@/stores/mainStore'
 
-const { getLevel, getProgress, setLevel, setGlossaryByProgress, setCurrentlyProgress, setExercisesByProgress, reset } = useMainStore()
+const { getLevel, getProgress, setLevel, setGlossaryByProgress, getStatusCourses, setCurrentlyProgress, setExercisesByProgress, setStatusCourses, reset } = useMainStore()
 
 export function useMainService() {
   const courseValidated = (idCourse : number) => {
-    console.log("TODO à implémenter la validité du cours (notion d'avancement)", idCourse)
-    return false
+    const status = getStatusCourses()
+    return status[idCourse] == 'validated'
   }
 
   const getLevelByCourseId = (idCourse: number) => {
@@ -41,7 +41,17 @@ export function useMainService() {
   }
 
   const validCourse = (idCourse: number) => {
-    console.log("TODO on valide le cours numéro ", idCourse)
+    const status = getStatusCourses()
+    status[idCourse] = 'validated'
+
+    if (idCourse < 19) {
+      const index = LEVELS_BY_COURSES_ID.findIndex((x: number[]) => x.includes(idCourse))
+      const levelValidated = LEVELS_BY_COURSES_ID[index].every((x: number) => status[x] == 'validated') //
+      if (levelValidated) {
+        LEVELS_BY_COURSES_ID[index + 1].forEach((x: number) => status[x] = 'available')
+      }
+    }
+    setStatusCourses(status)
   }
 
   const resetProgress = () => {

@@ -5,6 +5,7 @@ import { defineStore } from 'pinia'
 import { LEVELS_BY_COURSES_ID } from '@/config'
 import type { Word } from '@/models/Word'
 import type { Exercise } from '@/models/Exercise'
+import type { CourseStatus } from '@/models/CourseStatus'
 
 import { words } from '@/datas/words'
 import { exercises } from '@/datas/exercises'
@@ -14,6 +15,7 @@ interface Store {
   progress: number[]
   words: Word[]
   exercises: Exercise[]
+  status: CourseStatus[]
 }
 
 export const useMainStore = defineStore('main', () => {
@@ -22,10 +24,19 @@ export const useMainStore = defineStore('main', () => {
   })
 
   function initState() {
-    state.value = { level: 0, progress: [], words: [], exercises: [] }
+    const status = Array(20).fill('unavailable')
+    status[0] = 'available'
+    state.value = { level: 0, progress: [], words: [], exercises: [], status }
   }
 
   const isGlossaryAvailable = computed(() => state.value ? state.value.words.length > 0 : false)
+  const isExercisesAvailable = computed(() => state.value ? state.value.exercises.length > 0 : false)
+  const statusCourses = computed(() => {
+     if (!state.value) {
+      initState()
+     }
+     return state.value ? state.value.status : Array(20).fill('validated')
+  })
 
   function getLevel() {
     return state.value?.level ?? 0
@@ -41,6 +52,10 @@ export const useMainStore = defineStore('main', () => {
   
   function getCurrentExercises() {
     return state.value?.exercises ?? []
+  }
+  
+  function getStatusCourses() {
+    return state.value?.status ?? []
   }
   
   function setLevel(level: number) {
@@ -88,9 +103,33 @@ export const useMainStore = defineStore('main', () => {
     }
   }
 
+  function setStatusCourses(status: CourseStatus[]) {
+    if (!state.value) {
+      initState()
+    }
+    if (state.value) {
+      state.value.status = status
+    }
+  }
+
   function reset() {
     state.value = null
   }
 
-  return { isGlossaryAvailable, getLevel, getProgress, getGlossary, getCurrentExercises, setLevel, setCurrentlyProgress, setGlossaryByProgress, setExercisesByProgress, reset }
+  return {
+    isGlossaryAvailable,
+    isExercisesAvailable,
+    statusCourses,
+    getLevel,
+    getProgress,
+    getGlossary,
+    getCurrentExercises,
+    getStatusCourses,
+    setLevel,
+    setCurrentlyProgress,
+    setGlossaryByProgress,
+    setExercisesByProgress,
+    setStatusCourses,
+    reset
+  }
 })

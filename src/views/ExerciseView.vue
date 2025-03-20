@@ -21,6 +21,10 @@
           <p class="answer">{{ exercise.value.answer }}</p>
         </div>
       </div>
+      <div v-if="exercises.length == 0 && debugMode">
+        Empty list, probably a navigation problem<br />
+        Please reset progress and try again
+      </div>
     </main>
 
     <footer class="buttons">
@@ -37,11 +41,17 @@
 
   import { useDebugStore } from '@/stores/debugStore'
   import { useMainStore } from '@/stores/mainStore'
+  import { useMainService } from '@/services/mainService'
 
   import type { Exercise } from '@/models/Exercise'
 
   const { debugMode } = storeToRefs(useDebugStore())
   const { getProgress, getCurrentExercises } = useMainStore()
+  const { validCourse } = useMainService()
+
+  const props = defineProps({
+    idCourse: String
+  })
 
   const exercises = ref([] as { value: Exercise; spoiler: boolean }[])
 
@@ -50,6 +60,10 @@
   }
 
   const redirectToHome = () => {
+    if (props.idCourse) {
+      validCourse(parseInt(props.idCourse, 10))
+    }
+
     router.push('/')
   }
 

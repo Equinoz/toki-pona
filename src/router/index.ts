@@ -8,6 +8,7 @@ enum Routes {
   END = '/end',
   REVIEW = '/review',
   EXERCISE = '/exercise',
+  EXERCISE_BY_ID = '/exercise/:idCourse',
   GLOSSARY = '/glossary',
   QUIZZ = '/quizz',
 }
@@ -45,6 +46,12 @@ const router = createRouter({
       path: Routes.EXERCISE,
       name: 'exercise',
       component: () => import('../views/ExerciseView.vue'),
+    },
+    {
+      path: Routes.EXERCISE_BY_ID,
+      name: 'exerciseById',
+      component: () => import('../views/ExerciseView.vue'),
+      props: true,
     },
     {
       path: Routes.GLOSSARY,

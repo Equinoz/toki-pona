@@ -12,7 +12,10 @@
   import type { CourseStatus } from '@/models/CourseStatus'
 
   defineProps({
-    status: String as PropType<CourseStatus>
+    status: {
+      type: String as PropType<CourseStatus>,
+      required : true
+    }
   })
 </script>
 

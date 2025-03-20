@@ -34,7 +34,7 @@
   import Course7 from '@/components/Course7.vue'
   import Course8 from '@/components/Course8.vue'
 
-  const { setExercises } = useMainService()
+  const { setExercises, validCourse } = useMainService()
 
   const props = defineProps({
     idCourse: String
@@ -43,6 +43,10 @@
   const singleButton = computed(() => props.idCourse == '0' || props.idCourse == '1' || props.idCourse == '2' || props.idCourse == '20')
 
   const redirectToHome = () => {
+    if (props.idCourse == '0' || props.idCourse == '1' || props.idCourse == '2') {
+      validCourse(parseInt(props.idCourse, 10))
+    }
+
     router.push('/')
   }
 
@@ -51,7 +55,7 @@
       setExercises(parseInt(props.idCourse, 10))
     }
 
-    router.push('/exercise')
+    router.push(`/exercise/${props.idCourse}`)
   }
 </script>
 
