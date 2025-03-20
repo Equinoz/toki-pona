@@ -4,17 +4,14 @@ import { defineStore } from 'pinia'
 
 import { LEVELS_BY_COURSES_ID } from '@/config'
 import type { Word } from '@/models/Word'
-import type { Exercise } from '@/models/Exercise'
 import type { CourseStatus } from '@/models/CourseStatus'
 
 import { words } from '@/datas/words'
-import { exercises } from '@/datas/exercises'
 
 interface Store {
   level: number
   progress: number[]
   words: Word[]
-  exercises: Exercise[]
   status: CourseStatus[]
 }
 
@@ -26,11 +23,11 @@ export const useMainStore = defineStore('main', () => {
   function initState() {
     const status = Array(20).fill('unavailable')
     status[0] = 'available'
-    state.value = { level: 0, progress: [], words: [], exercises: [], status }
+    state.value = { level: 0, progress: [], words: [], status }
   }
 
   const isGlossaryAvailable = computed(() => state.value ? state.value.words.length > 0 : false)
-  const isExercisesAvailable = computed(() => state.value ? state.value.exercises.length > 0 : false)
+  const isExercisesAvailable = computed(() => state.value ? state.value.level != 0 : false)
   const statusCourses = computed(() => {
      if (!state.value) {
       initState()
@@ -48,10 +45,6 @@ export const useMainStore = defineStore('main', () => {
 
   function getGlossary() {
     return state.value?.words ?? []
-  }
-  
-  function getCurrentExercises() {
-    return state.value?.exercises ?? []
   }
   
   function getStatusCourses() {
@@ -91,18 +84,6 @@ export const useMainStore = defineStore('main', () => {
     }
   }
   
-  function setExercisesByProgress() {
-    if (!state.value) {
-      initState()
-    }
-    if (state.value) {
-      state.value.exercises = exercises.filter((x: Exercise) => {
-        if (x.idsCourse.length !== state.value?.progress.length) return false
-        return x.idsCourse.every((value, index) => value === state.value?.progress[index])
-      })
-    }
-  }
-
   function setStatusCourses(status: CourseStatus[]) {
     if (!state.value) {
       initState()
@@ -123,12 +104,10 @@ export const useMainStore = defineStore('main', () => {
     getLevel,
     getProgress,
     getGlossary,
-    getCurrentExercises,
     getStatusCourses,
     setLevel,
     setCurrentlyProgress,
     setGlossaryByProgress,
-    setExercisesByProgress,
     setStatusCourses,
     reset
   }

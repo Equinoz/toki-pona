@@ -34,7 +34,7 @@
   import Course7 from '@/components/Course7.vue'
   import Course8 from '@/components/Course8.vue'
 
-  const { setExercises, validCourse } = useMainService()
+  const { setGlossary, validCourse } = useMainService()
 
   const props = defineProps({
     idCourse: String
@@ -52,7 +52,7 @@
 
   const redirectToExercise = () => {
     if (props.idCourse) {
-      setExercises(parseInt(props.idCourse, 10))
+      setGlossary(parseInt(props.idCourse, 10))
     }
 
     router.push(`/exercise/${props.idCourse}`)

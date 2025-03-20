@@ -1,7 +1,7 @@
 <template>
   <div class="exercise">
     <div v-if="debugMode" class="debug-datas">
-      Debug : courses : {{ getProgress() }}, number of exercises : {{ getCurrentExercises().length }}
+      Debug : courses : {{ exercises[0]?.value.idsCourse ?? [] }}, number of exercises : {{ getExercises(idCourse).length }}
     </div>
 
     <header>
@@ -40,14 +40,12 @@
   import { storeToRefs } from 'pinia'
 
   import { useDebugStore } from '@/stores/debugStore'
-  import { useMainStore } from '@/stores/mainStore'
   import { useMainService } from '@/services/mainService'
 
   import type { Exercise } from '@/models/Exercise'
 
   const { debugMode } = storeToRefs(useDebugStore())
-  const { getProgress, getCurrentExercises } = useMainStore()
-  const { validCourse } = useMainService()
+  const { getExercises, validCourse } = useMainService()
 
   const props = defineProps({
     idCourse: String
@@ -68,7 +66,7 @@
   }
 
   onMounted(() => {
-    const currentExercises = getCurrentExercises() ?? []
+    const currentExercises = getExercises(props.idCourse) ?? []
     exercises.value = currentExercises.map((x: Exercise) => ({ value: x, spoiler: true }))
   })
 </script>
