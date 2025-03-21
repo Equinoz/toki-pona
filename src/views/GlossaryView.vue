@@ -1,6 +1,7 @@
 <template>
   <div class="glossary">
     <h1>Page du glossaire</h1>
+    Attention WARNING!!
     {{  getGlossary()?.length }} mots actuellement
   </div>
   <div>

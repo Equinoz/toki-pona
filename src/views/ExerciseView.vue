@@ -27,15 +27,16 @@
       </div>
     </main>
 
-    <footer class="buttons">
+    <footer class="buttons" :class="{ row: !singleButton }">
       <!-- TODO Ajouter des icones -->
-      <div class="button" @click="redirectToHome">accueil</div>
+      <div class="button" @click="back">retour</div>
+      <div v-if="!singleButton" class="button" @click="redirectToHome">valider</div>
     </footer>
   </div>
 </template>
 
 <script setup lang="ts">
-  import { ref, onMounted } from 'vue'
+  import { ref, computed, onMounted } from 'vue'
   import router from '@/router'
   import { storeToRefs } from 'pinia'
 
@@ -53,6 +54,8 @@
 
   const exercises = ref([] as { value: Exercise; spoiler: boolean }[])
 
+  const singleButton = computed(() => props.idCourse == undefined)
+
   const toggleExercise = (exercise: { value: Exercise; spoiler: boolean }) => {
     exercise.spoiler = !exercise.spoiler
   }
@@ -63,6 +66,10 @@
     }
 
     router.push('/')
+  }
+
+  const back = () => {
+    router.go(-1)
   }
 
   onMounted(() => {
@@ -131,12 +138,5 @@
 
   .answer {
     padding-left: var(--gap-sm);
-  }
-
-  .buttons {
-    display: flex;
-    justify-content: center;
-    margin-top: var(--gap-sm);
-    margin-bottom: var(--gap-lg);
   }
 </style>

@@ -12,7 +12,7 @@
 
     <footer class="buttons" :class="{ row: !singleButton }">
       <!-- TODO Ajouter des icones -->
-      <div class="button" @click="redirectToHome">accueil</div>
+      <div class="button" @click="back">retour</div>
       <div v-if="!singleButton" class="button" @click="redirectToExercise">exercices</div>
     </footer>
   </div>
@@ -42,12 +42,12 @@
 
   const singleButton = computed(() => props.idCourse == '0' || props.idCourse == '1' || props.idCourse == '2' || props.idCourse == '20')
 
-  const redirectToHome = () => {
+  const back = () => {
     if (props.idCourse == '0' || props.idCourse == '1' || props.idCourse == '2') {
       validCourse(parseInt(props.idCourse, 10))
     }
 
-    router.push('/')
+    router.go(-1)
   }
 
   const redirectToExercise = () => {

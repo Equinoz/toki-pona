@@ -18,8 +18,8 @@
 
     <div class="buttons">
       <!-- TODO Ajouter des icones -->
-      <div class="button" @click="reset">reset</div>
-      <div class="button" @click="restore">restore all</div>
+      <div class="button" @click="reset">Reset</div>
+      <div class="button" @click="restore">Restore all</div>
     </div>
   </div>
   <div v-else>
