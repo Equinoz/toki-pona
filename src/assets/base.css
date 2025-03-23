@@ -27,6 +27,8 @@
   --button-text-size-md: 20;
   --button-text-size-sm: 18;
   --line-height: 1.8rem;
+  --glossary-headings-size: 1.4rem;
+  --glossary-word-size: 1.1rem;
 }
 
 /* spacing */
@@ -35,6 +37,13 @@
   --gap: 2rem;
   --gap-sm: 1rem;
   --gap-xs: 0.5rem;
+}
+
+/* heights */
+:root {
+  --medium-height: 2rem;
+  --medium-lg-height: 2.5rem;
+  --large-height: 3rem;
 }
 
 /* styles */

@@ -12,8 +12,8 @@
     <div><Check :status="statusCourses[19]"/><RouterLink to="/end">Go to End</RouterLink></div>
     <div><Check :status="reviewStatus"/><RouterLink to="/review">Go to Review</RouterLink></div>
     <div><Check :status="exercisesStatus"/><RouterLink to="/exercise">Go to Exercises</RouterLink></div>
-    <div><Check :status="glossaryStatus"/><RouterLink to="/quizz">Go to Quizz</RouterLink></div>
     <div><Check :status="glossaryStatus"/><RouterLink to="/glossary">Go to Glossary</RouterLink></div>
+    <div><Check :status="glossaryStatus"/><RouterLink to="/quizz">Go to Quizz</RouterLink></div>
     <div><Check status="validated"/><RouterLink to="/about">Go to About</RouterLink></div>
 
     <div class="buttons">

@@ -1,12 +1,13 @@
 <template>
   <DebugHeader v-if="debugMode" />
-  <RouterView id="router" />
+  <div id="router">
+    <RouterView />
+  </div>
 </template>
 
 <script setup lang="ts">
   import { computed } from 'vue'
   import { RouterView } from 'vue-router'
-
 
   import DebugHeader from '@/components/DebugHeader.vue'
 

@@ -6,7 +6,7 @@
 
     <main>
       <h2>120 mots</h2>
-      <p class="content">le vocabulaire de base du toki pona ne contient même pas 120 mots. (il y en a 122 dans ce cours). il existe bien de nouveaux mots, les nimisin, mais leur emploi n'est pas forcément systématique, leur utilité parfois discutable et le principe même du nimisin va un peu à l'encontre de l'idée initiale qui est de réduire les choses au minimum pour rendre le toki pona le plus accessible possible. en pratique les nimisin sont souvent surtout des blagues entre tokiponistes.</p>
+      <p class="content">le vocabulaire de base du toki pona ne contient même pas 120 mots. (il y en a 123 dans ce cours). il existe bien de nouveaux mots, les nimisin, mais leur emploi n'est pas forcément systématique, leur utilité parfois discutable et le principe même du nimisin va un peu à l'encontre de l'idée initiale qui est de réduire les choses au minimum pour rendre le toki pona le plus accessible possible. en pratique les nimisin sont souvent surtout des blagues entre tokiponistes.</p>
       <p class="content">si on ne tient pas compte des nimisin, 120 mots c'est bien peu pour exprimer tout le vocabulaire d'une langue comme le français par exemple. même si on supprime tous les synonymes, on est encore très loin du compte. c'est ici que deux éléments cruciaux interviennent pour préciser le sens d'un mot :</p>
       <ul>
         <li>le contexte</li>
