@@ -79,21 +79,8 @@
 </script>
 
 <style scoped>
+  @import "@/assets/debugStyle.css";
   @import "@/assets/buttonsStyle.css";
-
-  .debug-datas, .debug-elt {
-    background-color: green;
-    border-radius: var(--border-radius);
-  }
-
-  .debug-datas {
-    margin: 1rem;
-    padding: 1rem;
-  }
-
-  .debug-elt {
-    padding: 0.5rem;
-  }
 
   header {
     display: flex;

@@ -104,6 +104,8 @@
 </script>
 
 <style scoped>
+  @import "@/assets/debugStyle.css";
+
   header {
     display: flex;
     justify-content: space-between;
@@ -139,13 +141,6 @@
     width: 40%;
     padding: 0 var(--gap-xs);
     font-size: var(--glossary-word-size);
-  }
-
-  .debug-datas {
-    background-color: green;
-    border-radius: var(--border-radius);
-    margin: var(--gap-sm);
-    padding: var(--gap-sm);
   }
 
   .words {

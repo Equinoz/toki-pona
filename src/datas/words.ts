@@ -16,7 +16,7 @@ export const words = [
   { id: 15, idCourse: 4, name: "kasi", meanings: ["plante, végétation, herbe, feuille"] },
   { id: 16, idCourse: 4, name: "kili", meanings: ["fruit, légume, champignon"] },
   { id: 17, idCourse: 4, name: "wawa", meanings: ["énergie, puissance, fort, puissant, sûr, fiable, confiant, énergique, intense"] },
-  { id: 18, idCourse: 4, name: "mu", meanings: ["p. (cri d'animal, communication animale), miaou, meuh, ouah"] },
+  { id: 18, idCourse: 4, name: "mu", meanings: ["p. (cri d'animal, communication animale)"] },
   { id: 19, idCourse: 5, name: "kulupu", meanings: ["groupe, communauté, société, nation, tribu, compagnie"] },
   { id: 20, idCourse: 5, name: "mama", meanings: ["parent, père, mère, ancêtre, créateur, celui ou celle qui prend soin"] },
   { id: 21, idCourse: 5, name: "meli", meanings: ["femme, épouse, petite amie, femelle, féminin"] },
