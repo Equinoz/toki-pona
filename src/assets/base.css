@@ -19,17 +19,18 @@
   --text-size: 1rem;
   --large-text-size: 25;
   --main-title-size: 35;
-  --title-size: 2.5rem;
+  --title-size: 2.4rem;
   --subtitle-size: 2rem;
   --subsubtitle-size: 1.5rem;
   --text-button-size: 1.2rem;
+  --text-quizz-button-size: 1.1rem;
   --small-main-title-size: 26;
   --button-text-size-md: 20;
   --button-text-size-sm: 18;
   --line-height: 1.8rem;
-  --glossary-headings-size: 1.4rem;
+  --glossary-headings-size: 1.3rem;
   --glossary-word-size: 1.1rem;
-  --text-xs: 0.9rem;
+  --text-xs: 0.85rem;
 }
 
 /* spacing */
@@ -42,6 +43,7 @@
 
 /* heights */
 :root {
+  --max-app-width: 700px;
   --medium-height: 2rem;
   --medium-lg-height: 2.5rem;
   --large-height: 3rem;

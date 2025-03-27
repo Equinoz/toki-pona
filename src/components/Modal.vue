@@ -41,9 +41,10 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 30%;
+    height: 33%;
+    max-width: var(--max-app-width);
     width: 80%;
-    padding: var(--gap-sm);
+    padding: var(--gap-xs);
     box-sizing: border-box;
     border: 1px solid rgba(0, 0, 0, 0.4);
     border-radius: var(--border-radius);
@@ -60,14 +61,14 @@
   }
 
   .sub-message {
-    font-size: var(--text-button-size);
+    font-size: var(--text-quizz-button-size);
   }
 
   .buttons {
     display: flex;
     justify-content: space-around;
     margin-bottom: var(--gap-sm);
-    font-size: var(--subsubtitle-size);
+    font-size: var(--text-button-size);
   }
 
   .buttons > div {

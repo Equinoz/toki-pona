@@ -2,6 +2,8 @@
 @import './reset.css';
 
 #app {
+  max-width: var(--max-app-width);
+  margin: auto;
   color: var(--text-color);
   font-size: var(--text-size);
   font-family: Ubuntu, sans-serif;

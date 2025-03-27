@@ -36,8 +36,8 @@
     fontXs: boolean
   }
 
-  const gauche = ["en", "pu", "sitelen", "pini", "mama"]
-  const droite = ["représentation", "fin", "celui ou celle qui prend soin", "et", "interaction avec le livre officiel toki pona"]
+  const gauche = ["en", "pu", "sitelen", "supa", "mama"]
+  const droite = ["représentation", "surface horizontale servant d'étagère", "celui ou celle qui prend soin", "et", "interaction avec le livre du toki pona"]
 
   const leftCol = ref([] as Element[])
   const rightCol = ref([] as Element[])
@@ -51,7 +51,7 @@
   }
 
   onMounted(() => {
-    // TODO gérer des modifs de datas comme pour mu
+    // TODO gérer des modifs de datas comme pour mu et "interaction avec le livre toki pona"
     leftCol.value = gauche.map((x: string) => ({ value: x, fontXs: false }))
     rightCol.value = droite.map((x: string) => { 
       return {value: x, fontXs: x.length > 35 }
@@ -68,7 +68,7 @@
     margin-top: var(--gap);
     padding: var(--gap-xs);
     border-radius: var(--border-radius);
-    font-size: var(--text-button-size);
+    font-size: var(--text-quizz-button-size);
   }
 
   .row {

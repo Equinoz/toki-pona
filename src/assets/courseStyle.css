@@ -19,6 +19,7 @@ h1 {
   display: inline-block;
   margin: auto;
   padding: var(--gap-xs);
+  text-align: center;
   font-size: var(--title-size);
   text-decoration: underline;
   text-decoration-color: var(--underline-color);

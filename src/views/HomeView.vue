@@ -67,7 +67,7 @@
     flex-direction: column;
     align-items: center;
     margin: 2rem;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
 
   .debug div {
@@ -76,5 +76,9 @@
 
   .debug > div > a, .debug > div > a:visited {
     color: white;
-  }  
+  }
+
+  .button {
+    width: 40%;
+  }
 </style>

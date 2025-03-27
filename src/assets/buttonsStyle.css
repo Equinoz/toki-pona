@@ -15,7 +15,7 @@
 
 .button {
   background-color: var(--underline-color);
-  width: 40%;
+  width: 35%;
   color: var(--text-color);
   font-size: var(--text-button-size);
   padding: var(--gap-sm);

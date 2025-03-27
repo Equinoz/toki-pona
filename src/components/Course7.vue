@@ -19,7 +19,7 @@
       <p class="content"><span class="new-word">e</span> particule (introduit le complément d'objet direct)<br /></p>
       <h3>notes</h3>
       <div class="content">
-        <span class="new-word">pali</span> ne correspond pas à tous les usages de "faire" en français. lorsqu'un on utilise un mot comme verbe, l'action de faire est sous-entendue.
+        <span class="new-word">pali</span> ne correspond pas à tous les usages de "faire" en français. lorsqu'on utilise un mot comme verbe, l'action de faire est sous-entendue.
         <p class="example">
           <span class="subject">mi</span> <span class="predicate">ni</span><br />
           <span class="tab"></span>

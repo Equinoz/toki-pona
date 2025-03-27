@@ -15,7 +15,7 @@
 
     <div ref="words-container" class="words">
       <div class="headings">
-        <div>mot en toki pona</div>
+        <div>toki pona</div>
         <div>significations</div>
       </div>
       <div v-for="word in words" :key="word.id" ref="ref-words" class="word">
@@ -132,7 +132,7 @@
     display: flex;
     justify-content: space-between;
     height: var(--large-height);
-    width: 85%;
+    width: 82%;
     font-family: Ubuntu, sans-serif;
   }
 
@@ -140,7 +140,8 @@
     background-color: var(--card-color);
     width: 40%;
     padding: 0 var(--gap-xs);
-    font-size: var(--glossary-word-size);
+    border: none;
+    font-size: var(--text-xs);
   }
 
   .words {
@@ -186,7 +187,6 @@
   }
 
   .word > div {
-    font-size: var(--glossary-word-size);
     padding: var(--gap-xs);
   }
 
@@ -194,6 +194,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: var(--glossary-word-size);
   }
 
   .words :last-child {
