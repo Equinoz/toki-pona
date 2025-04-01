@@ -67,4 +67,10 @@ export const exercises = [
   { id: 63, type: "langToTp" as TypeExercise, idsCourse: [7, 8], question: "le groupe ne combattra pas", answer: "kulupu li utala ala" },
   { id: 64, type: "langToTp" as TypeExercise, idsCourse: [7, 8], question: "tu ne chasses pas les pigeons", answer: "sina alasa ala e waso" },
   { id: 65, type: "langToTp" as TypeExercise, idsCourse: [7, 8], question: "nous ne sommes pas tristes", answer: "mi mute li ike ala" },
+  { id: 66, type: "tpToLang" as TypeExercise, idsCourse: [9], question: "oko ona li pona lukin", answer: "il a de beaux yeux" },
+  { id: 67, type: "tpToLang" as TypeExercise, idsCourse: [9], question: "nena ona en luka ona li pakala", answer: "il s'est cassé le nez et une main" },
+  { id: 68, type: "tpToLang" as TypeExercise, idsCourse: [9], question: "akesi anu waso li moku e pipi", answer: "les lézards ou les oiseaux mangent les insectes" },
+  { id: 69, type: "langToTp" as TypeExercise, idsCourse: [9], question: "tes cheveux sont longs", answer: "linja sina li suli" },
+  { id: 70, type: "langToTp" as TypeExercise, idsCourse: [9], question: "c'est une petite colline", answer: "ni li nena lili" },
+  { id: 71, type: "langToTp" as TypeExercise, idsCourse: [9], question: "cette femme creuse un trou", answer: "ni meli li pali e lupa" },
 ]

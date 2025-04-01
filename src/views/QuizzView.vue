@@ -1,7 +1,7 @@
 <template>
   <div class="quizz">
     <div v-if="debugMode" class="debug-datas">
-      {{ goodAnswers }}/{{ wordsRevised }}  mots, total : {{ getGlossary().length }}
+      Debug : {{ goodAnswers }}/{{ wordsRevised }}  mots, total : {{ getGlossary().length }}
     </div>
 
     <div v-if="!endQuizz">

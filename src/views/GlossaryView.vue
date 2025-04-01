@@ -10,7 +10,7 @@
     </header>
 
     <div v-if="debugMode" class="debug-datas">
-      Actuellement {{ words.length }} mots, progrès : {{ getProgress() }}
+      Debug : actuellement {{ words.length }} mots, progrès : {{ getProgress() }}
     </div>
 
     <div ref="words-container" class="words">

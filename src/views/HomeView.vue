@@ -9,6 +9,8 @@
     <div><Check :status="statusCourses[6]"/><RouterLink to="/course/6">Go to Modificateurs</RouterLink></div>
     <div><Check :status="statusCourses[7]"/><RouterLink to="/course/7">Go to COD</RouterLink></div>
     <div><Check :status="statusCourses[8]"/><RouterLink to="/course/8">Go to Négation</RouterLink></div>
+    <div><Check :status="statusCourses[9]"/><RouterLink to="/course/9">Go to Et/Ou</RouterLink></div>
+    <div><Check :status="statusCourses[10]"/><RouterLink to="/course/10">Go to Particule pi</RouterLink></div>
     <div><Check :status="statusCourses[19]"/><RouterLink to="/end">Go to End</RouterLink></div>
     <div><Check :status="reviewStatus"/><RouterLink to="/review">Go to Review</RouterLink></div>
     <div><Check :status="exercisesStatus"/><RouterLink to="/exercise">Go to Exercises</RouterLink></div>

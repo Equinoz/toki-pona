@@ -71,6 +71,20 @@ main {
   text-underline-offset: 4px;
 }
 
+.preposition {
+  color: var(--preposition-color);
+  font-weight: bold;
+  text-decoration: underline dashed;
+  text-underline-offset: 4px;
+}
+
+.nominal-group {
+  color: var(--preposition-color);
+  font-weight: bold;
+  text-decoration: underline dotted;
+  text-underline-offset: 4px;
+}
+
 .example {
   margin: var(--gap-xs);
   margin-left: var(--gap-xs);
