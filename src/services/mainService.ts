@@ -46,7 +46,7 @@ export function useMainService() {
       setLevel(levelCourse)
     } else if (!currentlyProgress.includes(idCourse)) {
       currentlyProgress.push(idCourse)
-      currentlyProgress.sort()
+      currentlyProgress.sort((a, b) => a - b)
     }
 
     setCurrentlyProgress(currentlyProgress)
