@@ -49,6 +49,8 @@ main {
   font-weight: bold;
 }
 
+/* TODO regrouper les éléments suivants */
+
 .subject {
   color: var(--subject-color);
   font-weight: bold;
@@ -75,6 +77,13 @@ main {
   color: var(--preposition-color);
   font-weight: bold;
   text-decoration: underline dashed;
+  text-underline-offset: 4px;
+}
+
+.auxiliary {
+  color: var(--auxiliary-color);
+  font-weight: bold;
+  text-decoration: underline dotted;
   text-underline-offset: 4px;
 }
 

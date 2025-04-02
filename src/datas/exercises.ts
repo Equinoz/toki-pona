@@ -85,4 +85,10 @@ export const exercises = [
   { id: 81, type: "langToTp" as TypeExercise, idsCourse: [9, 10], question: "les oreilles de Marie sont petites", answer: "lupa kute pi Mari li lili" },
   { id: 82, type: "langToTp" as TypeExercise, idsCourse: [9, 10], question: "les ouvriers et les soldats sont mécontents", answer: "jan pali en jan utala li ike" },
   { id: 83, type: "langToTp" as TypeExercise, idsCourse: [9, 10], question: "tes poumons sont sains", answer: "poki kon sina li pona" },
+  { id: 84, type: "tpToLang" as TypeExercise, idsCourse: [11], question: "mi ken awen wawa", answer: "nous pouvons rester forts" },
+  { id: 85, type: "tpToLang" as TypeExercise, idsCourse: [11], question: "kulupu li wile jo e ma", answer: "la tribu veut posséder la terre" },
+  { id: 86, type: "tpToLang" as TypeExercise, idsCourse: [11], question: "jan li kama e moku", answer: "la personne apporte de la nourriture" },
+  { id: 87, type: "langToTp" as TypeExercise, idsCourse: [11], question: "je ne peux pas voir cela", answer: "mi ken ala lukin e ni" },
+  { id: 88, type: "langToTp" as TypeExercise, idsCourse: [11], question: "je te protège", answer: "mi awen e sina" },
+  { id: 89, type: "langToTp" as TypeExercise, idsCourse: [11], question: "je veux apprendre le toki pona", answer: "mi wile kama sona e toki pona" },
 ]

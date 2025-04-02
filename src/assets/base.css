@@ -1,6 +1,6 @@
 /* Colors */
 :root {
-  --main-theme-color: #2e1253;
+  --main-theme-color: #2E1253;
   --title-color: #E63E62;
   --card-color: #EFF3F3;
   --text-color: #000007;
@@ -11,6 +11,7 @@
   --predicate-color: #3EE6C2;
   --object-color: #C23EE6;
   --preposition-color: #62E63E;
+  --auxiliary-color: #BF4918;
   --background-color-dialog: #021C24;
 }
 
