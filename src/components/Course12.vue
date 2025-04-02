@@ -7,56 +7,62 @@
     <main>
       <h2>vocabulaire</h2>
       <p class="content">
-        <span class="new-word">oko</span> oeil<br />
-        <span class="new-word">uta</span> bouche, lèvres, cavité buccale, mâchoire<br />
-        <span class="new-word">nena</span> bosse, montagne, colline, nez, bouton<br />
-        <span class="new-word">lupa</span> porte, trou, orifice, fenêtre<br />
-        <span class="new-word">sinpin</span> mur, face, front, visage, poitrine, avant, devant<br />
-        <span class="new-word">linja</span> objet long et flexible, corde, cheveu, fil, ligne<br />
-        <span class="new-word">luka</span> bras, main, organe du toucher, cinq
+        <span class="new-word">ilo</span> outil, machine, instrument, équipement, appareil<br />
+        <span class="new-word">jaki</span> ordure, dégoûtant, obscène, maladif, toxique, impur, insalubre, sale
       </p>
-      <h3>particule</h3>
+      <h3>prépositions</h3>
       <p class="content">
-        <span class="new-word">en</span> et (entre deux sujets)<br />
-        <span class="new-word">anu</span> ou
+        <span class="new-word">lon</span> exister, présent, réel, vrai, actuel, à/sur/en/dans, situé à/sur/en/dans<br />
+        <span class="new-word">tawa</span> aller voir, déplacer, se déplacer, en mouvement, animé, à, allant à, vers, pour, du point de vue de, selon<br />
+        <span class="new-word">tan</span> origine, cause, provenance, provenant de, parce que, à cause de, de<br />
+        <span class="new-word">sama</span> semblable, fraternel, homologue, identique, similaire, l'un l'autre, même, comme<br />
+        <span class="new-word">kepeken</span> utiliser, en utilisant, au moyen de
       </p>
       <h2>leçon</h2>
-      <h3>dire et</h3>
+      <h3>utiliser les prépositions</h3>
       <div class="content">
-        généralement pour dire "et" on répète la particule. pour parler de plusieurs sujets on utilise la particule <span class="new-word">en</span>.<br />
-        pour répéter les prédicats on utilise <span class="new-word">li</span>, pour répéter les compléments d'objet direct <span class="new-word">e</span> et pour les groupes nominaux c'est les prépositions que l'on répète.<br />
+        les prépositions sont utilisées pour exprimer des détails spécifiques du prédicat, comme comment et où. tout comme les auxiliaires, les prépositions peuvent être mises à la forme négative en utilisant <span class="new-word">ala</span>. une préposition se place en fin de phrase et est suivie d'un groupe nominal.
         <p class="example">
-          <span class="subject">sujet</span> en <span class="subject">sujet</span> li <span class="predicate">prédicat</span> li <span class="predicate">prédicat</span> e <span class="object">cod</span> e <span class="object">cod</span> <span class="preposition">préposition</span> <span class="nominal-group">GN</span> <span class="preposition">préposition</span> <span class="nominal-group">GN</span><br />
-        </p>
-      </div>
-      <h3>exemple</h3>
-      <div class="content">
-        <p class="example">
-          <span class="subject">jan</span> en <span class="subject">soweli</span> li <span class="predicate">lukin</span> li <span class="predicate">alasa</span> e <span class="object">kasi</span> e <span class="object">pipi</span><br />
+          <span class="subject">mi</span> <span class="predicate">pali</span> <span class="preposition">lon</span> <span class="nominal-group">tomo moku</span><br />
           <span class="tab"></span>
-          <span class="subject">l'individu</span> et <span class="subject">le chien</span> <span class="predicate">regardent</span> et <span class="predicate">attrapent</span> <span class="object">les plantes</span> et <span class="object">les insectes</span>
+          <span class="subject">je</span> <span class="predicate">travaille</span> <span class="preposition">dans</span> <span class="nominal-group">un restaurant</span>
         </p>
-      </div>
-      <h3>anu</h3>
-      <div class="content">
-        <span class="new-word">anu</span> exprime une alternative.<br />
-        cette conjonction s'utilise uniquement entre noms. on ne peut pas s'en servir pour joindre des phrases entre elles.<br />
+        on peut former une phrase autour d'une préposition
+        <p class="example">
+          <span class="subject">mi</span> <span class="preposition">lon</span> <span class="nominal-group">tomo</span><br />
+          <span class="tab"></span>
+          <span class="subject">je</span> <span class="predicate">suis</span> <span class="preposition">dans</span> <span class="nominal-group">la maison</span>
+        </p>
+        <p class="example">
+          <span class="subject">mi</span> <span class="preposition">tawa</span> <span class="nominal-group">sina</span><br />
+          <span class="tab"></span>
+          <span class="subject">je</span> <span class="preposition">me dirige vers</span> <span class="nominal-group">toi</span>
+        </p>
+        <span class="new-word">tawa</span> est également utile pour parler de ce qui nous plaît, nous fait du bien ou inversement.
+        <p class="example">
+          <span class="subject">lipu ni</span> li <span class="predicate">pona</span> <span class="preposition">tawa</span> <span class="nominal-group">mi</span><br />
+          <span class="tab"></span>
+          <span class="subject">ce livre</span> <span class="predicate">est bon</span> <span class="preposition">pour</span> <span class="nominal-group">moi</span> (ce livre me plaît)
+        </p>
+        <p class="example">
+          <span class="subject">pali ma</span> li <span class="predicate">ike</span> <span class="preposition">tawa</span> <span class="nominal-group">mi</span><br />
+          <span class="tab"></span>
+          <span class="subject">le travail de la terre</span> <span class="predicate">est déplaisant</span> <span class="preposition">pour</span> <span class="nominal-group">moi</span> (je n'aime pas le jardinage)
+        </p>
       </div>
       <h3>exemples</h3>
       <div class="content">
         <p class="example">
-          <span class="subject">ni tonsi</span> li <span class="predicate">moku</span> e <span class="object">kasi</span> anu <span class="object">waso</span><br />
+          <span class="subject">soweli mi</span> li <span class="preposition">sama</span> <span class="nominal-group">soweli sina</span><br />
           <span class="tab"></span>
-          <span class="subject">cette personne</span> <span class="predicate">mange</span> <span class="object">de la salade</span> ou <span class="object">de la volaille</span><br />
+          <span class="subject">mon chat</span> <span class="preposition">est le même que</span> <span class="nominal-group">le tien</span> (nos chats sont de la même espèce)
         </p>
         <p class="example">
-          <span class="subject">ni</span> li <span class="predicate">ali</span> anu <span class="predicate">ala</span><br />
+          <span class="subject">mi</span> <span class="predicate">pali</span> <span class="preposition">kepeken ala</span> <span class="nominal-group">ilo ni</span><br />
           <span class="tab"></span>
-          <span class="subject">c'est</span> <span class="predicate">tout</span> ou <span class="predicate">rien</span><br />
+          <span class="subject">je</span> <span class="predicate">travaillerais</span> <span class="preposition">sans utiliser</span> <span class="nominal-group">cet outil</span>
         </p>
       </div>
-      <h3>note concernant les questions</h3>
-      <p class="content">nous verrons dans le chapitre dédié que <span class="new-word">anu</span> est particulièrement utile lorsqu'il s'agit de poser des questions.</p>
     </main>
   </div>
 </template>

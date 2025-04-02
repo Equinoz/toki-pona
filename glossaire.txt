@@ -2,11 +2,8 @@ a
 anpa
 ante
 esun
-ilo
-jaki
 jelo
 kalama
-kepeken
 kin
 kule
 la
@@ -14,7 +11,6 @@ laso
 len
 lete
 loje
-lon
 mani
 moli
 mun
@@ -30,15 +26,12 @@ pana
 pimeja
 pini
 pu
-sama
 seme
 sewi
 sike
 sin
 suno
 suwi
-tan
-tawa
 tenpo
 tu
 walo
