@@ -1,7 +1,7 @@
 <template>
   <div class="course-details">
     <header>
-      <h1>personnes et lieux</h1>
+      <h1>gens et lieux</h1>
     </header>
     
     <main>

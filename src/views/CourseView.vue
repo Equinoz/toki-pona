@@ -13,7 +13,12 @@
     <Course10 v-else-if="idCourse == '10'" />
     <Course11 v-else-if="idCourse == '11'" />
     <Course12 v-else-if="idCourse == '12'" />
-    <Course13 v-else />
+    <Course13 v-else-if="idCourse == '13'" />
+    <Course14 v-else-if="idCourse == '14'" />
+    <Course15 v-else-if="idCourse == '15'" />
+    <Course16 v-else-if="idCourse == '16'" />
+    <Course17 v-else-if="idCourse == '17'" />
+    <Course18 v-else />
 
     <footer class="buttons" :class="{ row: !singleButton }">
       <!-- TODO Ajouter des icones -->
@@ -43,6 +48,11 @@
   import Course11 from '@/components/Course11.vue'
   import Course12 from '@/components/Course12.vue'
   import Course13 from '@/components/Course13.vue'
+  import Course14 from '@/components/Course14.vue'
+  import Course15 from '@/components/Course15.vue'
+  import Course16 from '@/components/Course16.vue'
+  import Course17 from '@/components/Course17.vue'
+  import Course18 from '@/components/Course18.vue'
 
   const { setGlossary, validCourse } = useMainService()
 

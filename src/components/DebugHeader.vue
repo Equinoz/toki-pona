@@ -48,6 +48,8 @@
   }
 
   .no-debug-mode {
+    position: relative;
+    z-index: 400;
     background-color: grey;
     padding: 0.3rem;
     font-size: 1.1rem;
