@@ -74,5 +74,5 @@
 </template>
 
 <style scoped>
-  @import "@/assets/courseStyle.css";
+  @import "@/assets/style/courseStyle.css";
 </style>

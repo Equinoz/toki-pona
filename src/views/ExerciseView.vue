@@ -28,9 +28,8 @@
     </main>
 
     <footer class="buttons" :class="{ row: !singleButton }">
-      <!-- TODO Ajouter des icones -->
-      <div class="button" @click="back">retour</div>
-      <div v-if="!singleButton" class="button" @click="redirectToHome">valider</div>
+      <div class="button" @click="back"><div class="linja-pona">tan</div><div>retour</div></div>
+      <div v-if="!singleButton" class="button" @click="redirectToHome"><div class="linja-pona">pana</div><div>valider</div></div>
     </footer>
   </div>
 </template>
@@ -79,8 +78,8 @@
 </script>
 
 <style scoped>
-  @import "@/assets/debugStyle.css";
-  @import "@/assets/buttonsStyle.css";
+  @import "@/assets/style/debugStyle.css";
+  @import "@/assets/style/buttonsStyle.css";
 
   header {
     display: flex;

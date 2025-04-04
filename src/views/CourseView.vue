@@ -21,9 +21,8 @@
     <Course18 v-else />
 
     <footer class="buttons" :class="{ row: !singleButton }">
-      <!-- TODO Ajouter des icones -->
-      <div class="button" @click="back">retour</div>
-      <div v-if="!singleButton" class="button" @click="redirectToExercise">exercices</div>
+      <div class="button" @click="back"><div class="linja-pona">tan</div><div>retour</div></div>
+      <div v-if="!singleButton" class="button" @click="redirectToExercise"><div class="linja-pona">alasa</div><div>exercices</div></div>
     </footer>
   </div>
 </template>
@@ -80,5 +79,5 @@
 </script>
 
 <style scoped>
-  @import "@/assets/buttonsStyle.css";
+  @import "@/assets/style/buttonsStyle.css";
 </style>

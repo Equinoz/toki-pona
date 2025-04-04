@@ -49,7 +49,7 @@ main {
   font-weight: bold;
 }
 
-/* TODO regrouper les éléments suivants */
+/*  TODO regrouper les éléments suivants */
 
 .subject {
   color: var(--subject-color);

@@ -15,6 +15,8 @@
 
 .button {
   background-color: var(--underline-color);
+  display: flex;
+  justify-content: space-between;
   width: 35%;
   color: var(--text-color);
   font-size: var(--text-button-size);
@@ -23,4 +25,18 @@
   border-radius: var(--border-radius);
   text-align: center;
   cursor: pointer;
+}
+
+.button > div:first-child {
+  font-size: 1.3rem;
+}
+
+.button > div:last-child {
+  width: 80%;
+  text-align: center;
+}
+
+.no-icon {
+  display: flex;
+  justify-content: center;
 }

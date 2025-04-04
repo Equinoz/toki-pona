@@ -60,6 +60,13 @@
   src: url("@/../public/fonts/Ubuntu/Ubuntu-Regular.ttf");
 }
 
+@font-face {
+  font-family: linja-pona;
+  src: url('../public/fonts/LinjaPona/linja-pona-4.1.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   background: var(--background-color);
 }

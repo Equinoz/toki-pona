@@ -5,12 +5,12 @@
     <p>Mentionner jan Sonja</p>
     <p>Mentionner comforttiger</p>
     <p>Mentionner Laurent Vogel</p>
+    <p>Mentionner la license du linja pona</p>
     <p>Change logs</p>
     <p>Parler un peu du Tao</p>
 
     <footer class="buttons">
-      <!-- TODO Ajouter des icones -->
-      <div class="button" @click="back">retour</div>
+      <div class="button" @click="back"><div class="linja-pona">tan</div><div>retour</div></div>
     </footer>
   </div>
 </template>
@@ -24,5 +24,5 @@
 </script>
 
 <style scoped>
-  @import "@/assets/buttonsStyle.css";
+  @import "@/assets/style/buttonsStyle.css";
 </style>

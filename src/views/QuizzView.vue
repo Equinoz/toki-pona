@@ -1,7 +1,7 @@
 <template>
   <div class="quizz">
     <div v-if="debugMode" class="debug-datas">
-      Debug : {{ goodAnswers }}/{{ wordsRevised }}  mots, total : {{ getGlossary().length }}
+      Debug : {{ goodAnswers }}/{{ wordsRevised }} words, total : {{ getGlossary().length }}
     </div>
 
     <div v-if="!endQuizz">
@@ -29,16 +29,14 @@
       </main>
 
       <div class="buttons">
-        <!-- TODO Ajouter des icônes -->
-        <div class="button" @click="quitBeforeEnd">quitter</div>
+        <div class="button" @click="quitBeforeEnd"><div class="linja-pona">tan</div><div>quitter</div></div>
       </div>
     </div>
     <div v-else class="end-choice">
       <div class="buttons">
-        <!-- TODO Ajouter des icones -->
         <div v-if="nextWordsAmount > 0" class="button" @click="moreWords">{{ nextWordsAmount }} mots de +</div>
         <div v-else class="all-revised">tous les mots ont été révisés !</div>
-        <div class="button" @click="back">accueil</div>
+        <div class="button" @click="back"><div class="linja-pona">tan</div><div>retour</div></div>
       </div>
     </div>
   </div>
@@ -254,8 +252,8 @@
 </script>
 
 <style scoped>
-  @import "@/assets/debugStyle.css";
-  @import "@/assets/buttonsStyle.css";
+  @import "@/assets/style/debugStyle.css";
+  @import "@/assets/style/buttonsStyle.css";
 
   main {
     background-color: var(--card-color);

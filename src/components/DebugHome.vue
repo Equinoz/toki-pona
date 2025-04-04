@@ -27,9 +27,8 @@
     <div><Check status="validated"/><RouterLink to="/about">Go to About</RouterLink></div>
 
     <div class="buttons">
-      <!-- TODO Ajouter des icones -->
-      <div class="button" @click="reset">Reset</div>
-      <div class="button" @click="restore">Restore all</div>
+      <div class="button no-icon" @click="reset">Reset</div>
+      <div class="button no-icon" @click="restore">Restore all</div>
     </div>
   </div>
 </template>
@@ -65,7 +64,7 @@
 </script>
 
 <style scoped>
-  @import "@/assets/buttonsStyle.css";
+  @import "@/assets/style/buttonsStyle.css";
 
   .debug {
     display: flex;

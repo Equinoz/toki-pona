@@ -1,12 +1,11 @@
 <template>
   <div class="review">
     <div class="buttons">
-      <!-- TODO Ajouter des icones -->
-      <div class="button" @click="redirectToExercises">exercices</div>
-      <div class="button" @click="redirectToGlossary">lexique</div>
-      <div class="button" @click="redirectToQuizz">quizz</div>
-      <div class="button" @click="back">retour</div>
-      <div class="button reset" @click="confirmationBeforeReset">réinitialiser</div>
+      <div class="button" @click="redirectToExercises"><div class="linja-pona">alasa</div><div>exercices</div></div>
+      <div class="button" @click="redirectToGlossary"><div class="linja-pona">nimi</div><div>lexique</div></div>
+      <div class="button" @click="redirectToQuizz"><div class="linja-pona">seme</div><div>quizz</div></div>
+      <div class="button" @click="back"><div class="linja-pona">tan</div><div>retour</div></div>
+      <div class="button reset" @click="confirmationBeforeReset"><div class="linja-pona">ala</div><div>réinitialiser</div></div>
     </div>
   </div>
 </template>
@@ -49,7 +48,7 @@
 </script>
 
 <style scoped>
-  @import "@/assets/buttonsStyle.css";
+  @import "@/assets/style/buttonsStyle.css";
 
   .review {
     height: 70vh;

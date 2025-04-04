@@ -1,8 +1,7 @@
 <template>
   <div class="glossary">
     <header>
-      <!-- TODO icône -->
-      <div class="back" @click="back">B</div>
+      <div class="back linja-pona" @click="back">tan</div>
       <div class="inputs">
         <input v-model="searchTextTp" class="search-input" placeholder="mot en toki pona" @input="(event) => searchTp(event)">
         <input v-model="searchTextLang" class="search-input" placeholder="signification" @input="(event) => searchLang(event)">
@@ -10,7 +9,7 @@
     </header>
 
     <div v-if="debugMode" class="debug-datas">
-      Debug : actuellement {{ words.length }} mots, progrès : {{ getProgress() }}
+       Debug : currently {{ words.length }} words, progress : {{ getProgress() }}
     </div>
 
     <div ref="words-container" class="words">
@@ -104,7 +103,7 @@
 </script>
 
 <style scoped>
-  @import "@/assets/debugStyle.css";
+  @import "@/assets/style/debugStyle.css";
 
   header {
     display: flex;
@@ -122,6 +121,8 @@
     background-color: var(--underline-color);
     height: var(--large-height);
     width: var(--large-height);
+    font-size: 1.5rem;
+    font-weight: bold;
     text-align: center;
     line-height: var(--large-height);
     vertical-align: middle;

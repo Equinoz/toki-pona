@@ -3,11 +3,11 @@
   <div v-else class="graph">
     <div class="top-buttons">
       <div class="course-container course-fixed">
-        <div :class="{ unavailable: reviewIsUnavailable }" class="course" @click="goToReviews()">i</div>
+        <div :class="{ unavailable: reviewIsUnavailable }" class="course linja-pona" @click="goToReviews()">pali</div>
         <div class="course-title">révisions</div>
       </div>
       <div class="course-container course-fixed">
-        <div  class="course" @click="goToAbout()">x</div>
+        <div  class="course linja-pona" @click="goToAbout()">kama</div>
         <div class="course-title">à-propos</div>
       </div>
     </div>
@@ -15,7 +15,7 @@
       <div v-for="level, index in levels" :key="index">
         <div class="row">
           <div v-for="course in level" :key="course" class="course-container">
-            <div :class="{ unavailable: isUnavailable(course), available: isAvailable(course) }" class="course" @click="goToCourse(course)">
+            <div :class="{ unavailable: isUnavailable(course), available: isAvailable(course) }" class="course linja-pona" @click="goToCourse(course)">
               {{ courseDatas[course]?.icon }}
             </div>
             <div :class="{ fontXs: course == 4 }" class="course-title">{{ courseDatas[course]?.title }}</div>
@@ -76,26 +76,26 @@
   }
 
   const courseDatas = [
-    { icon: '1', title: 'introduction' },
-    { icon: '2', title: 'prononciation' },
-    { icon: '3', title: 'vocabulaire' },
-    { icon: '4', title: 'premières phrases' },
-    { icon: '5', title: 'animaux/plantes' },
-    { icon: '6', title: 'gens/lieux' },
-    { icon: '7', title: 'modificateurs' },
-    { icon: '8', title: 'cod' },
-    { icon: '9', title: 'négation' },
-    { icon: 'A', title: 'et/ou' },
-    { icon: 'B', title: 'pi' },
-    { icon: 'C', title: 'auxiliaires' },
-    { icon: 'D', title: 'prépositions' },
-    { icon: 'E', title: 'temps/espace' },
-    { icon: 'F', title: 'questions' },
-    { icon: 'G', title: 'couleurs' },
-    { icon: 'H', title: 'a/o' },
-    { icon: 'I', title: 'nombres' },
-    { icon: 'J', title: 'la' },
-    { icon: 'K', title: 'conclusion' },
+    { icon: 'open', title: 'introduction' },
+    { icon: 'kalama', title: 'prononciation' },
+    { icon: 'nimi', title: 'vocabulaire' },
+    { icon: 'sin', title: 'premières phrases' },
+    { icon: 'soweli', title: 'animaux/plantes' },
+    { icon: 'jan', title: 'gens/lieux' },
+    { icon: 'ante', title: 'modificateurs' },
+    { icon: 'e', title: 'cod' },
+    { icon: 'ala', title: 'négation' },
+    { icon: 'en', title: 'et/ou' },
+    { icon: 'pi', title: 'pi' },
+    { icon: 'sinpin', title: 'auxiliaires' },
+    { icon: 'poka', title: 'prépositions' },
+    { icon: 'tenpo', title: 'temps/espace' },
+    { icon: 'seme', title: 'questions' },
+    { icon: 'kule', title: 'couleurs' },
+    { icon: 'a', title: 'a/o' },
+    { icon: 'nanpa', title: 'nombres' },
+    { icon: 'la', title: 'la' },
+    { icon: 'pini', title: 'conclusion' },
   ]
 
   onMounted(() => {
@@ -118,6 +118,7 @@
     display: flex;
     justify-content: space-between;
     width: calc(100% - var(--gap));
+    max-width: var(--max-app-width);
     padding-top: calc(var(--gap-xs) * 3);
   }
 
@@ -155,6 +156,8 @@
     vertical-align: middle;
     border: 6px solid rgb(37, 182, 37);
     border-radius: 50%;
+    font-size: var(--title-size);
+    font-weight: bold;
     cursor: pointer;
   }
 
