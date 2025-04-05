@@ -24,6 +24,7 @@
     justify-content: space-around;
     align-items: center;
     height: 4rem;
+    margin-top: -2.5rem;
   }
 
   .title {
@@ -52,6 +53,7 @@
     z-index: 400;
     background-color: grey;
     padding: 0.3rem;
+    margin-top: -2.5rem;
     font-size: 1.1rem;
     text-align: center;
     cursor: pointer;

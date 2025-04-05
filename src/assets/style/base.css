@@ -62,7 +62,7 @@
 
 @font-face {
   font-family: linja-pona;
-  src: url('../public/fonts/LinjaPona/linja-pona-4.1.woff') format('woff');
+  src: url('@/../public/fonts/LinjaPona/linja-pona-4.9.otf');
   font-weight: normal;
   font-style: normal;
 }

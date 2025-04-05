@@ -8,13 +8,13 @@ Application developed with Vue.js, TypeScript and Capacitor
 
 ```sh
 git clone https://github.com/Equinoz/toki-pona.git
+cd toki-pona
 npm install
-npx cap init
 npm run build
 npx cap add android
 npx cap copy android
+npm run resources
 ```
-
 
 ### Compile and Hot-Reload for Development (on http://localhost:7777)
 

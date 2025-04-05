@@ -64,6 +64,7 @@
   const searchTp = (inputEvent: Event) => {
     const searchText = (inputEvent.target as HTMLInputElement).value
     searchTextLang.value = '';
+    searchTextTp.value = searchTextTp.value.toLowerCase();
   
     const regex = new RegExp(`^${searchText}`, 'i');
     const elt = words.value.find(elt => !!~elt.name.search(regex));

@@ -1,6 +1,7 @@
 <template>
   <div class="end">
     <h1>Page de fin</h1>
+    TODO
   </div>
 </template>
 

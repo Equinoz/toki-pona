@@ -123,7 +123,7 @@
   }
 
   .courses {
-    margin-top: calc(var(--medium-lg-height) * 4);
+    margin-top: calc(var(--medium-lg-height) * 3.4);
   }
 
   .row {
