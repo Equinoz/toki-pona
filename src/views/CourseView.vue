@@ -18,11 +18,13 @@
     <Course15 v-else-if="idCourse == '15'" />
     <Course16 v-else-if="idCourse == '16'" />
     <Course17 v-else-if="idCourse == '17'" />
-    <Course18 v-else />
+    <Course18 v-else-if="idCourse == '18'" />
+    <Course19 v-else />
 
     <footer class="buttons" :class="{ row: !singleButton }">
       <div class="button" @click="back"><div class="linja-pona">tan</div><div>retour</div></div>
-      <div v-if="!singleButton" class="button" @click="redirectToExercise"><div class="linja-pona">alasa</div><div>exercices</div></div>
+      <div v-if="!singleButton && idCourse == '9'" class="button" @click="redirectToQuizz"><div class="linja-pona">seme</div><div>quizz</div></div>
+      <div v-else-if="!singleButton" class="button" @click="redirectToExercise"><div class="linja-pona">alasa</div><div>exercices</div></div>
     </footer>
   </div>
 </template>
@@ -31,6 +33,7 @@
   import { computed } from 'vue'
   import router from '@/router'
 
+  import { useMainStore } from '@/stores/mainStore'
   import { useMainService } from '@/services/mainService'
 
   import Course0 from '@/components/Course0.vue'
@@ -52,7 +55,9 @@
   import Course16 from '@/components/Course16.vue'
   import Course17 from '@/components/Course17.vue'
   import Course18 from '@/components/Course18.vue'
+  import Course19 from '@/components/Course19.vue'
 
+  const { allowGlyphs, switchGlyphsStatus } = useMainStore()
   const { setGlossary, validCourse } = useMainService()
 
   const props = defineProps({
@@ -75,6 +80,12 @@
     }
 
     router.push(`/exercise/${props.idCourse}`)
+  }
+
+  const redirectToQuizz = () => {
+    switchGlyphsStatus()
+    allowGlyphs()
+    router.push('/quizz/glyphs')
   }
 </script>
 

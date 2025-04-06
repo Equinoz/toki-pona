@@ -14,7 +14,7 @@
       <h2>l'alphabet</h2>
       <p class="content">l'alphabet du toki pona se compose de 5 voyelles (a, e, i, o ,u) et de 9 consonnes (j, p, t, k, m, n, s, l, w). les mots ne prennent pas de majuscules, même en début de phrase.</p>
       <p class="content">la ponctuation s'emploie en fin de phrase : (.), (!), (?), (,) et (:). la virgule et les deux-points s'emploient dans des cas précis que l'on verra dans les leçons suivantes.</p>
-      <p class="content">pour écrire en toki pona on peut utiliser autre chose que l'alphabet latin : un système de hiéroglyphes nommé "sitelen pona". à chaque mot correspond un glyphe. les sitelen pona feront peut-être l'objet d'une mise à jour ultérieure de l'appli.</p>
+      <p class="content">pour écrire en toki pona on peut utiliser autre chose que l'alphabet latin : un système de hiéroglyphes nommé "sitelen pona". à chacun des mots correspond un glyphe.</p>
       <h2>ce qu'on ne peut pas dire en toki pona</h2>
       <p class="content">clairement, on ne peut pas utiliser le toki pona pour orchestrer une opération de neuro-chirurgie ! mais... en français non plus. en réalité dans ce genre de situations particulièrement techniques, une grande place est donnée au jargon. toutes les langues ont leurs limites en vérité.</p>
       <p class="content">bien sûr, le toki pona est encore plus limité que les autres langues. il n'est pas possible d'écrire de la documentation technique, de décrire des plans architecturaux, de traduire un texte juridique... certaines choses ne sont pas impossibles, mais rendues particulièrement compliquées.</p>

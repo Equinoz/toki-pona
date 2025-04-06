@@ -29,6 +29,7 @@ export function useMainService() {
     }
 
     if (coursesExercises.length == 0) coursesExercises = getProgress()
+    if (coursesExercises.length == 1 && coursesExercises[0] == 9) coursesExercises = [8]
 
     return exercises.filter((x: Exercise) => {
       if (x.idsCourse.length !== coursesExercises.length) return false

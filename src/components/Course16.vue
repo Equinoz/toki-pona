@@ -1,7 +1,7 @@
 <template>
   <div class="course-details">
     <header>
-      <h1>a / o</h1>
+      <h1>couleurs</h1>
     </header>
     
     <main>

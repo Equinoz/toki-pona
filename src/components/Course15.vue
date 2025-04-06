@@ -1,7 +1,7 @@
 <template>
   <div class="course-details">
     <header>
-      <h1>couleurs</h1>
+      <h1>questions</h1>
     </header>
     
     <main>

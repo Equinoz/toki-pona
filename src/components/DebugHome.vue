@@ -9,17 +9,18 @@
     <div><Check :status="statusCourses[6]"/><RouterLink to="/course/6">Go to Modificateurs</RouterLink></div>
     <div><Check :status="statusCourses[7]"/><RouterLink to="/course/7">Go to COD</RouterLink></div>
     <div><Check :status="statusCourses[8]"/><RouterLink to="/course/8">Go to Négation</RouterLink></div>
-    <div><Check :status="statusCourses[9]"/><RouterLink to="/course/9">Go to Et/Ou</RouterLink></div>
-    <div><Check :status="statusCourses[10]"/><RouterLink to="/course/10">Go to Particule pi</RouterLink></div>
-    <div><Check :status="statusCourses[11]"/><RouterLink to="/course/11">Go to Auxiliaires</RouterLink></div>
-    <div><Check :status="statusCourses[12]"/><RouterLink to="/course/12">Go to Prépositions</RouterLink></div>
-    <div><Check :status="statusCourses[13]"/><RouterLink to="/course/13">Go to Temps/Espace</RouterLink></div>
-    <div><Check :status="statusCourses[14]"/><RouterLink to="/course/14">Go to Questions</RouterLink></div>
-    <div><Check :status="statusCourses[15]"/><RouterLink to="/course/15">Go to Couleurs</RouterLink></div>
-    <div><Check :status="statusCourses[16]"/><RouterLink to="/course/16">Go to A / O</RouterLink></div>
-    <div><Check :status="statusCourses[17]"/><RouterLink to="/course/17">Go to Nombres</RouterLink></div>
-    <div><Check :status="statusCourses[18]"/><RouterLink to="/course/18">Go to La</RouterLink></div>
-    <div><Check :status="statusCourses[19]"/><RouterLink to="/end">Go to End</RouterLink></div>
+    <div><Check :status="statusCourses[9]"/><RouterLink to="/course/9">Go to Glyphes</RouterLink></div>
+    <div><Check :status="statusCourses[10]"/><RouterLink to="/course/10">Go to Et/Ou</RouterLink></div>
+    <div><Check :status="statusCourses[11]"/><RouterLink to="/course/11">Go to Particule pi</RouterLink></div>
+    <div><Check :status="statusCourses[12]"/><RouterLink to="/course/12">Go to Auxiliaires</RouterLink></div>
+    <div><Check :status="statusCourses[13]"/><RouterLink to="/course/13">Go to Prépositions</RouterLink></div>
+    <div><Check :status="statusCourses[14]"/><RouterLink to="/course/14">Go to Temps/Espace</RouterLink></div>
+    <div><Check :status="statusCourses[15]"/><RouterLink to="/course/15">Go to Questions</RouterLink></div>
+    <div><Check :status="statusCourses[16]"/><RouterLink to="/course/16">Go to Couleurs</RouterLink></div>
+    <div><Check :status="statusCourses[17]"/><RouterLink to="/course/17">Go to A / O</RouterLink></div>
+    <div><Check :status="statusCourses[18]"/><RouterLink to="/course/18">Go to Nombres</RouterLink></div>
+    <div><Check :status="statusCourses[19]"/><RouterLink to="/course/19">Go to La</RouterLink></div>
+    <div><Check :status="statusCourses[20]"/><RouterLink to="/end">Go to End</RouterLink></div>
     <div><Check :status="reviewStatus"/><RouterLink to="/review">Go to Review</RouterLink></div>
     <div><Check :status="exercisesStatus"/><RouterLink to="/exercise">Go to Exercises</RouterLink></div>
     <div><Check :status="glossaryStatus"/><RouterLink to="/glossary">Go to Glossary</RouterLink></div>

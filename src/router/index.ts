@@ -11,6 +11,7 @@ enum Routes {
   EXERCISE_BY_ID = '/exercise/:idCourse',
   GLOSSARY = '/glossary',
   QUIZZ = '/quizz',
+  QUIZZ_GLYPH = '/quizz/glyphs',
 }
 
 const router = createRouter({
@@ -62,6 +63,12 @@ const router = createRouter({
       path: Routes.QUIZZ,
       name: 'quizz',
       component: () => import('../views/QuizzView.vue'),
+    },
+    {
+      path: Routes.QUIZZ_GLYPH,
+      name: 'quizzGlyphs',
+      component: () => import('../views/QuizzView.vue'),
+      props: { glyphs: true }
     },
   ],
   scrollBehavior () {

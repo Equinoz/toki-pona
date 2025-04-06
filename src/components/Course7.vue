@@ -7,16 +7,16 @@
     <main>
       <h2>vocabulaire</h2>
       <p class="content">
-        <span class="new-word">telo</span> eau, liquide, fluide, substance mouillée, boisson<br />
-        <span class="new-word">seli</span> feu, chaleur, élément de cuisson, réaction chimique, chaud<br />
-        <span class="new-word">kiwen</span> objet dur, métal, pierre, caillou, dur comme la pierre<br />
-        <span class="new-word">lawa</span> tête, dominer, diriger, guider, mener, posséder, régler, principal<br />
-        <span class="new-word">sitelen</span> image, représentation, symbole, marque, écriture, dessiner, écrire<br />
-        <span class="new-word">pali</span> acte, activité, travail, faire, fabriquer, travailler, construire, préparer, agir sur<br />
-        <span class="new-word">kute</span> oreille, entendre, écouter, obéir, faire attention à
+        <span class="linja-pona new-glyph">telo</span><span class="new-word">telo</span> eau, liquide, fluide, substance mouillée, boisson<br />
+        <span class="linja-pona new-glyph">seli</span><span class="new-word">seli</span> feu, chaleur, élément de cuisson, réaction chimique, chaud<br />
+        <span class="linja-pona new-glyph">kiwen</span><span class="new-word">kiwen</span> objet dur, métal, pierre, caillou, dur comme la pierre<br />
+        <span class="linja-pona new-glyph">lawa</span><span class="new-word">lawa</span> tête, dominer, diriger, guider, mener, posséder, régler, principal<br />
+        <span class="linja-pona new-glyph">sitelen</span><span class="new-word">sitelen</span> image, représentation, symbole, marque, écriture, dessiner, écrire<br />
+        <span class="linja-pona new-glyph">pali</span><span class="new-word">pali</span> acte, activité, travail, faire, fabriquer, travailler, construire, préparer, agir sur<br />
+        <span class="linja-pona new-glyph">kute</span><span class="new-word">kute</span> oreille, entendre, écouter, obéir, faire attention à
       </p>
       <h3>particule</h3>
-      <p class="content"><span class="new-word">e</span> particule (introduit le complément d'objet direct)<br /></p>
+      <p class="content"><span class="linja-pona new-glyph">e</span><span class="new-word">e</span> particule (introduit le complément d'objet direct)<br /></p>
       <h3>notes</h3>
       <div class="content">
         <span class="new-word">pali</span> ne correspond pas à tous les usages de "faire" en français. lorsqu'on utilise un mot comme verbe, l'action de faire est sous-entendue.

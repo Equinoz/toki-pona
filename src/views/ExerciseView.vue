@@ -22,7 +22,7 @@
         </div>
       </div>
       <div v-if="exercises.length == 0 && debugMode">
-        Empty list, probably a navigation problem<br />
+        Empty list, probably a navigation problem in debug mode<br />
         Please reset progress and try again
       </div>
     </main>

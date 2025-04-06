@@ -7,17 +7,17 @@
     <main>
       <h2>vocabulaire</h2>
       <p class="content">
-        <span class="new-word">mi</span> pronom de la première personne (je, moi, nous)<br />
-        <span class="new-word">sina</span> pronom de la seconde personne (tu, toi, vous)<br />
-        <span class="new-word">ona</span> pronom de la troisième personne (il.s, elle.s, eux)<br />
-        <span class="new-word">jan</span> être humain, personne, quelqu'un<br />
-        <span class="new-word">ijo</span> chose, quelque chose, phénomène, objet, matière, machin, un être<br />
-        <span class="new-word">suli</span> grand, lourd, gros, long, important, adulte<br />
-        <span class="new-word">lili</span> petit, un peu, jeune<br />
-        <span class="new-word">moku</span> nourriture, manger, boire, consommer, avaler
+        <span class="linja-pona new-glyph">mi</span><span class="new-word">mi</span> pronom de la première personne (je, moi, nous)<br />
+        <span class="linja-pona new-glyph">sina</span><span class="new-word">sina</span> pronom de la seconde personne (tu, toi, vous)<br />
+        <span class="linja-pona new-glyph">ona</span><span class="new-word">ona</span> pronom de la troisième personne (il.s, elle.s, eux)<br />
+        <span class="linja-pona new-glyph">jan</span><span class="new-word">jan</span> être humain, personne, quelqu'un<br />
+        <span class="linja-pona new-glyph">ijo</span><span class="new-word">ijo</span> chose, quelque chose, phénomène, objet, matière, machin, un être<br />
+        <span class="linja-pona new-glyph">suli</span><span class="new-word">suli</span> grand, lourd, gros, long, important, adulte<br />
+        <span class="linja-pona new-glyph">lili</span><span class="new-word">lili</span> petit, un peu, jeune<br />
+        <span class="linja-pona new-glyph">moku</span><span class="new-word">moku</span> nourriture, manger, boire, consommer, avaler
       </p>
       <h3>particule</h3>
-      <p class="content"><span class="new-word">li</span> particule (sépare le sujet du prédicat)<br /></p>
+      <p class="content"><span class="linja-pona new-glyph">li</span><span class="new-word">li</span> particule (sépare le sujet du prédicat)<br /></p>
       <h2>leçon</h2>
       <h3>structure de base</h3>
       <div class="content">

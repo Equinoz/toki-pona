@@ -5,13 +5,19 @@
     </div>
 
     <div v-if="!endQuizz">
+      <div v-if="isGlyphsAvailable" class="switch-container">
+        <div class="switch" @click="switchDisplay">
+          <div :class="{ active: !isGlyphsActivated}">a b c ...</div>
+          <div :class="{ active: isGlyphsActivated}"><span class="linja-pona switch-icon">sitelen</span></div>
+        </div>
+      </div>
       <main>
         <div v-for="value, index in leftCol" :key="value.value" class="row">
           <div
             :class="{ hidden: !leftCol[index].active, selected: leftCol[index].selected, error: leftCol[index].error, notDisplayed: !leftCol[index].displayed }"
             @click="selectLeft(index)"
           >
-            {{ leftCol[index].value }}
+            <span :class="{ 'linja-pona': isGlyphsActivated, glyphs: isGlyphsActivated }">{{ leftCol[index].value }}</span>
           </div>
           <div
             :class="{
@@ -36,7 +42,8 @@
       <div class="buttons">
         <div v-if="nextWordsAmount > 0" class="button" @click="moreWords">{{ nextWordsAmount }} mots de +</div>
         <div v-else class="all-revised">tous les mots ont été révisés !</div>
-        <div class="button" @click="back"><div class="linja-pona">tan</div><div>retour</div></div>
+        <div v-if="glyphs" class="button" @click="validate"><div class="linja-pona">pana</div><div>valider</div></div>
+        <div v-else class="button" @click="back"><div class="linja-pona">tan</div><div>retour</div></div>
       </div>
     </div>
   </div>
@@ -53,10 +60,13 @@
   import { useModalStore } from '@/stores/modalStore'
   import { useDebugStore } from '@/stores/debugStore'
   import { useMainStore } from '@/stores/mainStore'
+  import { useMainService } from '@/services/mainService'
 
   const { openModal } = useModalStore()
   const { debugMode } = storeToRefs(useDebugStore())
-  const { getGlossary } = useMainStore()
+  const { isGlyphsAvailable, isGlyphsActivated } = storeToRefs(useMainStore())
+  const { getGlossary, switchGlyphsStatus } = useMainStore()
+  const { validCourse } = useMainService()
 
   interface Element {
     active: boolean
@@ -67,6 +77,13 @@
     error: boolean
     displayed: boolean
   }
+
+  defineProps({
+    glyphs: {
+      type: Boolean,
+      default: false
+    }
+  })
 
   let availableWords = [] as Word[]
   let wordsToGuess = [] as Word[]
@@ -191,6 +208,12 @@
     router.go(-1)
   }
 
+  // quizz during course
+  const validate = () => {
+    validCourse(9)
+    router.push('/')
+  }
+
   function shuffle(arr: Array<unknown>) {
     for (let i = arr.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1))
@@ -244,6 +267,10 @@
     endQuizz.value = false
   }
 
+  const switchDisplay = () => {
+    switchGlyphsStatus()
+  }
+
   onMounted(() => {
     availableWords = [...getGlossary()]
     shuffle(availableWords)
@@ -254,6 +281,46 @@
 <style scoped>
   @import "@/assets/style/debugStyle.css";
   @import "@/assets/style/buttonsStyle.css";
+
+  .switch-container {
+    display: flex;
+    justify-content: center;
+    padding-top: var(--gap-xs);
+    color: var(--predicate-color);
+    font-size: var(--text-size);
+  }
+  
+  .switch {
+    display: flex;
+    border: var(--underline-color) 3px solid;
+    border-radius: var(--switch-border-radius);
+    cursor: pointer;
+  }
+
+  .switch > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: var(--medium-height);
+    width: calc(var(--medium-lg-height) * 2);
+  }
+
+  .switch > div:first-child {
+    border-radius: calc(var(--switch-border-radius) / 5) 0 0 calc(var(--switch-border-radius) / 5);
+  }
+
+  .switch > div:last-child {
+    border-radius: 0 calc(var(--switch-border-radius) / 5) calc(var(--switch-border-radius) / 5) 0;
+  }
+
+  .switch-icon {
+    font-size: var(--subtitle-size);
+  }
+
+  .active {
+    background-color: var(--underline-color);
+    color: var(--background-color);
+  }
 
   main {
     background-color: var(--card-color);
@@ -291,6 +358,10 @@
 
   .row > div:first-child {
     font-size: var(--glossary-headings-size);
+  }
+
+  .glyphs {
+    font-size: var(--subtitle-size);
   }
 
   .fontXs {

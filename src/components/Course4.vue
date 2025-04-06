@@ -7,17 +7,17 @@
     <main>
       <h2>vocabulaire</h2>
       <p class="content">
-        <span class="new-word">soweli</span> animal, mammifère terrestre<br />
-        <span class="new-word">akesi</span> animal non-mignon, reptile, batracien, amphibien<br />
-        <span class="new-word">pipi</span> insecte, araignée, fourmi<br />
-        <span class="new-word">waso</span> oiseau, créature volante, animal ailé<br />
-        <span class="new-word">kala</span> poisson, animal marin<br />
-        <span class="new-word">kasi</span> plante, végétation, herbe, feuille<br />
-        <span class="new-word">kili</span> fruit, légume, champignon<br />
-        <span class="new-word">wawa</span> énergie, puissance, fort, puissant, sûr, fiable, confiant, énergique, intense
+        <span class="linja-pona new-glyph">soweli</span><span class="new-word">soweli</span> animal, mammifère terrestre<br />
+        <span class="linja-pona new-glyph">akesi</span><span class="new-word">akesi</span> animal non-mignon, reptile, batracien, amphibien<br />
+        <span class="linja-pona new-glyph">pipi</span><span class="new-word">pipi</span> insecte, araignée, fourmi<br />
+        <span class="linja-pona new-glyph">waso</span><span class="new-word">waso</span> oiseau, créature volante, animal ailé<br />
+        <span class="linja-pona new-glyph">kala</span><span class="new-word">kala</span> poisson, animal marin<br />
+        <span class="linja-pona new-glyph">kasi</span><span class="new-word">kasi</span> plante, végétation, herbe, feuille<br />
+        <span class="linja-pona new-glyph">kili</span><span class="new-word">kili</span> fruit, légume, champignon<br />
+        <span class="linja-pona new-glyph">wawa</span><span class="new-word">wawa</span> énergie, puissance, fort, puissant, sûr, fiable, confiant, énergique, intense
       </p>
       <h3>particule</h3>
-      <p class="content"><span class="new-word">mu</span> particule (cri d'animal, communication animale), miaou, meuh, ouah<br /></p>
+      <p class="content"><span class="linja-pona new-glyph">mu</span><span class="new-word">mu</span> particule (cri d'animal, communication animale), miaou, meuh, ouah<br /></p>
       <h2>leçon</h2>
       <h3>animaux</h3>
       <div class="content">

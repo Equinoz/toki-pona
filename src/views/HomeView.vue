@@ -85,6 +85,7 @@
     { icon: 'ante', title: 'modificateurs' },
     { icon: 'e', title: 'cod' },
     { icon: 'ala', title: 'négation' },
+    { icon: 'sitelen', title: 'glyphes' },
     { icon: 'en', title: 'et/ou' },
     { icon: 'pi', title: 'pi' },
     { icon: 'sinpin', title: 'auxiliaires' },

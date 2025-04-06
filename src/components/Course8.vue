@@ -7,14 +7,14 @@
     <main>
       <h2>vocabulaire</h2>
       <p class="content">
-        <span class="new-word">ala</span> aucun, zéro, rien, non, ne, pas<br />
-        <span class="new-word">ale/ali</span> tout, abondance, la vie, l'univers, tous, abondants, innombrables, nombre 100<br />
-        <span class="new-word">kon</span> air, atmosphère, vent, souffle, essence, esprit, réalité caché, agent invisible<br />
-        <span class="new-word">lipu</span> objet plat, feuille, page, livre, document, carte, papier, site web<br />
-        <span class="new-word">jo</span> possession, avoir, contenir, porter, tenir<br />
-        <span class="new-word">alasa</span> chasser, cueillir, fouiller, chercher, essayer, tenter<br />
-        <span class="new-word">lukin</span> vision, regard, regarder, voir, examiner, observer, lire, surveiller, chercher à, essayer de<br />
-        <span class="new-word">taso</span> mais, cependant, seulement
+        <span class="linja-pona new-glyph">ala</span><span class="new-word">ala</span> aucun, zéro, rien, non, ne, pas<br />
+        <span class="linja-pona new-glyph">ale</span><span class="new-word">ale/ali</span> tout, abondance, la vie, l'univers, tous, abondants, innombrables, nombre 100<br />
+        <span class="linja-pona new-glyph">kon</span><span class="new-word">kon</span> air, atmosphère, vent, souffle, essence, esprit, réalité caché, agent invisible<br />
+        <span class="linja-pona new-glyph">lipu</span><span class="new-word">lipu</span> objet plat, feuille, page, livre, document, carte, papier, site web<br />
+        <span class="linja-pona new-glyph">jo</span><span class="new-word">jo</span> possession, avoir, contenir, porter, tenir<br />
+        <span class="linja-pona new-glyph">alasa</span><span class="new-word">alasa</span> chasser, cueillir, fouiller, chercher, essayer, tenter<br />
+        <span class="linja-pona new-glyph">lukin</span><span class="new-word">lukin</span> vision, regard, regarder, voir, examiner, observer, lire, surveiller, chercher à, essayer de<br />
+        <span class="linja-pona new-glyph">taso</span><span class="new-word">taso</span> mais, cependant, seulement
       </p>
       <h2>leçon</h2>
       <h3>négation</h3>

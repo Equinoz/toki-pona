@@ -1,57 +1,52 @@
 <template>
   <div class="course-details">
     <header>
-      <h1>auxiliaires</h1>
+      <h1>pi</h1>
     </header>
     
     <main>
       <h2>vocabulaire</h2>
       <p class="content">
-        <span class="new-word">lape</span> repos, dormir, dormant, se reposant<br />
-        <span class="new-word">unpa</span> sexe, sexuel, avoir des rapports sexuels avec
+        <span class="linja-pona new-glyph">pilin</span><span class="new-word">pilin</span> coeur (physique et psychologique), sentir, penser, qui ressent<br />
+        <span class="linja-pona new-glyph">sijelo</span><span class="new-word">sijelo</span> corps, état physique, torse<br />
+        <span class="linja-pona new-glyph">monsi</span><span class="new-word">monsi</span> fesses, dos, derrière, arrière<br />
+        <span class="linja-pona new-glyph">insa</span><span class="new-word">insa</span> centre, contenu, intérieur, estomac, viscères, dedans, entre<br />
+        <span class="linja-pona new-glyph">poka</span><span class="new-word">poka</span> côté, proximité, hanche, proche, à côté, auprès, en compagnie de<br />
+        <span class="linja-pona new-glyph">noka</span><span class="new-word">noka</span> partie inférieure, organe de locomotion, pied, jambe, bas, dessous<br />
+        <span class="linja-pona new-glyph">selo</span><span class="new-word">selo</span> forme, couche extérieure, écorce, pelure, coquille, limite, surface externe, peau<br />
+        <span class="linja-pona new-glyph">ko</span><span class="new-word">ko</span> argile, pâte, poudre, substance collante, semi-solide
       </p>
-      <h3>auxiliaires</h3>
-      <p class="content">
-        <span class="new-word">kama</span> futur, qui arrive, qui vient, venir, advenir, devenir, arriver à, réussir à, être la cause de, venu<br />
-        <span class="new-word">wile</span> désir, devoir, vouloir, avoir besoin de<br />
-        <span class="new-word">awen</span> attendre, rester, demeurer, continuer à, resté, protégé, gardé, conservé, qui attend, qui persiste<br />
-        <span class="new-word">sona</span> connaissance, sagesse, savoir, connaître<br />
-        <span class="new-word">ken</span> possibilité, pouvoir, possible, être capable de
-      </p>
-      <h3>note concernant lukin</h3>
-      <p class="content"><span class="new-word">lukin</span>, qui a déjà été vu, sert également d'auxiliaire, il n'est donc pas considéré comme un nouveau mot ici.</p>
+      <h3>particule</h3>
+      <p class="content"><span class="linja-pona new-glyph">pi</span><span class="new-word">pi</span> particule "de"<br /></p>
+      <h3>définition de groupe nominal</h3>
+      <div class="content">dans ce cours, un groupe nominal désigne un groupe qui réunit un mot principal + éventuellement des modificateurs, comme <span class="new-word">jan</span> ou <span class="new-word">ilo moku</span>.</div>
       <h2>leçon</h2>
+      <h3>la particule pi</h3>
       <div class="content">
-        généralement, après la particule <span class="new-word">li</span> on trouve un mot utilisé comme verbe principal. l'auxiliaire est une sorte de pré-verbe, ajouté avant le verbe principal.
+        lorsqu'un groupe nominal contient deux mots, le second modifie le premier. Si on en ajoute un troisième, c'est la somme de tous les mots précédents qui est modifiée.<br />
+        la particule <span class="new-word">pi</span> sert à introduire un deuxième groupe nominal qui décrit le premier groupe nominal
         <p class="example">
-          <span class="subject">ma tomo</span> li <span class="auxiliary">kama</span> <span class="predicate">suli</span><br />
+          <span class="subject">mama mama olin mi</span><br />
           <span class="tab"></span>
-          <span class="subject">la ville</span> <span class="auxiliary">devient</span> <span class="predicate">grande</span>
-        </p>
-        certains mots sont à la fois des verbes et des auxiliaires et peuvent avoir un sens un peu différent dans l'un ou l'autre cas.
-        <p class="example">
-          <span class="subject">mije wawa</span> li <span class="auxiliary">lukin</span> <span class="predicate">jo</span> e <span class="object">meli pona</span><br />
+          <span class="subject">mes grands-parents adorés</span><br />
+          <span class="subject">mama mama pi olin mi</span><br />
           <span class="tab"></span>
-          <span class="subject">l'homme fort</span> <span class="predicate">cherche</span> <span class="object">une gentille femme</span>
+          <span class="subject">les grands-parents de mon conjoint</span>
         </p>
-        les auxiliaires ne peuvent être modifiés qu'avec le mot <span class="new-word">ala</span>, pour les mettre à la forme négative.
-        <p class="example">
-          <span class="subject">jan</span> li <span class="auxiliary">wile ala</span> <span class="predicate">moku</span> e <span class="object">pipi</span><br />
-          <span class="tab"></span>
-          <span class="subject">les gens</span> <span class="auxiliary">ne veulent pas</span> <span class="predicate">manger</span> <span class="object">d'insectes</span>
-        </p>
+        il ne faut pas utiliser cette particule entre un mot et un seul qualificatif. on ne dit pas "<span class="new-word">jan pi wawa</span>" mais bien "<span class="new-word">jan wawa</span>".<br />
+        il ne faut pas non plus chercher une traduction littérale à <span class="new-word">pi</span>. le traduire par "de" aide à en saisir le sens mais n'est pas exact, il n'y a pas d'équivalent réel en français.
       </div>
       <h3>exemples</h3>
       <div class="content">
         <p class="example">
-          <span class="subject">mi</span> <span class="auxiliary">lukin</span> <span class="predicate">lukin</span> e <span class="object">waso suli</span><br />
+          <span class="subject">mi</span> <span class="predicate">toki</span> e <span class="object">ijo mute pi pona mute</span><br />
           <span class="tab"></span>
-          <span class="subject">j'</span><span class="auxiliary">essaye de</span> <span class="predicate">voir</span> <span class="object">le grand oiseau</span>
+          <span class="subject">je</span> <span class="predicate">parle</span> de <span class="object">beaucoup de choses qui sont très bonnes</span>
         </p>
         <p class="example">
-          <span class="subject">mi</span> <span class="auxiliary">wile</span> <span class="predicate">unpa</span> e <span class="object">ona</span><br />
+          <span class="subject">kulupu pi toki pona</span><br />
           <span class="tab"></span>
-          <span class="subject">je</span> <span class="auxiliary">veux</span> <span class="predicate">faire l'amour avec</span> <span class="object">iel</span>
+          <span class="subject">la communauté du toki pona</span>
         </p>
       </div>
     </main>

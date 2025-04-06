@@ -13,6 +13,8 @@ interface Store {
   progress: number[]
   words: Word[]
   status: CourseStatus[]
+  glyphsAvailable: boolean
+  glyphsActivated: boolean
 }
 
 export const useMainStore = defineStore('main', () => {
@@ -21,9 +23,9 @@ export const useMainStore = defineStore('main', () => {
   })
 
   function initState() {
-    const status = Array(20).fill('unavailable')
+    const status = Array(21).fill('unavailable')
     status[0] = 'available'
-    state.value = { level: 0, progress: [], words: [], status }
+    state.value = { level: 0, progress: [], words: [], status, glyphsAvailable: false, glyphsActivated: false }
   }
 
   const isGlossaryAvailable = computed(() => state.value ? state.value.words.length > 0 : false)
@@ -32,8 +34,10 @@ export const useMainStore = defineStore('main', () => {
      if (!state.value) {
       initState()
      }
-     return state.value ? state.value.status : Array(20).fill('validated')
+     return state.value ? state.value.status : Array(21).fill('validated')
   })
+  const isGlyphsAvailable = computed(() => state.value?.glyphsAvailable ?? true)
+  const isGlyphsActivated = computed(() => state.value?.glyphsActivated ?? true)
 
   function getLevel() {
     return state.value?.level ?? 0
@@ -93,6 +97,24 @@ export const useMainStore = defineStore('main', () => {
     }
   }
 
+  function allowGlyphs() {
+    if (!state.value) {
+      initState()
+    }
+    if (state.value) {
+      state.value.glyphsAvailable = true
+    }
+  }
+
+  function switchGlyphsStatus() {
+    if (!state.value) {
+      initState()
+    }
+    if (state.value) {
+      state.value.glyphsActivated = !state.value?.glyphsActivated
+    }
+  }
+
   function reset() {
     state.value = null
   }
@@ -101,6 +123,8 @@ export const useMainStore = defineStore('main', () => {
     isGlossaryAvailable,
     isExercisesAvailable,
     statusCourses,
+    isGlyphsAvailable,
+    isGlyphsActivated,
     getLevel,
     getProgress,
     getGlossary,
@@ -109,6 +133,8 @@ export const useMainStore = defineStore('main', () => {
     setCurrentlyProgress,
     setGlossaryByProgress,
     setStatusCourses,
+    allowGlyphs,
+    switchGlyphsStatus,
     reset
   }
 })

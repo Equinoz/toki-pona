@@ -7,14 +7,14 @@
     <main>
       <h2>vocabulaire</h2>
       <p class="content">
-        <span class="new-word">pona</span> réparer, bon, positif, utile, paisible, simple, sympa<br />
-        <span class="new-word">ike</span> mal, mauvais, négatif, compliqué, superflu, non pertinent<br />
-        <span class="new-word">poki</span> sac, verre, coupe, boîte, bol, récipient, tasse, placard, tiroir, vase<br />
-        <span class="new-word">pakala</span> accident, détruire, brisé, cassé, abîmé, bâclé, gâché<br />
-        <span class="new-word">utala</span> guerre, bataille, combattre, se battre contre, lutter contre<br />
-        <span class="new-word">palisa</span> objet long dur et/ou pointu, bâton<br />
-        <span class="new-word">mute</span> quantité, beaucoup de, plusieurs, plus de, nombreux, très<br />
-        <span class="new-word">ni</span> ce, cette, ces, ceci, cela
+        <span class="linja-pona new-glyph">pona</span><span class="new-word">pona</span> réparer, bon, positif, utile, paisible, simple, sympa<br />
+        <span class="linja-pona new-glyph">ike</span><span class="new-word">ike</span> mal, mauvais, négatif, compliqué, superflu, non pertinent<br />
+        <span class="linja-pona new-glyph">poki</span><span class="new-word">poki</span> sac, verre, coupe, boîte, bol, récipient, tasse, placard, tiroir, vase<br />
+        <span class="linja-pona new-glyph">pakala</span><span class="new-word">pakala</span> accident, détruire, brisé, cassé, abîmé, bâclé, gâché<br />
+        <span class="linja-pona new-glyph">utala</span><span class="new-word">utala</span> guerre, bataille, combattre, se battre contre, lutter contre<br />
+        <span class="linja-pona new-glyph">palisa</span><span class="new-word">palisa</span> objet long dur et/ou pointu, bâton<br />
+        <span class="linja-pona new-glyph">mute</span><span class="new-word">mute</span> quantité, beaucoup de, plusieurs, plus de, nombreux, très<br />
+        <span class="linja-pona new-glyph">ni</span><span class="new-word">ni</span> ce, cette, ces, ceci, cela
       </p>
       <h2>leçon</h2>
       <h3>modificateurs</h3>

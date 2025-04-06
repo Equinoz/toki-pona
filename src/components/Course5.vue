@@ -7,15 +7,15 @@
     <main>
       <h2>vocabulaire</h2>
       <p class="content">
-        <span class="new-word">kulupu</span> groupe, communauté, société, nation, tribu, compagnie<br />
-        <span class="new-word">mama</span> parent, père, mère, ancêtre, créateur, celui ou celle qui prend soin<br />
-        <span class="new-word">meli</span> femme, épouse, petite amie, femelle, féminin<br />
-        <span class="new-word">mije</span> homme, mari, petit ami, mâle, masculin<br />
-        <span class="new-word">tonsi</span> non-binaire, non-conforme aux normes de genre, transgenre<br />
-        <span class="new-word">olin</span> amour, affection, aimer, respecter, compatir, montrer de l'affection pour<br />
-        <span class="new-word">ma</span> terre, sol, monde, pays, région, territoire, lieu en plein air<br />
-        <span class="new-word">tomo</span> construction, habitation, espace intérieur, lieu couvert, maison, bâtiment, édifice, pièce, chambre, demeure, chez soi<br />
-        <span class="new-word">toki</span> langage, communiquer, dire, parler, penser<br />
+        <span class="linja-pona new-glyph">kulupu</span><span class="new-word">kulupu</span> groupe, communauté, société, nation, tribu, compagnie<br />
+        <span class="linja-pona new-glyph">mama</span><span class="new-word">mama</span> parent, père, mère, ancêtre, créateur, celui ou celle qui prend soin<br />
+        <span class="linja-pona new-glyph">meli</span><span class="new-word">meli</span> femme, épouse, petite amie, femelle, féminin<br />
+        <span class="linja-pona new-glyph">mije</span><span class="new-word">mije</span> homme, mari, petit ami, mâle, masculin<br />
+        <span class="linja-pona new-glyph">tonsi</span><span class="new-word">tonsi</span> non-binaire, non-conforme aux normes de genre, transgenre<br />
+        <span class="linja-pona new-glyph">olin</span><span class="new-word">olin</span> amour, affection, aimer, respecter, compatir, montrer de l'affection pour<br />
+        <span class="linja-pona new-glyph">ma</span><span class="new-word">ma</span> terre, sol, monde, pays, région, territoire, lieu en plein air<br />
+        <span class="linja-pona new-glyph">tomo</span><span class="new-word">tomo</span> construction, habitation, espace intérieur, lieu couvert, maison, bâtiment, édifice, pièce, chambre, demeure, chez soi<br />
+        <span class="linja-pona new-glyph">toki</span><span class="new-word">toki</span> langage, communiquer, dire, parler, penser<br />
       </p>
       <h2>leçon</h2>
       <h3>noms</h3>
