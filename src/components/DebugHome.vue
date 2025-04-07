@@ -29,7 +29,7 @@
 
     <div class="buttons">
       <div class="button no-icon" @click="reset">Reset</div>
-      <div class="button no-icon" @click="restore">Restore all</div>
+      <div class="button no-icon" @click="restoreAll">Restore all</div>
     </div>
   </div>
 </template>
@@ -45,7 +45,7 @@
   const mainStore = useMainStore()
 
   const { isGlossaryAvailable, isExercisesAvailable, statusCourses } = storeToRefs(mainStore)
-  const { reset } = mainStore
+  const { reset, restoreAll } = mainStore
 
   const reviewStatus = computed(() => {
     return isGlossaryAvailable.value || isExercisesAvailable.value ? 'validated' : 'unavailable' 
@@ -58,10 +58,6 @@
   const exercisesStatus = computed(() => {
     return isExercisesAvailable.value ? 'validated' : 'unavailable' 
   })
-
-  const restore = () => {
-    console.log("TODO restoreAll")
-  }
 </script>
 
 <style scoped>

@@ -71,7 +71,11 @@
 
   const goToCourse = (index: number) => {
     if (statusCourses.value[index] != 'unavailable') {
-      router.push(`/course/${index}`)
+      if (index != 20) {
+        router.push(`/course/${index}`)
+      } else {
+        router.push('/exercise/20')
+      }
     }
   }
 

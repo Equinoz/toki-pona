@@ -67,7 +67,7 @@ export function useMainService() {
     if (status[idCourse] != 'validated') {
       status[idCourse] = 'validated'
 
-      if (idCourse < 19) {
+      if (idCourse < 20) {
         const index = getLevelByCourseId(idCourse)
         const levelValidated = LEVELS_BY_COURSES_ID[index].every((x: number) => status[x] == 'validated')
         if (levelValidated) {
@@ -82,5 +82,5 @@ export function useMainService() {
     reset()
   }
 
-  return { getExercises, setGlossary, validCourse, resetProgress }
+  return { getExercises, setProgress, setGlossary, validCourse, resetProgress }
 }

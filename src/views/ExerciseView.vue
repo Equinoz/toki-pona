@@ -29,7 +29,7 @@
 
     <footer class="buttons" :class="{ row: !singleButton }">
       <div class="button" @click="back"><div class="linja-pona">tan</div><div>retour</div></div>
-      <div v-if="!singleButton" class="button" @click="redirectToHome"><div class="linja-pona">pana</div><div>valider</div></div>
+      <div v-if="!singleButton" class="button" @click="valid"><div class="linja-pona">pana</div><div>valider</div></div>
     </footer>
   </div>
 </template>
@@ -45,7 +45,7 @@
   import type { Exercise } from '@/models/Exercise'
 
   const { debugMode } = storeToRefs(useDebugStore())
-  const { getExercises, validCourse } = useMainService()
+  const { getExercises, setProgress, validCourse } = useMainService()
 
   const props = defineProps({
     idCourse: String
@@ -59,12 +59,16 @@
     exercise.spoiler = !exercise.spoiler
   }
 
-  const redirectToHome = () => {
+  const valid = () => {
     if (props.idCourse) {
       validCourse(parseInt(props.idCourse, 10))
     }
 
-    router.push('/')
+    if (props.idCourse == '20') {
+      router.push('/end')
+    } else {
+      router.push('/')
+    }
   }
 
   const back = () => {
@@ -72,6 +76,9 @@
   }
 
   onMounted(() => {
+    if (props.idCourse == '20') {
+      setProgress(20)
+    }
     const currentExercises = getExercises(props.idCourse) ?? []
     exercises.value = currentExercises.map((x: Exercise) => ({ value: x, spoiler: true }))
   })

@@ -16,6 +16,15 @@
         <span class="linja-pona new-glyph">lukin</span><span class="new-word">lukin</span> vision, regard, regarder, voir, examiner, observer, lire, surveiller, chercher à, essayer de<br />
         <span class="linja-pona new-glyph">taso</span><span class="new-word">taso</span> mais, cependant, seulement
       </p>
+      <h3>note</h3>
+      <div class="content">
+        <span class="new-word">jo</span> n'est pas équivalent à "avoir" en français, particulièrement dans son rôle d'auxiliaire.
+        <p class="example">
+          <span class="subject">j'ai</span> <span class="predicate">mangé</span><br />
+          <span class="tab"></span>
+          <span class="subject">mi</span> <span class="predicate">moku</span><br />
+        </p>
+      </div>
       <h2>leçon</h2>
       <h3>négation</h3>
       <div class="content">
@@ -63,9 +72,6 @@
     </main>
   </div>
 </template>
-
-<script setup lang="ts">
-</script>
 
 <style scoped>
   @import "@/assets/style/courseStyle.css";

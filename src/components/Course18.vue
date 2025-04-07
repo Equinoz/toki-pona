@@ -7,62 +7,79 @@
     <main>
       <h2>vocabulaire</h2>
       <p class="content">
-        <span class="new-word">oko</span> oeil<br />
-        <span class="new-word">uta</span> bouche, lèvres, cavité buccale, mâchoire<br />
-        <span class="new-word">nena</span> bosse, montagne, colline, nez, bouton<br />
-        <span class="new-word">lupa</span> porte, trou, orifice, fenêtre<br />
-        <span class="new-word">sinpin</span> mur, face, front, visage, poitrine, avant, devant<br />
-        <span class="new-word">linja</span> objet long et flexible, corde, cheveu, fil, ligne<br />
-        <span class="new-word">luka</span> bras, main, organe du toucher, cinq
-      </p>
-      <h3>particule</h3>
-      <p class="content">
-        <span class="new-word">en</span> et (entre deux sujets)<br />
-        <span class="new-word">anu</span> ou
+        <span class="linja-pona new-glyph">nanpa</span><span class="new-word">nanpa</span> nombre, -ième<br />
+        <span class="linja-pona new-glyph">wan</span><span class="new-word">wan</span> un, unité, unique, uni<br />
+        <span class="linja-pona new-glyph">tu</span><span class="new-word">tu</span> deux, diviser, séparer, fendre<br />
+        <span class="linja-pona new-glyph">esun</span><span class="new-word">esun</span> marché, boutique, foire, magasin, commerce<br />
+        <span class="linja-pona new-glyph">pan</span><span class="new-word">pan</span> pain, céréale, pâtes, riz, blé, orge, maïs, avoine<br />
+        <span class="linja-pona new-glyph">sike</span><span class="new-word">sike</span> objet rond, ballon, boule, cercle, cycle, sphère, roue, anneau, annuel<br />
+        <span class="linja-pona new-glyph">ante</span><span class="new-word">ante</span> autre, différent, changé
       </p>
       <h2>leçon</h2>
-      <h3>dire et</h3>
-      <div class="content">
-        généralement pour dire "et" on répète la particule. pour parler de plusieurs sujets on utilise la particule <span class="new-word">en</span>.<br />
-        pour répéter les prédicats on utilise <span class="new-word">li</span>, pour répéter les compléments d'objet direct <span class="new-word">e</span> et pour les groupes nominaux c'est les prépositions que l'on répète.<br />
-        <p class="example">
-          <span class="subject">sujet</span> en <span class="subject">sujet</span> li <span class="predicate">prédicat</span> li <span class="predicate">prédicat</span> e <span class="object">cod</span> e <span class="object">cod</span> <span class="preposition">préposition</span> <span class="nominal-group">GN</span> <span class="preposition">préposition</span> <span class="nominal-group">GN</span><br />
-        </p>
-      </div>
-      <h3>exemple</h3>
+      <h3>compter</h3>
+      <div class="content">initialement, on utilise les mots <span class="new-word">ala</span>, <span class="new-word">wan</span>, <span class="new-word">tu</span>, <span class="new-word">mute</span> et <span class="new-word">ali</span> pour compter, signifiant respectivement "zéro", "un", "deux", "beaucoup" et "tout".<br />
+        c'est effectivement un peu restrictif, passé 2 c'est uniquement beaucoup, ce qui est bien peu précis. pour permettre une énumération plus fine, il a été ajouté les mots <span class="new-word">luka</span> et <span class="new-word">mute</span> qui signifient "cinq" et "vingt" dans ce contexte. <span class="new-word">ali</span> quant à lui signifie "cent".<br />
+        ce système est additif, il suffit d'ajouter les nombres les uns à la suite des autres, du plus grand au plus petit.</div>
       <div class="content">
         <p class="example">
-          <span class="subject">jan</span> en <span class="subject">soweli</span> li <span class="predicate">lukin</span> li <span class="predicate">alasa</span> e <span class="object">kasi</span> e <span class="object">pipi</span><br />
+          <span class="subject">tu wan</span><br />
           <span class="tab"></span>
-          <span class="subject">l'individu</span> et <span class="subject">le chien</span> <span class="predicate">regardent</span> et <span class="predicate">attrapent</span> <span class="object">les plantes</span> et <span class="object">les insectes</span>
-        </p>
-      </div>
-      <h3>anu</h3>
-      <div class="content">
-        <span class="new-word">anu</span> exprime une alternative.<br />
-        cette conjonction s'utilise uniquement entre noms. on ne peut pas s'en servir pour joindre des phrases entre elles.<br />
-      </div>
-      <h3>exemples</h3>
-      <div class="content">
-        <p class="example">
-          <span class="subject">ni tonsi</span> li <span class="predicate">moku</span> e <span class="object">kasi</span> anu <span class="object">waso</span><br />
-          <span class="tab"></span>
-          <span class="subject">cette personne</span> <span class="predicate">mange</span> <span class="object">de la salade</span> ou <span class="object">de la volaille</span><br />
+          <span class="subject">3</span>
         </p>
         <p class="example">
-          <span class="subject">ni</span> li <span class="predicate">ali</span> anu <span class="predicate">ala</span><br />
+          <span class="subject">luka tu tu</span><br />
           <span class="tab"></span>
-          <span class="subject">c'est</span> <span class="predicate">tout</span> ou <span class="predicate">rien</span><br />
+          <span class="subject">9</span>
+        </p>
+        <p class="example">
+          <span class="subject">mute mute luka wan</span><br />
+          <span class="tab"></span>
+          <span class="subject">46</span>
+        </p>
+        <p class="example">
+          <span class="subject">ali ali mute luka luka tu</span><br />
+          <span class="tab"></span>
+          <span class="subject">232</span>
         </p>
       </div>
-      <h3>note concernant les questions</h3>
-      <p class="content">nous verrons dans le chapitre dédié que <span class="new-word">anu</span> est particulièrement utile lorsqu'il s'agit de poser des questions.</p>
+      <div class="content">
+        les nombres s'utilisent comme des adjectifs.
+        <p class="example">
+          <span class="subject">kili luka wan</span><br />
+          <span class="tab"></span>
+          <span class="subject">six melons</span>
+        </p>
+        comme <span class="new-word">mute</span> vient après un qualificatif, on ne risque pas d'ambiguïté.
+        <p class="example">
+          <span class="subject">jan lili mute</span><br />
+          <span class="tab"></span>
+          <span class="subject">des enfants / 20 enfants</span>
+        </p>
+        <p class="example">
+          <span class="subject">jan mute lili</span><br />
+          <span class="tab"></span>
+          <span class="subject">quelques personnes</span>
+        </p>
+      </div>
+      <h3>numérotation avancée</h3>
+      <div class="content">on l'aura compris, le toki pona n'a pas pour vocation de dénombrer toutes sortes de nombres dans tous les sens. pour autant, plusieurs systèmes ont été proposés tels que <a href="https://sona.pona.la/wiki/nasin_nanpa_pona">le nasin nanpa pona</a>, mais si on veut réellement faire du calcul il faut mieux utiliser une autre langue.</div>
+      <h3>nombres ordinaux</h3>
+      <div class="content">
+        il est possible d'utiliser <span class="new-word">nanpa</span> avant un chiffre pour en faire un nombre ordinal.
+        <p class="example">
+          <span class="subject">soweli nanpa tu</span><br />
+          <span class="tab"></span>
+          <span class="subject">le second animal</span>
+        </p>
+        <p class="example">
+          <span class="subject">ni</span> li <span class="predicate">jan lili ona nanpa tu</span><br />
+          <span class="tab"></span>
+          <span class="subject">c'est </span> <span class="predicate">son deuxième enfant</span>
+        </p>
+      </div>
     </main>
   </div>
 </template>
-
-<script setup lang="ts">
-</script>
 
 <style scoped>
   @import "@/assets/style/courseStyle.css";

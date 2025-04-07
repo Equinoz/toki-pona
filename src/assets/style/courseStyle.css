@@ -55,49 +55,44 @@ main {
   font-weight: bold;
 }
 
-/*  TODO regrouper les éléments suivants */
+.subject, .predicate, .object, .preposition, .auxiliary, .nominal-group {
+  font-weight: bold;
+  text-underline-offset: 4px;
+}
+
+.predicate, .preposition {
+  text-decoration: underline dashed;
+}
+
+.object, .auxiliary {
+  text-decoration: underline dotted;
+}
 
 .subject {
   color: var(--subject-color);
-  font-weight: bold;
   text-decoration: underline;
-  text-underline-offset: 4px;
   text-decoration-thickness: 2px;
 }
 
 .predicate {
   color: var(--predicate-color);
-  font-weight: bold;
-  text-decoration: underline dashed;
-  text-underline-offset: 4px;
 }
 
 .object {
   color: var(--object-color);
-  font-weight: bold;
-  text-decoration: underline dotted;
-  text-underline-offset: 4px;
 }
 
 .preposition {
   color: var(--preposition-color);
-  font-weight: bold;
-  text-decoration: underline dashed;
-  text-underline-offset: 4px;
 }
 
 .auxiliary {
   color: var(--auxiliary-color);
-  font-weight: bold;
-  text-decoration: underline dotted;
-  text-underline-offset: 4px;
 }
 
 .nominal-group {
   color: var(--preposition-color);
-  font-weight: bold;
   text-decoration: underline dotted;
-  text-underline-offset: 4px;
 }
 
 .example {

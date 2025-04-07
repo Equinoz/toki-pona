@@ -77,7 +77,7 @@ export const useMainStore = defineStore('main', () => {
     if (!state.value) {
       initState()
     }
-    if (state.value && state.value.level > 8) {
+    if (state.value && state.value.level > 9) {
       // all words
       state.value.words = words
     } else if (state.value) {
@@ -119,6 +119,17 @@ export const useMainStore = defineStore('main', () => {
     state.value = null
   }
 
+  function restoreAll() {
+    initState()
+    if (state.value) {
+      state.value.glyphsAvailable = true
+      state.value.level = 11
+      state.value.progress = [20]
+      state.value.status = Array(21).fill('validated')
+      state.value.words = words
+    }
+  }
+
   return {
     isGlossaryAvailable,
     isExercisesAvailable,
@@ -135,6 +146,7 @@ export const useMainStore = defineStore('main', () => {
     setStatusCourses,
     allowGlyphs,
     switchGlyphsStatus,
-    reset
+    reset,
+    restoreAll
   }
 })

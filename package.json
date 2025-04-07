@@ -1,9 +1,10 @@
 {
-  "name": "toki-pona",
-  "version": "0.0.1",
+  "name": "sona-pona",
+  "version": "0.9",
   "author": "Julien Le Coz",
   "description": "Mobile application to study toki pona",
   "type": "module",
+  "license": "CC BY-SA 4.0",
   "scripts": {
     "dev": "VITE_DEBUG=true vite",
     "build": "VITE_DEBUG=true run-p type-check \"build-only {@}\" --",

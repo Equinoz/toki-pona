@@ -7,62 +7,42 @@
     <main>
       <h2>vocabulaire</h2>
       <p class="content">
-        <span class="new-word">oko</span> oeil<br />
-        <span class="new-word">uta</span> bouche, lèvres, cavité buccale, mâchoire<br />
-        <span class="new-word">nena</span> bosse, montagne, colline, nez, bouton<br />
-        <span class="new-word">lupa</span> porte, trou, orifice, fenêtre<br />
-        <span class="new-word">sinpin</span> mur, face, front, visage, poitrine, avant, devant<br />
-        <span class="new-word">linja</span> objet long et flexible, corde, cheveu, fil, ligne<br />
-        <span class="new-word">luka</span> bras, main, organe du toucher, cinq
-      </p>
-      <h3>particule</h3>
-      <p class="content">
-        <span class="new-word">en</span> et (entre deux sujets)<br />
-        <span class="new-word">anu</span> ou
+        <span class="linja-pona new-glyph">kule</span><span class="new-word">kule</span> couleur, colorer, coloré, pigmenté, peint<br />
+        <span class="linja-pona new-glyph">pimeja</span><span class="new-word">pimeja</span> noir, foncé, sombre<br />
+        <span class="linja-pona new-glyph">walo</span><span class="new-word">walo</span> blanc, clair, pâle<br />
+        <span class="linja-pona new-glyph">loje</span><span class="new-word">loje</span> rouge<br />
+        <span class="linja-pona new-glyph">laso</span><span class="new-word">laso</span> bleu, vert<br />
+        <span class="linja-pona new-glyph">jelo</span><span class="new-word">jelo</span> jaune<br />
       </p>
       <h2>leçon</h2>
-      <h3>dire et</h3>
+      <h3>autres couleurs</h3>
       <div class="content">
-        généralement pour dire "et" on répète la particule. pour parler de plusieurs sujets on utilise la particule <span class="new-word">en</span>.<br />
-        pour répéter les prédicats on utilise <span class="new-word">li</span>, pour répéter les compléments d'objet direct <span class="new-word">e</span> et pour les groupes nominaux c'est les prépositions que l'on répète.<br />
+        pour décrire des couleurs qui ne figurent pas parmi les couleurs présentes dans le vocabulaire du toki pona, on les combine. l'ordre importe peu.
         <p class="example">
-          <span class="subject">sujet</span> en <span class="subject">sujet</span> li <span class="predicate">prédicat</span> li <span class="predicate">prédicat</span> e <span class="object">cod</span> e <span class="object">cod</span> <span class="preposition">préposition</span> <span class="nominal-group">GN</span> <span class="preposition">préposition</span> <span class="nominal-group">GN</span><br />
-        </p>
-      </div>
-      <h3>exemple</h3>
-      <div class="content">
-        <p class="example">
-          <span class="subject">jan</span> en <span class="subject">soweli</span> li <span class="predicate">lukin</span> li <span class="predicate">alasa</span> e <span class="object">kasi</span> e <span class="object">pipi</span><br />
+          <span class="subject">len lawa</span> li <span class="predicate">loje walo</span><br />
+          <span class="subject">len lawa</span> li <span class="predicate">walo loje</span><br />
           <span class="tab"></span>
-          <span class="subject">l'individu</span> et <span class="subject">le chien</span> <span class="predicate">regardent</span> et <span class="predicate">attrapent</span> <span class="object">les plantes</span> et <span class="object">les insectes</span>
+          <span class="subject">la casquette</span> est <span class="predicate">rose</span>
         </p>
+        il est toujours possible de préciser de plus en plus une couleur (<span class="new-word">laso jelo walo</span> = "vert pâle") mais en général on évite de trop rentrer dans le détail.
       </div>
-      <h3>anu</h3>
-      <div class="content">
-        <span class="new-word">anu</span> exprime une alternative.<br />
-        cette conjonction s'utilise uniquement entre noms. on ne peut pas s'en servir pour joindre des phrases entre elles.<br />
-      </div>
-      <h3>exemples</h3>
+      <h3>parler de plusieurs couleurs</h3>
       <div class="content">
         <p class="example">
-          <span class="subject">ni tonsi</span> li <span class="predicate">moku</span> e <span class="object">kasi</span> anu <span class="object">waso</span><br />
+          <span class="subject">kasi</span> li <span class="predicate">loje jelo</span><br />
           <span class="tab"></span>
-          <span class="subject">cette personne</span> <span class="predicate">mange</span> <span class="object">de la salade</span> ou <span class="object">de la volaille</span><br />
+          <span class="subject">la fleur</span> est <span class="predicate">orange</span>
         </p>
+        si on veut dire qu'une fleur est rouge et jaune, on ne peut pas utiliser <span class="new-word">loje jelo</span> ce qui signifierait orange. dans ce cas il est nécessaire d'utiliser la particule <span class="new-word">pi</span>.
         <p class="example">
-          <span class="subject">ni</span> li <span class="predicate">ali</span> anu <span class="predicate">ala</span><br />
+          <span class="subject">kasi</span> pi <span class="predicate">loje en jelo</span><br />
           <span class="tab"></span>
-          <span class="subject">c'est</span> <span class="predicate">tout</span> ou <span class="predicate">rien</span><br />
+          <span class="subject">la fleur</span> est <span class="predicate">rouge et jaune</span>
         </p>
       </div>
-      <h3>note concernant les questions</h3>
-      <p class="content">nous verrons dans le chapitre dédié que <span class="new-word">anu</span> est particulièrement utile lorsqu'il s'agit de poser des questions.</p>
     </main>
   </div>
 </template>
-
-<script setup lang="ts">
-</script>
 
 <style scoped>
   @import "@/assets/style/courseStyle.css";

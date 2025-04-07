@@ -7,62 +7,86 @@
     <main>
       <h2>vocabulaire</h2>
       <p class="content">
-        <span class="new-word">oko</span> oeil<br />
-        <span class="new-word">uta</span> bouche, lèvres, cavité buccale, mâchoire<br />
-        <span class="new-word">nena</span> bosse, montagne, colline, nez, bouton<br />
-        <span class="new-word">lupa</span> porte, trou, orifice, fenêtre<br />
-        <span class="new-word">sinpin</span> mur, face, front, visage, poitrine, avant, devant<br />
-        <span class="new-word">linja</span> objet long et flexible, corde, cheveu, fil, ligne<br />
-        <span class="new-word">luka</span> bras, main, organe du toucher, cinq
+        <span class="linja-pona new-glyph">suno</span><span class="new-word">suno</span> soleil, lumière, lueur, brillant<br />
+        <span class="linja-pona new-glyph">mun</span><span class="new-word">mun</span> lune, astre, étoile<br />
+        <span class="linja-pona new-glyph">sin</span><span class="new-word">sin</span> nouveau, frais, encore, encore un, de plus, en plus<br />
+        <span class="linja-pona new-glyph">nasin</span><span class="new-word">nasin</span> chemin, voie, manière, façon, coutume, méthode, doctrine, rue<br />
+        <span class="linja-pona new-glyph">pu</span><span class="new-word">pu</span> interaction avec le livre officiel du toki pona
       </p>
       <h3>particule</h3>
       <p class="content">
-        <span class="new-word">en</span> et (entre deux sujets)<br />
-        <span class="new-word">anu</span> ou
+        <span class="linja-pona new-glyph">la</span><span class="new-word">la</span> particule (contexte)
       </p>
       <h2>leçon</h2>
-      <h3>dire et</h3>
+      <h3>poser le contexte</h3>
       <div class="content">
-        généralement pour dire "et" on répète la particule. pour parler de plusieurs sujets on utilise la particule <span class="new-word">en</span>.<br />
-        pour répéter les prédicats on utilise <span class="new-word">li</span>, pour répéter les compléments d'objet direct <span class="new-word">e</span> et pour les groupes nominaux c'est les prépositions que l'on répète.<br />
+        la particule <span class="new-word">la</span> permet d'établir un rapport entre phrases ou de lier un groupe de mots à une phrase. elle est utilisée pour établir le contexte : tout ce qui précède <span class="new-word">la</span> est considéré comme étant le contexte de ce qui suit.
         <p class="example">
-          <span class="subject">sujet</span> en <span class="subject">sujet</span> li <span class="predicate">prédicat</span> li <span class="predicate">prédicat</span> e <span class="object">cod</span> e <span class="object">cod</span> <span class="preposition">préposition</span> <span class="nominal-group">GN</span> <span class="preposition">préposition</span> <span class="nominal-group">GN</span><br />
-        </p>
-      </div>
-      <h3>exemple</h3>
-      <div class="content">
-        <p class="example">
-          <span class="subject">jan</span> en <span class="subject">soweli</span> li <span class="predicate">lukin</span> li <span class="predicate">alasa</span> e <span class="object">kasi</span> e <span class="object">pipi</span><br />
+          <span class="nominal-group">tenpo kama</span> la <span class="subject">mi</span> <span class="preposition">tawa</span> <span class="nominal-group">sina</span><br />
           <span class="tab"></span>
-          <span class="subject">l'individu</span> et <span class="subject">le chien</span> <span class="predicate">regardent</span> et <span class="predicate">attrapent</span> <span class="object">les plantes</span> et <span class="object">les insectes</span>
+          <span class="subject">je</span> <span class="predicate">te rejoins</span> <span class="preposition">dans</span> <span class="nominal-group">le futur</span>
         </p>
-      </div>
-      <h3>anu</h3>
-      <div class="content">
-        <span class="new-word">anu</span> exprime une alternative.<br />
-        cette conjonction s'utilise uniquement entre noms. on ne peut pas s'en servir pour joindre des phrases entre elles.<br />
-      </div>
-      <h3>exemples</h3>
-      <div class="content">
+        la partie de la phrase située avant un <span class="new-word">la</span> peut souvent se placer après une préposition en conservant le sens de la phrase.
         <p class="example">
-          <span class="subject">ni tonsi</span> li <span class="predicate">moku</span> e <span class="object">kasi</span> anu <span class="object">waso</span><br />
+          <span class="subject">mi</span> <span class="predicate">tawa sina</span> <span class="preposition">lon</span> <span class="nominal-group">tenpo kama</span><br />
           <span class="tab"></span>
-          <span class="subject">cette personne</span> <span class="predicate">mange</span> <span class="object">de la salade</span> ou <span class="object">de la volaille</span><br />
-        </p>
-        <p class="example">
-          <span class="subject">ni</span> li <span class="predicate">ali</span> anu <span class="predicate">ala</span><br />
-          <span class="tab"></span>
-          <span class="subject">c'est</span> <span class="predicate">tout</span> ou <span class="predicate">rien</span><br />
+          <span class="subject">je</span> <span class="predicate">te rejoins</span> <span class="preposition">dans</span> <span class="nominal-group">le futur</span>
         </p>
       </div>
-      <h3>note concernant les questions</h3>
-      <p class="content">nous verrons dans le chapitre dédié que <span class="new-word">anu</span> est particulièrement utile lorsqu'il s'agit de poser des questions.</p>
+      <h3>conjugaison</h3>
+      <div class="content">
+        bien sûr il n'y a pas de conjugaison en toki pona ! mais on peut contextualiser les choses dans le temps et ainsi parler du passé et du futur.
+        <p class="example">
+          <span class="nominal-group">tenpo pimeja</span> la <span class="subject">mi</span> <span class="auxiliary">ken ala</span> <span class="predicate">lape</span><br />
+          <span class="tab"></span>
+          <span class="subject">je</span> <span class="auxiliary">n'arrive pas</span> <span class="predicate">à dormir</span> <span class="nominal-group">la nuit</span>
+        </p>
+        <p class="example">
+          <span class="nominal-group">tenpo suno pini</span> la <span class="subject">mi</span> <span class="predicate">pilin ike</span><br />
+          <span class="tab"></span>
+          <span class="subject">j'étais</span> <span class="predicate">malade</span> <span class="nominal-group">hier</span>
+        </p>
+      </div>
+      <h3>conditions</h3>
+      <div class="content">
+        <span class="new-word">la</span> peut situer la phrase dans un contexte temporel, mais aussi dans un contexte conditionnel. 
+        <p class="example">
+          <span class="subject">sina</span> <span class="predicate">moku</span> e <span class="object">telo nasa</span> la <span class="subject">sina</span> <span class="predicate">nasa</span><br />
+          <span class="tab"></span>
+          si <span class="subject">tu</span> <span class="predicate">bois</span> <span class="object">de la bière</span>, <span class="subject">tu</span> <span class="predicate">seras ivre</span>
+        </p>
+      </div>
+      <h3>comparaisons</h3>
+      <div class="content">
+        il n'y a ni comparatif, ni superlatif en toki pona. pour dire qu'une chose est meilleure qu'une autre on dira que l'une est très bonne et l'autre peu bonne.
+        <p class="example">
+          <span class="subject">mi</span> <span class="predicate">suli mute</span>. <span class="subject">sina</span> <span class="predicate">suli lili</span><br />
+          <span class="tab"></span>
+          <span class="subject">je suis</span> <span class="predicate">plus grand</span> <span class="preposition">que</span> <span class="nominal-group">toi</span>
+        </p>
+      </div>
+      <h3>expressions avec la</h3>
+      <div class="content">
+        comme <span class="new-word">la</span> modifie le sens de toute la phrase, on peut utiliser la construction "mot + <span class="new-word">la</span>" pour ajouter de la nuance.
+        <p class="example">
+          ken la <span class="subject">ona</span> li <span class="predicate">pakala</span><br />
+          <span class="tab"></span>
+          peut-être <span class="subject">qu'il</span> <span class="predicate">est blessé</span>
+        </p>
+        <p class="example">
+          tan suno la <span class="subject">mi</span> <span class="predicate">pilin seli</span><br />
+          <span class="tab"></span>
+          à cause du soleil <span class="subject">j'ai</span> <span class="predicate">chaud</span>
+        </p>
+        <p class="example">
+          ante la <span class="subject">ona</span> <span class="auxiliary">ken ala</span> <span class="predicate">sona</span> e <span class="object">pu</span><br />
+          <span class="tab"></span>
+          autrement <span class="subject">il</span> <span class="auxiliary">ne pourra pas</span> <span class="predicate">comprendre</span> <span class="object">le livre officiel du toki pona</span>
+        </p>
+      </div>
     </main>
   </div>
 </template>
-
-<script setup lang="ts">
-</script>
 
 <style scoped>
   @import "@/assets/style/courseStyle.css";
