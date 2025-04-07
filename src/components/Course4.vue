@@ -8,7 +8,7 @@
       <h2>vocabulaire</h2>
       <p class="content">
         <span class="linja-pona new-glyph">soweli</span><span class="new-word">soweli</span> animal, mammifère terrestre<br />
-        <span class="linja-pona new-glyph">akesi</span><span class="new-word">akesi</span> animal non-mignon, reptile, batracien, amphibien<br />
+        <span class="linja-pona new-glyph">akesi</span><span class="new-word">akesi</span> créature écailleuse, créature rampante, reptile, batracien, amphibien<br />
         <span class="linja-pona new-glyph">pipi</span><span class="new-word">pipi</span> insecte, araignée, fourmi<br />
         <span class="linja-pona new-glyph">waso</span><span class="new-word">waso</span> oiseau, créature volante, animal ailé<br />
         <span class="linja-pona new-glyph">kala</span><span class="new-word">kala</span> poisson, animal marin<br />

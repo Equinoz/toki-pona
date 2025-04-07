@@ -26,7 +26,7 @@
         <p class="example">
           <span class="subject">tonsi Ema</span><br />
           <span class="tab"></span>
-          <span class="subject">Emma</span> (la personne qui se nomme Emma)
+          <span class="subject">Emma</span> (la personne non-binaire qui se nomme Emma)
         </p>
         <p class="example">
           <span class="subject">mama Natane</span><br />

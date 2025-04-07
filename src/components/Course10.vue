@@ -45,9 +45,9 @@
       <h3>exemples</h3>
       <div class="content">
         <p class="example">
-          <span class="subject">ni tonsi</span> li <span class="predicate">moku</span> e <span class="object">kasi</span> anu <span class="object">waso</span><br />
+          <span class="subject">tonsi ni</span> li <span class="predicate">moku</span> e <span class="object">kasi</span> anu <span class="object">waso</span><br />
           <span class="tab"></span>
-          <span class="subject">cette personne</span> <span class="predicate">mange</span> <span class="object">de la salade</span> ou <span class="object">de la volaille</span><br />
+          <span class="subject">l'individu non-binaire</span> <span class="predicate">mange</span> <span class="object">de la salade</span> ou <span class="object">de la volaille</span><br />
         </p>
         <p class="example">
           <span class="subject">ni</span> li <span class="predicate">ali</span> anu <span class="predicate">ala</span><br />

@@ -37,7 +37,7 @@
       <h3>exemples</h3>
       <div class="content">
         <p class="example">
-          <span class="subject">mi</span> li <span class="predicate">moku</span><br />
+          <span class="subject">mi</span> <span class="predicate">moku</span><br />
           <span class="tab"></span>
           <span class="subject">je</span> <span class="predicate">mange</span>
         </p>

@@ -8,7 +8,7 @@
       <h2>vocabulaire</h2>
       <p class="content">
         <span class="linja-pona new-glyph">mani</span><span class="new-word">mani</span> argent, monnaie, richesse, grand animal domestiqué<br />
-        <span class="linja-pona new-glyph">nasa</span><span class="new-word">nasa</span> fou, bête, idiot, étrange, bizarre, insolite, stupide, ivre<br />
+        <span class="linja-pona new-glyph">nasa</span><span class="new-word">nasa</span> étrange, insolite, anormal, imprévu, sous l'emprise de l'alcool, sous l'emprise de la drogue<br />
         <span class="linja-pona new-glyph">len</span><span class="new-word">len</span> tissu, vêtement, textile, couverture, rideau d'intimité, vêtir<br />
         <span class="linja-pona new-glyph">suwi</span><span class="new-word">suwi</span> sucré, doux, parfumé, mignon, innocent, adorable<br />
         <span class="linja-pona new-glyph">weka</span><span class="new-word">weka</span> retirer, éliminer, absent, enlevé, éloigné, au loin<br />

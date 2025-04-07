@@ -58,7 +58,7 @@
       <div class="content">
         <span class="new-word">taso</span> est utilisé au début d'une phrase pour dire cependant, mais.
         <p class="example">
-          <span class="subject">mi</span> <span class="predicate">pona</span>. taso <span class="subject">ona</span> <span class="predicate">ike</span><br />
+          <span class="subject">mi</span> <span class="predicate">pona</span>. taso <span class="subject">ona</span> li <span class="predicate">ike</span><br />
           <span class="tab"></span>
           <span class="subject">je</span> suis <span class="predicate">heureux</span> mais <span class="subject">il</span> est <span class="predicate">triste</span>
         </p>

@@ -16,8 +16,8 @@
       <p class="content">mise en situation : je suis en train de prendre mon petit déjeuner et je souhaite demander à ma moitié de me passer le miel. je vais utiliser le mot "moku" qui signifie nourriture, manger, avaler, boisson...</p>
       <p>en utilisant le mot "moku", comment vais-je faire la différence entre du miel et une bière impériale stout à 9°* ? je vais donc préciser : "moku jelo" pour "aliment jaune" si ce qui, selon moi, caractérise le mieux le miel est sa couleur, ou "moku sewi" pour "aliment sucré" si je préfère faire référence à son goût doux et sucré.</p>
       <p class="content">mais difficile de distinguer le miel d'une omelette pour la première expression ou d'un pot de nutella pour la seconde. je peux dire "moku jelo suwi", mais là aussi, entre du miel et un bonbon jaune en forme de banane la confusion est encore possible...</p>
-      <p class="content">par contre avec "moku jelo suwi pi pipi", "l'aliment jaune sucré des insectes (sous-entendu abeilles)" plus de confusion possible surtout si je tiens un pot de miel de la forêt dans la main !**</p>
-      <p class="content">parce que c'est bien là toute l'importance du contexte : "moku jelo suwi pi pipi" est un peu long à dire, mais si je lui demande de me passer simplement "moku" pendant qu'elle étale le miel sur sa propre tartine, il sera assez évident que c'est bien du miel dont je parle...</p>
+      <p class="content">par contre avec "moku jelo suwi pipi", "l'aliment jaune sucré des insectes (sous-entendu abeilles)" plus de confusion possible surtout si je tiens un pot de miel de la forêt dans la main !**</p>
+      <p class="content">parce que c'est bien là toute l'importance du contexte : "moku jelo suwi pipi" est un peu long à dire, mais si je lui demande de me passer simplement "moku" pendant qu'elle étale le miel sur sa propre tartine, il sera assez évident que c'est bien du miel dont je parle...</p>
       <p class="content">dans les faits, il y a de nombreuses précisions qui ne sont pas forcément nécessaires au quotidien. entre les combinaisons de mots et le contexte, de nombreuses choses peuvent être précisées en toki pona.</p>
       <h2>et la politesse, bordel ?</h2>
       <p class="content">il n'y a pas de mot pour dire "merci" ou "s'il te plaît" en toki pona. impossible d'être poli ou aimable donc.</p>
@@ -44,7 +44,7 @@
       <p class="content">avec si peu de mots il est évident qu'il est nécessaire de tous les connaître pour pouvoir utiliser la langue : si un mot manque, inévitablement c'est rapidement tout un champ lexical qui manque...</p>
       <h2>---</h2>
       <p class="content">* ça peut se dire en toki pona : moku telo pan nasa pimeja wawa pi luka tu tu nanpa</p>
-      <p class="content">** moku jelo suwi pi pipi pi kasi suli mute !</p>
+      <p class="content">** moku jelo suwi pipi pi kasi suli mute !</p>
     </main>
   </div>
 </template>

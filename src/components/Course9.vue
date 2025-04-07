@@ -11,9 +11,9 @@
       <p class="content">il existe aussi un système hiéroglyphique totalement dédié au toki pona, système dans lequel chaque mot correspond à un glyphe unique : c'est le sitelen pona.</p>
       <div class="content">
         <p class="example">
-          <span class="linja-pona sitelen-pona"><span class="subject">ni soweli</span> li <span class="predicate">moku</span> e <span class="object">kasi moku</span><br /></span>
+          <span class="linja-pona sitelen-pona"><span class="subject">soweli ni</span> li <span class="predicate">moku</span> e <span class="object">kasi moku</span><br /></span>
           <span class="tab"></span>
-          <span class="subject">ni soweli</span> li <span class="predicate">moku</span> e <span class="object">kasi moku</span><br />
+          <span class="subject">soweli ni</span> li <span class="predicate">moku</span> e <span class="object">kasi moku</span><br />
           <span class="tab"></span><span class="tab"></span>
           <span class="subject">ces lapins</span> <span class="predicate">mangent</span> <span class="object">de la salade</span>
         </p>
@@ -40,7 +40,7 @@
       </div>
 
       <h2>autres systèmes</h2>
-      <p class="content">deux autres systèmes me semblent intéressants à mentionner ici : le sitelen sitelen et le toki pona luka</p>
+      <p class="content">deux autres systèmes me semblent intéressants à mentionner ici : le sitelen sitelen et le luka pona</p>
       <h3>sitelen sitelen</h3>
       <p class="content">le sitelen sitelen est une autre façon de représenter graphiquement des phrases en toki pona. chaque lettre ou syllabe est représentée par un élément visuel et la combinaison de ces éléments permet de déterminer des mots et des phrases.</p>
       <div class="sitelen-sitelen-example">
@@ -48,10 +48,10 @@
         <div>ali li pona</div>
       </div>
       <p class="content">on obtient ainsi des dessins tout en rondeurs, très pratiques pour écrire une citation ou un slogan par exemple. il est possible d'en savoir plus sur le <a href="https://jonathangabel.com/toki-pona/">site web de Jonathan Gabel</a>.</p>
-      <h3>toki pona luka</h3>
-      <p class="content">le toki pona signé est une version silencieuse du toki pona qui s'utilise grâce à des gestes manuels. chaque mot et chaque lettre a son propre signe. on forme les phrases en exécutant les signes l'un après l'autre, dans le même ordre et selon la même grammaire que pour la version parlée/écrite.</p>
-      <p class="content">chaque signe peut être décrit à l'aide de quatre éléments : la configuration de la main, le positionnement sur le corps, l'orientation de la paume et le fait de faire le signe avec une seule main ou deux.</p>
-      <p class="content">il y a peu de ressources internet sur le sujet, il est possible de visiter <a href="https://chuff.wordpress.com/tpsl/">https://chuff.wordpress.com/tpsl/</a> ou de se référer au livre de Sonja Lang "Toki Pona La langue du bien"</p>
+      <h3>luka pona</h3>
+      <p class="content">le luka pona est un langage signé complet et organisé, inspiré du toki pona. ce langage a émergé en réponse à des projets précédents et est inspiré de ceux-ci, ainsi que des langues des signes naturelles.</p>
+      <p class="content">les éléments qui sont à prendre en compte pour signer le luka pona sont la forme, le placement, l'orientation et le mouvement, ainsi que les caractéristiques non-manuelles.</p>
+      <p class="content">pour en savoir plus il est possible de visiter <a href="https://sona.pona.la/wiki/luka_pona">https://sona.pona.la/wiki/luka_pona</a>.</p>
     </main>
   </div>
 </template>
