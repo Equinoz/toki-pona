@@ -1,39 +1,41 @@
-# toki-pona
+# Toki pona
 
-This template should help get you started developing with Vue 3 in Vite.
+An mobile application to study toki pona, a minimalist language develop by [Sonja Lang](https://www.lang.sg/).
 
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
-
-## Type Support for `.vue` Imports in TS
-
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
+Application developed with Vue.js, TypeScript and Capacitor
 
 ## Project Setup
 
 ```sh
+git clone https://github.com/Equinoz/toki-pona.git
+cd toki-pona
 npm install
+npm run build
+npx cap add android
+npx cap copy android
+npm run resources
 ```
 
-### Compile and Hot-Reload for Development
+### Compile and Hot-Reload for Development (on http://localhost:7777)
 
 ```sh
 npm run dev
 ```
 
-### Type-Check, Compile and Minify for Production
+### Type-Check, Compile and Minify for web application
 
 ```sh
 npm run build
 ```
 
-### Lint with [ESLint](https://eslint.org/)
-
+### Compile to Java app with Capacitor  
+Compile for Production then:
 ```sh
-npm run lint
+npm run sync
+```
+
+### Compile the Android App with Android Studio (needs Android Studio)  
+Compile to Java App then:
+```sh
+android-studio
 ```

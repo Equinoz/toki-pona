@@ -1,26 +1,94 @@
 <template>
   <div class="course">
-    <h1>Page de cours {{ idCourse }}</h1>
-    
-    <main>
-      Logoden biniou degemer mat an penn ar bed Brieg, jod beajour Roazhon Park Pabu Arzhon-Rewiz vihan hep dimeziñ bluenn, dimezell Plouha priz gwele anezho kilañ respont. Moc’h ket stourm prest paotrig doñv a c’hroc’hen da, biniou pevar c’henderv an evidout wec’h pemp enep ar, gambr Orient ouzhimp bragoù Nazer magañ an. Abardaez logoden golo ur kêr bruzun dont klask berrloer, treut Gwengamp mat fentigelloù dilun soñjal loar degemer koll, Muzilheg pediñ mat vaneg ouzhoc’h ha Gwikourvest. Miz ur digor gwalc’hiñ berr pesketa devezh delioù goap, a sav gwenn ar aval vazh ankouna’haat c’hilhog bleun, dirak sukr paour fraoñval ur maez adarre. Tann legumaj logoden Roazhon kontell Kermouster wechoù gwazh brudet, vantell egiston voull gant avel Sun Arre montr plouz, bobl matezh muzul enno disadorn war fourchetez. Plourin-Montroulez diaoul klouar broustañ war kaer dindan vaneg hol, merc’her an prenañ reizh planken c’hig ugnet seblantout kilpenn, askell bed buoc’h fiziañs yod Baz an. C’harrez saveteiñ danvez warnon reizh drezañ da betek plad, debriñ etre ha ac’hanomp vezañ kemmañ bodañ degas teñval, Melwenn en lous beajiñ c’hontrol lien war. Nazer broustañ gwengolo a serret dilhad kraou c’houmanant vro, lous wouel kousket dougen traonienn warno boued bevañ kalonek, daou te kazetenn labourat kemener dirak merc’her. Kaozeadenn c’haier tavarn tremen deñvalijenn pont kleuz seiz burzhud, linenn dihuniñ difenn Aradon doujañs voull goustad martolod labourat, berr ganti brezel moereb deiz bremañ gallek. Mederieg evidomp an Plouha grizilh Rosko pla’hig c’havr neud, diwezhañ bihañ Gwaien redek a kreion c’hilpenn tan ennoc’h, vuzell boued c’helien birviñ dimeziñ envel tost.
-    </main>
-     TODO BUTTONS
+    <Course0 v-if="idCourse == '0'" />
+    <Course1 v-else-if="idCourse == '1'" />
+    <Course2 v-else-if="idCourse == '2'" />
+    <Course3 v-else-if="idCourse == '3'" />
+    <Course4 v-else-if="idCourse == '4'" />
+    <Course5 v-else-if="idCourse == '5'" />
+    <Course6 v-else-if="idCourse == '6'" />
+    <Course7 v-else-if="idCourse == '7'" />
+    <Course8 v-else-if="idCourse == '8'" />
+    <Course9 v-else-if="idCourse == '9'" />
+    <Course10 v-else-if="idCourse == '10'" />
+    <Course11 v-else-if="idCourse == '11'" />
+    <Course12 v-else-if="idCourse == '12'" />
+    <Course13 v-else-if="idCourse == '13'" />
+    <Course14 v-else-if="idCourse == '14'" />
+    <Course15 v-else-if="idCourse == '15'" />
+    <Course16 v-else-if="idCourse == '16'" />
+    <Course17 v-else-if="idCourse == '17'" />
+    <Course18 v-else-if="idCourse == '18'" />
+    <Course19 v-else />
+
+    <footer class="buttons" :class="{ row: !singleButton }">
+      <div class="button" @click="back"><div class="linja-pona">tan</div><div>retour</div></div>
+      <div v-if="!singleButton && idCourse == '9'" class="button" @click="redirectToQuizz"><div class="linja-pona">seme</div><div>quizz</div></div>
+      <div v-else-if="!singleButton" class="button" @click="redirectToExercise"><div class="linja-pona">alasa</div><div>exercices</div></div>
+    </footer>
   </div>
 </template>
 
 <script setup lang="ts">
-  defineProps({
+  import { computed } from 'vue'
+  import router from '@/router'
+
+  import { useMainStore } from '@/stores/mainStore'
+  import { useMainService } from '@/services/mainService'
+
+  import Course0 from '@/components/Course0.vue'
+  import Course1 from '@/components/Course1.vue'
+  import Course2 from '@/components/Course2.vue'
+  import Course3 from '@/components/Course3.vue'
+  import Course4 from '@/components/Course4.vue'
+  import Course5 from '@/components/Course5.vue'
+  import Course6 from '@/components/Course6.vue'
+  import Course7 from '@/components/Course7.vue'
+  import Course8 from '@/components/Course8.vue'
+  import Course9 from '@/components/Course9.vue'
+  import Course10 from '@/components/Course10.vue'
+  import Course11 from '@/components/Course11.vue'
+  import Course12 from '@/components/Course12.vue'
+  import Course13 from '@/components/Course13.vue'
+  import Course14 from '@/components/Course14.vue'
+  import Course15 from '@/components/Course15.vue'
+  import Course16 from '@/components/Course16.vue'
+  import Course17 from '@/components/Course17.vue'
+  import Course18 from '@/components/Course18.vue'
+  import Course19 from '@/components/Course19.vue'
+
+  const { allowGlyphs, switchGlyphsStatus } = useMainStore()
+  const { setGlossary, validCourse } = useMainService()
+
+  const props = defineProps({
     idCourse: String
   })
+
+  const singleButton = computed(() => props.idCourse == '0' || props.idCourse == '1' || props.idCourse == '2' || props.idCourse == '20')
+
+  const back = () => {
+    if (props.idCourse == '0' || props.idCourse == '1' || props.idCourse == '2') {
+      validCourse(parseInt(props.idCourse, 10))
+    }
+
+    router.go(-1)
+  }
+
+  const redirectToExercise = () => {
+    if (props.idCourse) {
+      setGlossary(parseInt(props.idCourse, 10))
+    }
+
+    router.push(`/exercise/${props.idCourse}`)
+  }
+
+  const redirectToQuizz = () => {
+    switchGlyphsStatus()
+    allowGlyphs()
+    router.push('/quizz/glyphs')
+  }
 </script>
 
-<style>
-/* @media (min-width: 1024px) {
-  .course {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-  }
-} */
+<style scoped>
+  @import "@/assets/style/buttonsStyle.css";
 </style>

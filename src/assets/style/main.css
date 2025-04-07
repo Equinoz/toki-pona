@@ -1,0 +1,23 @@
+@import './base.css';
+@import './reset.css';
+
+#app {
+  max-width: var(--max-app-width);
+  margin: auto;
+  padding-top: var(--gap-lg);
+  color: var(--text-color);
+  font-size: var(--text-size);
+  font-family: Ubuntu, sans-serif;
+}
+
+#router {
+  margin: var(--gap-sm);
+}
+
+.linja-pona {
+  font-family: linja-pona;
+  font-feature-settings: "liga" 1, "clig" 1, "calt" 1, "kern" 1, "mark" 1;
+  text-rendering: optimizeLegibility;
+  text-align: center;
+  vertical-align: middle;
+} 

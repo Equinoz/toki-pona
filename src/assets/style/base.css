@@ -1,0 +1,73 @@
+/* Colors */
+:root {
+  --main-theme-color: #2E1253;
+  --title-color: #E63E62;
+  --card-color: #EFF3F3;
+  --text-color: #000007;
+  --icon-button-color: #C23EE6;
+  --underline-color: #3EE6C2;
+  --background-color: #06222A;
+  --subject-color: #E63E62;
+  --predicate-color: #3EE6C2;
+  --object-color: #C23EE6;
+  --preposition-color: #62E63E;
+  --auxiliary-color: #BF4918;
+  --background-color-dialog: #021C24;
+}
+
+/* Font sizes */
+:root {
+  --text-size: 1rem;
+  --title-size: 2.4rem;
+  --subtitle-size: 2rem;
+  --subsubtitle-size: 1.5rem;
+  --text-button-size: 1.2rem;
+  --text-quizz-button-size: 1.1rem;
+  --line-height: 1.8rem;
+  --glossary-headings-size: 1.3rem;
+  --glossary-word-size: 1.1rem;
+  --text-xs: 0.85rem;
+}
+
+/* spacing */
+:root {
+  --gap-lg: 2.5rem;
+  --gap: 2rem;
+  --gap-sm: 1rem;
+  --gap-xs: 0.5rem;
+}
+
+/* heights */
+:root {
+  --max-app-width: 700px;
+  --medium-height: 2rem;
+  --medium-lg-height: 2.5rem;
+  --large-height: 3rem;
+}
+
+/* styles */
+:root {
+  --border-radius: 0.4rem;
+  --switch-border-radius: 3rem;
+}
+
+@font-face {
+  font-family: "Dosis";
+  src: url("@/../public/fonts/Dosis/Dosis-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Ubuntu";
+  src: url("@/../public/fonts/Ubuntu/Ubuntu-Regular.ttf");
+}
+
+@font-face {
+  font-family: linja-pona;
+  src: url('@/../public/fonts/LinjaPona/linja-pona-4.9.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background: var(--background-color);
+}
