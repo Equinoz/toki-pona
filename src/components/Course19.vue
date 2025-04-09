@@ -74,9 +74,14 @@
           peut-être <span class="subject">qu'il</span> <span class="predicate">est blessé</span>
         </p>
         <p class="example">
-          tan suno la <span class="subject">mi</span> <span class="predicate">pilin seli</span><br />
+          tenpo la <span class="subject">mi</span> <span class="predicate">pilin ike</span><br />
           <span class="tab"></span>
-          à cause du soleil <span class="subject">j'ai</span> <span class="predicate">chaud</span>
+          parfois <span class="subject">je</span> <span class="predicate">me sens triste</span>
+        </p>
+        <p class="example">
+          pona la <span class="subject">ona</span> li <span class="predicate">kama</span><br />
+          <span class="tab"></span>
+          heureusement <span class="subject">elle</span> <span class="predicate">est venue</span>
         </p>
         <p class="example">
           ante la <span class="subject">ona</span> <span class="auxiliary">ken ala</span> <span class="predicate">sona</span> e <span class="object">pu</span><br />
