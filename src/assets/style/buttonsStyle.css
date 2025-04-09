@@ -40,3 +40,16 @@
   display: flex;
   justify-content: center;
 }
+
+.back-button {
+  background-color: var(--underline-color);
+  height: var(--large-height);
+  width: var(--large-height);
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  line-height: var(--large-height);
+  vertical-align: middle;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+}

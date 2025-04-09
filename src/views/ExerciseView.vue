@@ -1,62 +1,47 @@
 <template>
   <div class="exercise">
     <div v-if="debugMode" class="debug-datas">
-      Debug : courses : {{ exercises[0]?.idsCourse ?? [] }}, number of exercises : {{ getExercises(idCourse).length }}
+      Debug : courses : {{ exercisesByCourse[0]?.idsCourse ?? [] }}, number of exercises : {{ getExercises(idCourse).length }}
     </div>
 
-    <SwitchToSitelen />
+    <header v-show="!endExercises" :class="{ center: isGlyphsAvailable }">
+      <div :class="{ fixed: !isGlyphsAvailable }" class="back-button linja-pona" @click="back">tan</div>
+      <SwitchToSitelen />
+    </header>
+
     <main>
-      <div v-if="debugMode">
-        <div v-for="exercise in currentExercises" :key="exercise.id" class="debug-exercise">
-          <div><span class="id-debug">Id {{ exercise.id }}:</span> {{ getInstruction(exercise.type) }}</div>
-          <div v-if="exercise.type == 'langToTp' || exercise.type == 'tpToLang'">
-            <p><em>Q:</em> {{ exercise.question }}</p>
-            <p><em>A:</em> {{ exercise.answer }}</p>
-          </div>
-          <div v-else-if="exercise.type == 'chooseWord'">
-            <p><em>M:</em> {{ exercise.meaning }}</p>
-            <p><em>Q:</em> {{ exercise.question }}</p>
-            <p><em>I:</em> {{ exercise.index }}</p>
-            <p><em>S:</em> {{ exercise.suggestions?.join(', ') }}</p>
-          </div>
-          <div v-else>
-            <p><em>Q:</em> {{ exercise.question }}</p>
-            <p><em>A:</em> {{ exercise.answer }}</p>
-            <p><em>S:</em> {{ exercise.suggestions?.join(', ') }}</p>
-          </div>
-        </div>
-        <div v-if="exercises.length == 0 && debugMode">
-          Empty list, probably a navigation problem in debug mode<br />
-          Please reset progress and try again
-        </div>
-      </div>
-      <div v-else>
-        l'essentiel du bordel
-      </div>
+      <DebugExercise v-if="debugMode" :exercises="exercisesByCourse"/>
+      <ExerciseDisplayed v-else-if="!endExercises" :exercise="currentExercise" :trigger="trigger" @answer="answerListener" />
+      <div v-else class="exercises-done">exercices terminés !</div>
     </main>
 
-    <footer class="buttons" :class="{ row: !singleButton }">
-      <div class="button" @click="back"><div class="linja-pona">tan</div><div>retour</div></div>
-      <div v-if="!singleButton" class="button" @click="valid"><div class="linja-pona">pana</div><div>valider</div></div>
+    <footer class="buttons">
+      <div class="button" @click="valid"><div class="linja-pona">pana</div><div>valider</div></div>
     </footer>
   </div>
 </template>
 
 <script setup lang="ts">
-  import { ref, computed, onMounted } from 'vue'
+  import { ref, onMounted } from 'vue'
   import router from '@/router'
   import { storeToRefs } from 'pinia'
 
+  import { useModalStore } from '@/stores/modalStore'
   import { useDebugStore } from '@/stores/debugStore'
+  import { useMainStore } from '@/stores/mainStore'
   import { useMainService } from '@/services/mainService'
   import { useUtils } from '@/utils/useUtils'
 
   import type { Exercise } from '@/models/Exercise'
+  import type { ExerciseWrapper } from '@/models/ExerciseWrapper'
 
+  import DebugExercise from '@/components/DebugExercise.vue'
   import SwitchToSitelen from '@/components/SwitchToSitelen.vue'
-  import type { TypeExercise } from '@/models/TypeExercise'
+  import ExerciseDisplayed from '@/components/Exercise.vue'
 
+  const { openModal } = useModalStore()
   const { debugMode } = storeToRefs(useDebugStore())
+  const { isGlyphsAvailable } = storeToRefs(useMainStore())
   const { getExercises, setProgress, validCourse } = useMainService()
   const { shuffle } = useUtils()
 
@@ -64,50 +49,66 @@
     idCourse: String
   })
 
-  const currentExercises = ref([] as Exercise[])
-  const exercises = ref([] as Exercise[])
+  const exercisesByCourse = ref([] as Exercise[])
+  const exercises = ref([] as ExerciseWrapper[])
+  const currentExercise = ref({} as ExerciseWrapper)
+  const endExercises = ref(false)
+  const trigger = ref(false)
 
-  const singleButton = computed(() => props.idCourse == undefined)
-
-  const getInstruction = (type: TypeExercise) => {
-    switch(type) {
-      case 'langToTp':
-        return 'traduis du français vers le toki pona'
-      case 'tpToLang':
-        return 'traduis du toki pona vers le français'
-      case 'chooseLangMeaning':
-        return 'choisis la signification correspondante'
-      case 'chooseTpMeaning':
-        return 'choisis le mot qui correspond à la signification'
-      default:
-        return 'choisis le mot qui convient'
+  const valid = () => {
+    if (endExercises.value || debugMode.value) {
+      validAllExercises()
+    } else {
+      trigger.value = !trigger.value
     }
   }
 
-  const valid = () => {
+  const answerListener = (validated: boolean) => {
+    currentExercise.value.validated = validated
+    exercises.value.splice(0 ,1)
+    if (!validated) {
+      exercises.value.push(currentExercise.value)
+    }
+    if (exercises.value.length > 0) {
+      currentExercise.value = exercises.value[0]
+    } else {
+      endExercises.value = true
+    }
+  }
+
+  const validAllExercises = () => {
     if (props.idCourse) {
       validCourse(parseInt(props.idCourse, 10))
     }
 
     if (props.idCourse == '20') {
       router.push('/end')
-    } else {
+    } else if (!props.idCourse) {
+      router.go(-1)
+    }else {
       router.push('/')
     }
   }
 
   const back = () => {
-    router.go(-1)
+    if (endExercises.value) {
+      validAllExercises()
+    } else {
+      openModal('arrêter les exercices en cours ?', 'la progression actuelle va être perdue !', () => router.go(-1))
+    }
   }
 
   onMounted(() => {
     if (props.idCourse == '20') {
       setProgress(20)
     }
-    currentExercises.value = getExercises(props.idCourse) ?? []
-    exercises.value = [...currentExercises.value]
-    shuffle(exercises.value)
-    exercises.value = exercises.value.splice(0, 5)
+    exercisesByCourse.value = getExercises(props.idCourse) ?? []
+    const exercisesToDisplay = [...exercisesByCourse.value]
+    shuffle(exercisesToDisplay)
+    exercises.value = exercisesToDisplay.splice(0, 5).map((x: Exercise) => ({ value: x, validated: false } as ExerciseWrapper))
+    if (exercises.value.length > 0) {
+      currentExercise.value = exercises.value[0]
+    }
   })
 </script>
 
@@ -118,20 +119,34 @@
   main {
     background-color: var(--card-color);
     padding: var(--gap-sm);
-    margin-top: var(--gap-sm);
+    margin-top: var(--gap);
     border-radius: var(--border-radius);
   }
 
-  .debug-exercise * {
-    padding-bottom: var(--gap-sm);
-    line-height: 1.5rem;
+  header {
+    position: relative;
+    display: flex;
   }
 
-  .id-debug {
-    color: green;
+  header > :first-child {
+    position: absolute;
+    top: 0.2rem;
+    left: 0;
   }
 
-  .id-debug, em {
-    font-weight: bold;
+  .center {
+    justify-content: center;
+  }
+
+  .fixed {
+    position: relative !important;
+  }
+
+  .exercises-done {
+    background-color: var(--card-color);
+    padding: var(--gap-sm);
+    border-radius: var(--border-radius);
+    font-size: var(--subsubtitle-size);
+    text-align: center;
   }
 </style>

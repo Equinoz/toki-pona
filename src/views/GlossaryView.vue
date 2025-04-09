@@ -1,7 +1,7 @@
 <template>
   <div class="glossary">
     <header>
-      <div class="back linja-pona" @click="back">tan</div>
+      <div class="back-button linja-pona" @click="back">tan</div>
       <div class="inputs">
         <input v-model="searchTextTp" class="search-input" placeholder="mot en toki pona" @input="(event) => searchTp(event)">
         <input v-model="searchTextLang" class="search-input" placeholder="signification" @input="(event) => searchLang(event)">
@@ -106,6 +106,7 @@
 
 <style scoped>
   @import "@/assets/style/debugStyle.css";
+  @import "@/assets/style/buttonsStyle.css";
 
   header {
     display: flex;
@@ -115,20 +116,8 @@
     margin-bottom: var(--gap-sm);
   }
 
-  .back, .search-input, .words {
+  .search-input, .words {
     border-radius: var(--border-radius);
-  }
-
-  .back {
-    background-color: var(--underline-color);
-    height: var(--large-height);
-    width: var(--large-height);
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-align: center;
-    line-height: var(--large-height);
-    vertical-align: middle;
-    cursor: pointer;
   }
 
   .inputs {
