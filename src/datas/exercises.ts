@@ -175,4 +175,7 @@ export const exercises = [
  { id: 172, type: "langToTp" as TypeExercise, idsCourse: [20], question: "l'enfant a peut-être soif", answer: "ken la jan lili li wile moku e telo" },
  { id: 173, type: "langToTp" as TypeExercise, idsCourse: [20], question: "c'est la pleine lune ce soir", answer: "tenpo pimeja ni la mun li suli" },
  { id: 174, type: "langToTp" as TypeExercise, idsCourse: [20], question: "si tu comprends cette parole tu connais le toki pona", answer: "sina sona e toki ni la sina sona e toki pona" },
+ { id: 175, type: "chooseLangMeaning" as TypeExercise, idsCourse: [20], question: "nasin", answer: "voie", suggestions: ["voie", "parapluie", "verre", "super"] },
+ { id: 176, type: "chooseTpMeaning" as TypeExercise, idsCourse: [20], question: "nouveau", answer: "sin", suggestions: ["sin", "la", "supa", "tan"] },
+ { id: 177, type: "chooseWord" as TypeExercise, idsCourse: [20], meaning: "ils vont loin à pied", question: "ona li tawa suli kepeken noka", index: 4, suggestions: ["kepeken", "anpa", "kama", "ken"] },
 ]

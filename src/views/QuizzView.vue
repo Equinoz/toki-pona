@@ -5,12 +5,7 @@
     </div>
 
     <div v-if="!endQuizz">
-      <div v-if="isGlyphsAvailable" class="switch-container">
-        <div class="switch" @click="switchDisplay">
-          <div :class="{ active: !isGlyphsActivated}">a b c ...</div>
-          <div :class="{ active: isGlyphsActivated}"><span class="linja-pona switch-icon">sitelen</span></div>
-        </div>
-      </div>
+      <SwitchToSitelen />
       <main>
         <div v-for="value, index in leftCol" :key="value.value" class="row">
           <div
@@ -61,12 +56,16 @@
   import { useDebugStore } from '@/stores/debugStore'
   import { useMainStore } from '@/stores/mainStore'
   import { useMainService } from '@/services/mainService'
+  import { useUtils } from '@/utils/useUtils'
+  
+  import SwitchToSitelen from '@/components/SwitchToSitelen.vue'
 
   const { openModal } = useModalStore()
   const { debugMode } = storeToRefs(useDebugStore())
-  const { isGlyphsAvailable, isGlyphsActivated } = storeToRefs(useMainStore())
-  const { getGlossary, switchGlyphsStatus } = useMainStore()
+  const { isGlyphsActivated } = storeToRefs(useMainStore())
+  const { getGlossary } = useMainStore()
   const { validCourse } = useMainService()
+  const { shuffle } = useUtils()
 
   interface Element {
     active: boolean
@@ -214,15 +213,6 @@
     router.push('/')
   }
 
-  function shuffle(arr: Array<unknown>) {
-    for (let i = arr.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1))
-      const tmp = arr[i]
-      arr[i] = arr[j]
-      arr[j] = tmp
-    }
-  }
-
   const adaptMeanings = (words: Word[]) => words.map((x: Word) => {
     switch (x.name) {
       case 'li':
@@ -267,10 +257,6 @@
     endQuizz.value = false
   }
 
-  const switchDisplay = () => {
-    switchGlyphsStatus()
-  }
-
   onMounted(() => {
     availableWords = [...getGlossary()]
     shuffle(availableWords)
@@ -281,46 +267,6 @@
 <style scoped>
   @import "@/assets/style/debugStyle.css";
   @import "@/assets/style/buttonsStyle.css";
-
-  .switch-container {
-    display: flex;
-    justify-content: center;
-    padding-top: var(--gap-xs);
-    color: var(--predicate-color);
-    font-size: var(--text-size);
-  }
-  
-  .switch {
-    display: flex;
-    border: var(--underline-color) 3px solid;
-    border-radius: var(--switch-border-radius);
-    cursor: pointer;
-  }
-
-  .switch > div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: var(--medium-height);
-    width: calc(var(--medium-lg-height) * 2);
-  }
-
-  .switch > div:first-child {
-    border-radius: calc(var(--switch-border-radius) / 5) 0 0 calc(var(--switch-border-radius) / 5);
-  }
-
-  .switch > div:last-child {
-    border-radius: 0 calc(var(--switch-border-radius) / 5) calc(var(--switch-border-radius) / 5) 0;
-  }
-
-  .switch-icon {
-    font-size: var(--subtitle-size);
-  }
-
-  .active {
-    background-color: var(--underline-color);
-    color: var(--background-color);
-  }
 
   main {
     background-color: var(--card-color);

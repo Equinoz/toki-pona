@@ -1,29 +1,37 @@
 <template>
   <div class="exercise">
     <div v-if="debugMode" class="debug-datas">
-      Debug : courses : {{ exercises[0]?.value.idsCourse ?? [] }}, number of exercises : {{ getExercises(idCourse).length }}
+      Debug : courses : {{ exercises[0]?.idsCourse ?? [] }}, number of exercises : {{ getExercises(idCourse).length }}
     </div>
 
-    <header>
-      <h1>exercices</h1>
-    </header>
-
+    <SwitchToSitelen />
     <main>
-      <div v-for="exercise in exercises" :key="exercise.value.id">
-        <span v-if="debugMode" class="debug-elt">id : {{ exercise.value.id }}</span>
-        <h3 v-if="exercise.value.type == 'langToTp'">traduis du français vers le toki pona</h3>
-        <h3 v-else>traduis du toki pona vers le français</h3>
-        <div class="exercise" v-if="exercise.spoiler" @click="toggleExercise(exercise)">
-          <p>▸ {{ exercise.value.question }}</p>
+      <div v-if="debugMode">
+        <div v-for="exercise in currentExercises" :key="exercise.id" class="debug-exercise">
+          <div><span class="id-debug">Id {{ exercise.id }}:</span> {{ getInstruction(exercise.type) }}</div>
+          <div v-if="exercise.type == 'langToTp' || exercise.type == 'tpToLang'">
+            <p><em>Q:</em> {{ exercise.question }}</p>
+            <p><em>A:</em> {{ exercise.answer }}</p>
+          </div>
+          <div v-else-if="exercise.type == 'chooseWord'">
+            <p><em>M:</em> {{ exercise.meaning }}</p>
+            <p><em>Q:</em> {{ exercise.question }}</p>
+            <p><em>I:</em> {{ exercise.index }}</p>
+            <p><em>S:</em> {{ exercise.suggestions?.join(', ') }}</p>
+          </div>
+          <div v-else>
+            <p><em>Q:</em> {{ exercise.question }}</p>
+            <p><em>A:</em> {{ exercise.answer }}</p>
+            <p><em>S:</em> {{ exercise.suggestions?.join(', ') }}</p>
+          </div>
         </div>
-        <div class="exercise" v-else @click="toggleExercise(exercise)">
-          <p>▾ {{ exercise.value.question }}</p>
-          <p class="answer">{{ exercise.value.answer }}</p>
+        <div v-if="exercises.length == 0 && debugMode">
+          Empty list, probably a navigation problem in debug mode<br />
+          Please reset progress and try again
         </div>
       </div>
-      <div v-if="exercises.length == 0 && debugMode">
-        Empty list, probably a navigation problem in debug mode<br />
-        Please reset progress and try again
+      <div v-else>
+        l'essentiel du bordel
       </div>
     </main>
 
@@ -41,22 +49,39 @@
 
   import { useDebugStore } from '@/stores/debugStore'
   import { useMainService } from '@/services/mainService'
+  import { useUtils } from '@/utils/useUtils'
 
   import type { Exercise } from '@/models/Exercise'
 
+  import SwitchToSitelen from '@/components/SwitchToSitelen.vue'
+  import type { TypeExercise } from '@/models/TypeExercise'
+
   const { debugMode } = storeToRefs(useDebugStore())
   const { getExercises, setProgress, validCourse } = useMainService()
+  const { shuffle } = useUtils()
 
   const props = defineProps({
     idCourse: String
   })
 
-  const exercises = ref([] as { value: Exercise; spoiler: boolean }[])
+  const currentExercises = ref([] as Exercise[])
+  const exercises = ref([] as Exercise[])
 
   const singleButton = computed(() => props.idCourse == undefined)
 
-  const toggleExercise = (exercise: { value: Exercise; spoiler: boolean }) => {
-    exercise.spoiler = !exercise.spoiler
+  const getInstruction = (type: TypeExercise) => {
+    switch(type) {
+      case 'langToTp':
+        return 'traduis du français vers le toki pona'
+      case 'tpToLang':
+        return 'traduis du toki pona vers le français'
+      case 'chooseLangMeaning':
+        return 'choisis la signification correspondante'
+      case 'chooseTpMeaning':
+        return 'choisis le mot qui correspond à la signification'
+      default:
+        return 'choisis le mot qui convient'
+    }
   }
 
   const valid = () => {
@@ -79,8 +104,10 @@
     if (props.idCourse == '20') {
       setProgress(20)
     }
-    const currentExercises = getExercises(props.idCourse) ?? []
-    exercises.value = currentExercises.map((x: Exercise) => ({ value: x, spoiler: true }))
+    currentExercises.value = getExercises(props.idCourse) ?? []
+    exercises.value = [...currentExercises.value]
+    shuffle(exercises.value)
+    exercises.value = exercises.value.splice(0, 5)
   })
 </script>
 
@@ -88,48 +115,23 @@
   @import "@/assets/style/debugStyle.css";
   @import "@/assets/style/buttonsStyle.css";
 
-  header {
-    display: flex;
-    justify-content: center;
-    margin-bottom: var(--gap);
-  }
-
-  h1, main {
-    border-radius: var(--border-radius);
-  }
-
-  h1, h3 {
-    color: var(--title-color);
-    font-family: Dosis, sans-serif;
-    font-weight: bold;
-  }
-
-  h1 {
-    background-color: var(--card-color);
-    display: inline-block;
-    margin: auto;
-    padding: var(--gap-xs);
-    font-size: var(--title-size);
-    text-decoration: underline;
-    text-decoration-color: var(--underline-color);
-  }
-
-  h3 {
-    font-size: var(--subsubtitle-size);
-    padding-bottom: var(--gap-xs);
-  }
-
   main {
     background-color: var(--card-color);
     padding: var(--gap-sm);
-    line-height: var(--line-height);
+    margin-top: var(--gap-sm);
+    border-radius: var(--border-radius);
   }
 
-  .exercise {
+  .debug-exercise * {
     padding-bottom: var(--gap-sm);
+    line-height: 1.5rem;
   }
 
-  .answer {
-    padding-left: var(--gap-sm);
+  .id-debug {
+    color: green;
+  }
+
+  .id-debug, em {
+    font-weight: bold;
   }
 </style>

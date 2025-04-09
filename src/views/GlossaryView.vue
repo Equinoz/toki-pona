@@ -26,6 +26,7 @@
 </template>
 
 <script setup lang="ts">
+// TODO rajouter les sitelen pona
   import { ref, useTemplateRef, onMounted } from 'vue'
   import router from '@/router'
   import { storeToRefs } from 'pinia'
