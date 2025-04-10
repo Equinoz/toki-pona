@@ -45,6 +45,7 @@
 </template>
 
 <script setup lang="ts">
+  // TODO ajouter bouton de retour comme sur les exos ou le lexique
   import { ref, onMounted } from 'vue'
   import type { Ref } from 'vue'
   import router from '@/router'

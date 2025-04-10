@@ -16,7 +16,8 @@
     </main>
 
     <footer class="buttons">
-      <div class="button" @click="valid"><div class="linja-pona">pana</div><div>valider</div></div>
+      <div v-if="showResultat" class="button" @click="nextQuestion"><div class="linja-pona">awen</div><div>continuer</div></div>
+      <div v-else class="button" @click="valid"><div class="linja-pona">pana</div><div>valider</div></div>
     </footer>
   </div>
 </template>
@@ -54,25 +55,44 @@
   const currentExercise = ref({} as ExerciseWrapper)
   const endExercises = ref(false)
   const trigger = ref(false)
+  const showResultat = ref(false)
+  const resultatQuestion = ref(false)
 
   const valid = () => {
     if (endExercises.value || debugMode.value) {
       validAllExercises()
     } else {
+      // queries component's status
       trigger.value = !trigger.value
     }
   }
 
+  // get component's status
   const answerListener = (validated: boolean) => {
-    currentExercise.value.validated = validated
-    exercises.value.splice(0 ,1)
-    if (!validated) {
+    resultatQuestion.value = validated
+    showResultat.value = true
+  }
+
+  const nextQuestion = () => {
+    showResultat.value = false
+    currentExercise.value.validated = resultatQuestion.value
+    exercises.value.shift()
+    // it's wrong, keep the exercise
+    if (!resultatQuestion.value) {
       exercises.value.push(currentExercise.value)
     }
+
+    // it's right. other exercises are available
     if (exercises.value.length > 0) {
       currentExercise.value = exercises.value[0]
     } else {
+      // no more exercises, it's the end
       endExercises.value = true
+    }
+    
+    // the last exercise is in error we must force the refresh
+    if (exercises.value.length == 1) {
+      currentExercise.value.forceRefresh = !currentExercise.value.forceRefresh
     }
   }
 
@@ -105,7 +125,7 @@
     exercisesByCourse.value = getExercises(props.idCourse) ?? []
     const exercisesToDisplay = [...exercisesByCourse.value]
     shuffle(exercisesToDisplay)
-    exercises.value = exercisesToDisplay.splice(0, 5).map((x: Exercise) => ({ value: x, validated: false } as ExerciseWrapper))
+    exercises.value = exercisesToDisplay.splice(0, 5).map((x: Exercise) => ({ value: x, validated: false, forceRefresh: false } as ExerciseWrapper))
     if (exercises.value.length > 0) {
       currentExercise.value = exercises.value[0]
     }
