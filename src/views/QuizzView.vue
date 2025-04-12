@@ -5,7 +5,11 @@
     </div>
 
     <div v-if="!endQuizz">
-      <SwitchToSitelen />
+      <header v-show="!endQuizz" :class="{ center: isGlyphsAvailable }">
+        <div :class="{ fixed: !isGlyphsAvailable }" class="back-button linja-pona" @click="quitBeforeEnd">tan</div>
+        <SwitchToSitelen />
+      </header>
+
       <main>
         <div v-for="value, index in leftCol" :key="value.value" class="row">
           <div
@@ -28,10 +32,6 @@
           </div>
         </div>
       </main>
-
-      <div class="buttons">
-        <div class="button" @click="quitBeforeEnd"><div class="linja-pona">tan</div><div>quitter</div></div>
-      </div>
     </div>
     <div v-else class="end-choice">
       <div class="buttons">
@@ -45,7 +45,6 @@
 </template>
 
 <script setup lang="ts">
-  // TODO ajouter bouton de retour comme sur les exos ou le lexique
   import { ref, onMounted } from 'vue'
   import type { Ref } from 'vue'
   import router from '@/router'
@@ -63,7 +62,7 @@
 
   const { openModal } = useModalStore()
   const { debugMode } = storeToRefs(useDebugStore())
-  const { isGlyphsActivated } = storeToRefs(useMainStore())
+  const { isGlyphsAvailable, isGlyphsActivated } = storeToRefs(useMainStore())
   const { getGlossary } = useMainStore()
   const { validCourse } = useMainService()
   const { shuffle } = useUtils()
@@ -275,6 +274,25 @@
     padding: var(--gap-xs);
     border-radius: var(--border-radius);
     font-size: var(--text-quizz-button-size);
+  }
+
+  header {
+    position: relative;
+    display: flex;
+  }
+
+  header > :first-child {
+    position: absolute;
+    top: 0.2rem;
+    left: 0;
+  }
+
+  .center {
+    justify-content: center;
+  }
+
+  .fixed {
+    position: relative !important;
   }
 
   .row {

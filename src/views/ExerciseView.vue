@@ -125,7 +125,7 @@
     exercisesByCourse.value = getExercises(props.idCourse) ?? []
     const exercisesToDisplay = [...exercisesByCourse.value]
     shuffle(exercisesToDisplay)
-    exercises.value = exercisesToDisplay.splice(0, 5).map((x: Exercise) => ({ value: x, validated: false, forceRefresh: false } as ExerciseWrapper))
+    exercises.value = exercisesToDisplay.splice(0, 8).map((x: Exercise) => ({ value: x, validated: false, forceRefresh: false } as ExerciseWrapper))
     if (exercises.value.length > 0) {
       currentExercise.value = exercises.value[0]
     }

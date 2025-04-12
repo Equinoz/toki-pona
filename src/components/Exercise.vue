@@ -1,13 +1,13 @@
 <template>
   <div>
     <h2>{{ getInstruction(exercise.value?.type) }}</h2>
-    <h3 v-if="!isExerciseType3" :class="{ chooseMeaning: isExerciseType1 }">{{ exercise.value?.question }}</h3>
-    <h3 v-if="exerciseInError && !isExerciseType3" class="correction">{{ exercise.value?.answer }}</h3>
+    <h3 v-if="!isExerciseType3" :class="{ 'linja-pona': isGlyphsActivated && !isAnswerInTp, chooseMeaning: isExerciseType1 }">{{ exercise.value?.question }}</h3>
+    <h3 v-if="exerciseInError && !isExerciseType3" :class="{'linja-pona': isGlyphsActivated && isAnswerInTp }" class="correction">{{ exercise.value?.answer }}</h3>
     <h3 v-if="isExerciseType3" class="meaning">{{ exercise.value?.meaning }}</h3>
-    <h3 v-if="exerciseInError && isExerciseType3" class="correction">{{  exercise.value?.question }}</h3>
+    <h3 v-if="exerciseInError && isExerciseType3" :class="{'linja-pona': isGlyphsActivated }" class="correction">{{ exercise.value?.question }}</h3>
     <h3 v-if="correctExercise" class="correct-answer">bonne réponse !</h3>
 
-    <div v-if="isExerciseType1" class="suggestions">
+    <div v-if="isExerciseType1" class="suggestions" :class="{'linja-pona': isGlyphsActivated && isAnswerInTp }">
       <span
         v-for="suggestion, index in suggestions"
         :key="index"
@@ -18,7 +18,7 @@
         {{ suggestion }}
       </span>
     </div>
-    <div v-else-if="isExerciseType2">
+    <div v-else-if="isExerciseType2" :class="{'linja-pona': isGlyphsActivated && isAnswerInTp }">
       <div class="response">
         <div v-for="elt, index in currentAnswer" :key="index" class="available-word" @click="moveSuggestion(index, true)">
           {{ elt }}
@@ -30,7 +30,7 @@
         </div>
       </div>
     </div>
-    <div v-else>
+    <div v-else :class="{'linja-pona': isGlyphsActivated }">
       <h3 class="response-choose-word">
         <div v-for="elt, index in beginSentenceToCompleted" :key="index" class="sentence-word">
           {{ elt }}
@@ -50,8 +50,10 @@
 </template>
 
 <script setup lang="ts">
-  // TODO ajouter les sitelen pona
   import { type PropType, ref, type Ref, computed, watch } from 'vue'
+  import { storeToRefs } from 'pinia'
+
+  import { useMainStore } from '@/stores/mainStore'
 
   import { useUtils } from '@/utils/useUtils'
 
@@ -60,6 +62,7 @@
   const emit = defineEmits(['answer'])
 
   const { shuffle, getInstruction } = useUtils()
+  const { isGlyphsActivated } = storeToRefs(useMainStore())
 
   const props = defineProps({
     exercise: {
@@ -86,6 +89,7 @@
   const isExerciseType1 = computed(() => props.exercise.value?.type == 'chooseTpMeaning' || props.exercise.value?.type == 'chooseLangMeaning')
   const isExerciseType2 = computed(() => props.exercise.value?.type == 'langToTp' || props.exercise.value?.type == 'tpToLang')
   const isExerciseType3 = computed(() => props.exercise.value?.type == 'chooseWord')
+  const isAnswerInTp = computed(() => props.exercise.value?.type == 'chooseTpMeaning' || props.exercise.value?.type == 'langToTp')
 
   const selectSuggestion = (index: number) => {
     if (!exerciseEnding.value) {
