@@ -1,86 +1,134 @@
 <template>
   <div class="exercise">
     <div v-if="debugMode" class="debug-datas">
-      Debug : courses : {{ exercises[0]?.value.idsCourse ?? [] }}, number of exercises : {{ getExercises(idCourse).length }}
+      Debug : courses : {{ exercisesByCourse[0]?.idsCourse ?? [] }}, number of exercises : {{ getExercises(idCourse).length }}
     </div>
 
-    <header>
-      <h1>exercices</h1>
+    <header v-show="!endExercises" :class="{ center: isGlyphsAvailable }">
+      <div :class="{ fixed: !isGlyphsAvailable }" class="back-button linja-pona" @click="back">tan</div>
+      <SwitchToSitelen />
     </header>
 
     <main>
-      <div v-for="exercise in exercises" :key="exercise.value.id">
-        <span v-if="debugMode" class="debug-elt">id : {{ exercise.value.id }}</span>
-        <h3 v-if="exercise.value.type == 'langToTp'">traduis du français vers le toki pona</h3>
-        <h3 v-else>traduis du toki pona vers le français</h3>
-        <div class="exercise" v-if="exercise.spoiler" @click="toggleExercise(exercise)">
-          <p>▸ {{ exercise.value.question }}</p>
-        </div>
-        <div class="exercise" v-else @click="toggleExercise(exercise)">
-          <p>▾ {{ exercise.value.question }}</p>
-          <p class="answer">{{ exercise.value.answer }}</p>
-        </div>
-      </div>
-      <div v-if="exercises.length == 0 && debugMode">
-        Empty list, probably a navigation problem in debug mode<br />
-        Please reset progress and try again
-      </div>
+      <DebugExercise v-if="debugMode" :exercises="exercisesByCourse"/>
+      <ExerciseDisplayed v-else-if="!endExercises" :exercise="currentExercise" :trigger="trigger" @answer="answerListener" />
+      <div v-else class="exercises-done">exercices terminés !</div>
     </main>
 
-    <footer class="buttons" :class="{ row: !singleButton }">
-      <div class="button" @click="back"><div class="linja-pona">tan</div><div>retour</div></div>
-      <div v-if="!singleButton" class="button" @click="valid"><div class="linja-pona">pana</div><div>valider</div></div>
+    <footer class="buttons">
+      <div v-if="showResultat" class="button" @click="nextQuestion"><div class="linja-pona">awen</div><div>continuer</div></div>
+      <div v-else class="button" @click="valid"><div class="linja-pona">pana</div><div>valider</div></div>
     </footer>
   </div>
 </template>
 
 <script setup lang="ts">
-  import { ref, computed, onMounted } from 'vue'
+  import { ref, onMounted } from 'vue'
   import router from '@/router'
   import { storeToRefs } from 'pinia'
 
+  import { useModalStore } from '@/stores/modalStore'
   import { useDebugStore } from '@/stores/debugStore'
+  import { useMainStore } from '@/stores/mainStore'
   import { useMainService } from '@/services/mainService'
+  import { useUtils } from '@/utils/useUtils'
 
   import type { Exercise } from '@/models/Exercise'
+  import type { ExerciseWrapper } from '@/models/ExerciseWrapper'
 
+  import DebugExercise from '@/components/DebugExercise.vue'
+  import SwitchToSitelen from '@/components/SwitchToSitelen.vue'
+  import ExerciseDisplayed from '@/components/Exercise.vue'
+
+  const { openModal } = useModalStore()
   const { debugMode } = storeToRefs(useDebugStore())
+  const { isGlyphsAvailable } = storeToRefs(useMainStore())
   const { getExercises, setProgress, validCourse } = useMainService()
+  const { shuffle } = useUtils()
 
   const props = defineProps({
     idCourse: String
   })
 
-  const exercises = ref([] as { value: Exercise; spoiler: boolean }[])
-
-  const singleButton = computed(() => props.idCourse == undefined)
-
-  const toggleExercise = (exercise: { value: Exercise; spoiler: boolean }) => {
-    exercise.spoiler = !exercise.spoiler
-  }
+  const exercisesByCourse = ref([] as Exercise[])
+  const exercises = ref([] as ExerciseWrapper[])
+  const currentExercise = ref({} as ExerciseWrapper)
+  const endExercises = ref(false)
+  const trigger = ref(false)
+  const showResultat = ref(false)
+  const resultatQuestion = ref(false)
 
   const valid = () => {
+    if (endExercises.value || debugMode.value) {
+      validAllExercises()
+    } else {
+      // queries component's status
+      trigger.value = !trigger.value
+    }
+  }
+
+  // get component's status
+  const answerListener = (validated: boolean) => {
+    resultatQuestion.value = validated
+    showResultat.value = true
+  }
+
+  const nextQuestion = () => {
+    showResultat.value = false
+    currentExercise.value.validated = resultatQuestion.value
+    exercises.value.shift()
+    // it's wrong, keep the exercise
+    if (!resultatQuestion.value) {
+      exercises.value.push(currentExercise.value)
+    }
+
+    // it's right. other exercises are available
+    if (exercises.value.length > 0) {
+      currentExercise.value = exercises.value[0]
+    } else {
+      // no more exercises, it's the end
+      endExercises.value = true
+    }
+    
+    // the last exercise is in error we must force the refresh
+    if (exercises.value.length == 1) {
+      currentExercise.value.forceRefresh = !currentExercise.value.forceRefresh
+    }
+  }
+
+  const validAllExercises = () => {
     if (props.idCourse) {
       validCourse(parseInt(props.idCourse, 10))
     }
 
     if (props.idCourse == '20') {
       router.push('/end')
-    } else {
+    } else if (!props.idCourse) {
+      router.go(-1)
+    }else {
       router.push('/')
     }
   }
 
   const back = () => {
-    router.go(-1)
+    if (endExercises.value) {
+      validAllExercises()
+    } else {
+      openModal('arrêter les exercices en cours ?', 'la progression actuelle va être perdue !', () => router.go(-1))
+    }
   }
 
   onMounted(() => {
     if (props.idCourse == '20') {
       setProgress(20)
     }
-    const currentExercises = getExercises(props.idCourse) ?? []
-    exercises.value = currentExercises.map((x: Exercise) => ({ value: x, spoiler: true }))
+    exercisesByCourse.value = getExercises(props.idCourse) ?? []
+    const exercisesToDisplay = [...exercisesByCourse.value]
+    shuffle(exercisesToDisplay)
+    exercises.value = exercisesToDisplay.splice(0, 8).map((x: Exercise) => ({ value: x, validated: false, forceRefresh: false } as ExerciseWrapper))
+    if (exercises.value.length > 0) {
+      currentExercise.value = exercises.value[0]
+    }
   })
 </script>
 
@@ -88,48 +136,37 @@
   @import "@/assets/style/debugStyle.css";
   @import "@/assets/style/buttonsStyle.css";
 
-  header {
-    display: flex;
-    justify-content: center;
-    margin-bottom: var(--gap);
-  }
-
-  h1, main {
-    border-radius: var(--border-radius);
-  }
-
-  h1, h3 {
-    color: var(--title-color);
-    font-family: Dosis, sans-serif;
-    font-weight: bold;
-  }
-
-  h1 {
-    background-color: var(--card-color);
-    display: inline-block;
-    margin: auto;
-    padding: var(--gap-xs);
-    font-size: var(--title-size);
-    text-decoration: underline;
-    text-decoration-color: var(--underline-color);
-  }
-
-  h3 {
-    font-size: var(--subsubtitle-size);
-    padding-bottom: var(--gap-xs);
-  }
-
   main {
     background-color: var(--card-color);
     padding: var(--gap-sm);
-    line-height: var(--line-height);
+    margin-top: var(--gap);
+    border-radius: var(--border-radius);
   }
 
-  .exercise {
-    padding-bottom: var(--gap-sm);
+  header {
+    position: relative;
+    display: flex;
   }
 
-  .answer {
-    padding-left: var(--gap-sm);
+  header > :first-child {
+    position: absolute;
+    top: 0.2rem;
+    left: 0;
+  }
+
+  .center {
+    justify-content: center;
+  }
+
+  .fixed {
+    position: relative !important;
+  }
+
+  .exercises-done {
+    background-color: var(--card-color);
+    padding: var(--gap-sm);
+    border-radius: var(--border-radius);
+    font-size: var(--subsubtitle-size);
+    text-align: center;
   }
 </style>

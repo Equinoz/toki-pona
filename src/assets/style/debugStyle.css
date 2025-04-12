@@ -1,13 +1,6 @@
-.debug-datas, .debug-elt {
-  background-color: green;
-  border-radius: var(--border-radius);
-}
-
 .debug-datas {
+  background-color: green;
   margin: var(--gap-sm);
   padding: var(--gap-sm);
-}
-
-.debug-elt {
-  padding: 0.5rem;
+  border-radius: var(--border-radius);
 }

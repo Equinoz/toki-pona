@@ -5,5 +5,8 @@ export interface Exercise {
   type: TypeExercise
   idsCourse: number[]
   question: string
-  answer: string
+  suggestions: string[]
+  answer?: string
+  meaning?: string
+  index?: number
 }
