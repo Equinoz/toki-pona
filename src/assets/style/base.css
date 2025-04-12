@@ -41,9 +41,10 @@
 /* heights */
 :root {
   --max-app-width: 700px;
-  --medium-height: 2rem;
-  --medium-lg-height: 2.5rem;
   --large-height: 3rem;
+  --medium-lg-height: 2.5rem;
+  --medium-height: 2rem;
+  --small-height: 1.1rem;
 }
 
 /* styles */

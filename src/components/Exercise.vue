@@ -1,8 +1,10 @@
 <template>
   <div>
     <h2>{{ getInstruction(exercise.value?.type) }}</h2>
-    <h3 :class="{ chooseMeaning: isExerciseType1 }">{{ exercise.value?.question }}</h3>
-    <h3 v-if="exerciseInError" class="correction">{{ exercise.value?.answer }}</h3>
+    <h3 v-if="!isExerciseType3" :class="{ chooseMeaning: isExerciseType1 }">{{ exercise.value?.question }}</h3>
+    <h3 v-if="exerciseInError && !isExerciseType3" class="correction">{{ exercise.value?.answer }}</h3>
+    <h3 v-if="isExerciseType3" class="meaning">{{ exercise.value?.meaning }}</h3>
+    <h3 v-if="exerciseInError && isExerciseType3" class="correction">{{  exercise.value?.question }}</h3>
     <h3 v-if="correctExercise" class="correct-answer">bonne réponse !</h3>
 
     <div v-if="isExerciseType1" class="suggestions">
@@ -29,8 +31,20 @@
       </div>
     </div>
     <div v-else>
-      Type 3<br />
-      {{ exercise }}
+      <h3 class="response-choose-word">
+        <div v-for="elt, index in beginSentenceToCompleted" :key="index" class="sentence-word">
+          {{ elt }}
+        </div>
+        <div :class="{ chooseInError: exerciseInError }" class="available-word" @click="chooseWord()">{{ wordToChoose }}</div>
+        <div v-for="elt, index in endSentenceToCompleted" :key="index" class="sentence-word">
+          {{ elt }}
+        </div>
+      </h3>
+      <div class="available-words">
+        <div v-for="suggestion, index in suggestions" :key="index" class="available-word" @click="chooseWord(index)">
+          {{ suggestion }}
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -64,10 +78,14 @@
   const suggestionInError: Ref<number | null> = ref(null)
   const exerciseInError = ref(false)
   const correctExercise = ref(false)
+  const beginSentenceToCompleted = ref([] as string[])
+  const endSentenceToCompleted = ref([] as string[])
+  const wordToChoose = ref('')
 
   const exerciseEnding = computed(() => correctExercise.value || exerciseInError.value)
   const isExerciseType1 = computed(() => props.exercise.value?.type == 'chooseTpMeaning' || props.exercise.value?.type == 'chooseLangMeaning')
   const isExerciseType2 = computed(() => props.exercise.value?.type == 'langToTp' || props.exercise.value?.type == 'tpToLang')
+  const isExerciseType3 = computed(() => props.exercise.value?.type == 'chooseWord')
 
   const selectSuggestion = (index: number) => {
     if (!exerciseEnding.value) {
@@ -85,6 +103,20 @@
     }
   }
 
+  const chooseWord = (index?: number) => {
+    if (index != undefined && wordToChoose.value != '') {
+      const choseWord = suggestions.value.splice(index, 1)
+      suggestions.value.push(wordToChoose.value)
+      wordToChoose.value = choseWord[0]
+    } else if (index != undefined) {
+      const choseWord = suggestions.value.splice(index, 1)
+      wordToChoose.value = choseWord[0]
+    } else if (index == undefined && wordToChoose.value != '') {
+      suggestions.value.push(wordToChoose.value)
+      wordToChoose.value = ''
+    }
+  }
+
   const initExercise = () => {
     const newExercise = props.exercise.value
     exerciseInError.value = false
@@ -92,6 +124,7 @@
     selectedElement.value = null
     suggestionInError.value = null
     currentAnswer.value = []
+    wordToChoose.value = ''
 
     const newSuggestions = []
     if (isExerciseType2.value && newExercise.answer) {
@@ -100,6 +133,12 @@
     newSuggestions.push(... newExercise.suggestions)
     shuffle(newSuggestions)
     suggestions.value = newSuggestions
+
+    if (isExerciseType3.value && newExercise.index) {
+      const sentenceToCompleted = newExercise.question.split(' ')
+      endSentenceToCompleted.value = sentenceToCompleted.splice(newExercise.index + 1, sentenceToCompleted.length - 1)
+      beginSentenceToCompleted.value = sentenceToCompleted.splice(0, newExercise.index)
+    }
   }
 
   watch(
@@ -119,12 +158,14 @@
   watch(
     () => props.trigger,
     () => {
-      if (selectedElement.value != null || currentAnswer.value.length > 0) {
+      if (selectedElement.value != null || currentAnswer.value.length > 0 || wordToChoose.value != '') {
         let exerciseValidated = false
         if (isExerciseType1.value && selectedElement.value != null) {
           exerciseValidated = suggestions.value[selectedElement.value] == props.exercise.value?.answer
-        } else {
+        } else if (isExerciseType2.value) {
           exerciseValidated = currentAnswer.value.join(' ') == props.exercise.value?.answer
+        } else if (props.exercise.value.index != undefined) {
+          exerciseValidated = props.exercise.value.question?.split(' ')[props.exercise.value.index] == wordToChoose.value
         }
         if (!exerciseValidated) {
           exerciseInError.value = true
@@ -182,13 +223,15 @@
     margin: var(--gap-sm) var(--gap-xs);
     line-height: calc(var(--large-height) / 2);
   }
+
   .available-word {
-    height: 1.1rem;
+    height: var(--small-height);
     margin: var(--gap-xxs);
+    margin-top: 5px;
     font-size: var(--glossary-word-size);
   }
 
-  .suggestion, .available-word {
+  .suggestion, .available-word, .response-choose-word {
     background-color: rgba(62, 230, 194, 0.2);
     display: flex;
     justify-content: center;
@@ -205,7 +248,7 @@
     background-color: rgba(98, 230, 62, 0.4) !important;
   }
 
-  .suggestionInError {
+  .suggestionInError, .chooseInError {
     background-color: rgba(255, 30, 8, 0.5) !important;
   }
 
@@ -220,5 +263,24 @@
     margin-bottom: var(--gap);
     border-radius: var(--border-radius);
     border: 1px solid rgba(62, 230, 194, 0.4);
+  }
+
+  .response-choose-word {
+    background-color: rgba(62, 230, 194, 0.1);
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+    margin-bottom: var(--gap);
+    padding: var(--gap-xs);
+    min-height: calc(var(--large-height) * 1);
+    border: 1px solid rgba(62, 230, 194, 0.4);
+  }
+
+  .response-choose-word > div {
+    height: var(--small-height);
+  }
+
+  .sentence-word {
+    margin: var(--gap-xxs);
   }
 </style>
