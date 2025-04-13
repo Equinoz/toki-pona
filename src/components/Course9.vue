@@ -21,7 +21,7 @@
       <p class="content">lorsqu'un mot (par exemple un adjectif) modifie un nom, il peut être écrit à l'intérieur ou au-dessus du mot qu'il modifie</p>
       <div class="content">
         <p class="example">
-          <img class="sona-pona-img" src="../assets/images/example_glyph.png" /><br />
+          <span class="linja-pona sitelen-pona"><span class="subject">sona+pona</span></span><br />
           <span class="tab"></span>
           <span class="subject">sona pona</span><br />
           <span class="tab"></span><span class="tab"></span>
@@ -31,7 +31,7 @@
       <p class="content">en sitelen pona, on écrit les noms propres à l'intérieur d'un cartouche : c'est une forme ovale qui contient les glyphes, et on prend en compte la première lettre de chaque mot représenté par un glyphe. on peut utiliser le glyphe que l'on souhaite pour représenter une lettre. un "p" peut aussi bien être représenté par <span class="new-word">pali</span> ou <span class="new-word">pona</span> selon ce que l'on souhaite souligner concernant ce nom propre.</p>
       <div class="content">
         <p class="example">
-          <span class="linja-pona sitelen-pona"><span class="subject">jan</span> <span class="cartouche">pona ijo jan e</span> li <span class="predicate">suli</span></span><br />
+          <span class="linja-pona sitelen-pona"><span class="subject">jan</span> <span class="cartouche">[_pona_ijo_jan_e]</span> li <span class="predicate">suli</span></span><br />
           <span class="tab"></span>
           <span class="subject">jan Pije</span> li <span class="predicate">suli</span><br />
           <span class="tab"></span><span class="tab"></span>
@@ -69,13 +69,8 @@
   }
 
   .cartouche {
-    padding: calc(var(--gap-sm) / 5);
-    margin-left: var(--gap-xs);
     color: var(--subject-color);
-    font-size: var(--subsubtitle-size);
     font-weight: bold;
-    border: 3px solid var(--subject-color);
-    border-radius: var(--border-radius);
   }
 
   .sitelen-sitelen-example {
