@@ -211,7 +211,7 @@
   }
 
   .chooseMeaning {
-    font-size: var(--subsubtitle-size);
+    font-size: var(--exercise-options-size);
     text-align: center;
   }
 
@@ -232,7 +232,7 @@
     height: var(--small-height);
     margin: var(--gap-xxs);
     margin-top: 10px;
-    font-size: var(--subsubtitle-size);
+    font-size: var(--exercise-options-size);
   }
 
   .suggestion, .available-word, .response-choose-word {
@@ -286,6 +286,6 @@
 
   .sentence-word {
     margin: var(--gap-xxs);
-    font-size: var(--subsubtitle-size);
+    font-size: var(--exercise-options-size);
   }
 </style>
