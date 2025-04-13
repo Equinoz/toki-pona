@@ -5,6 +5,8 @@
     </header>
 
     <main>
+      <h2>petit avertissement</h2>
+      <p class="content">n'étant pas un pratiquant de longue date du toki pona, ce cours peut contenir des erreurs et je m'en excuse d'avance. le but de cette application est simplement de partager gratuitement ce langage de façon interactive. en cas d'incertitudes ou de doutes il ne faut surtout pas hésiter à se faire corriger. j'espère qu'à terme mon propre niveau de toki pona sera suffisant pour que je supprime cet avertissement !</p> 
       <h2>un micro-langage</h2>
       <p class="content">le "toki pona" est un micro-langage délibérément minimaliste, inventé par la linguiste et traductrice canadienne Sonja Lang et publié sur internet en 2001.</p>
       <p class="content">le toki pona, qui signifie "langue du bien", est largement inspiré de la philosophie du Tao. elle se caractérise par la simplicité extrême de sa phonologie, de sa grammaire et de son vocabulaire, (initialement 120 mots) ce qui la rend facile à apprendre.</p>
