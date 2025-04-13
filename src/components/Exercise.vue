@@ -138,7 +138,7 @@
     shuffle(newSuggestions)
     suggestions.value = newSuggestions
 
-    if (isExerciseType3.value && newExercise.index) {
+    if (isExerciseType3.value && newExercise.index != undefined) {
       const sentenceToCompleted = newExercise.question.split(' ')
       endSentenceToCompleted.value = sentenceToCompleted.splice(newExercise.index + 1, sentenceToCompleted.length - 1)
       beginSentenceToCompleted.value = sentenceToCompleted.splice(0, newExercise.index)
