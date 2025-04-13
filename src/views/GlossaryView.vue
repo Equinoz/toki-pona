@@ -14,11 +14,13 @@
 
     <div ref="words-container" class="words">
       <div class="headings">
-        <div>toki pona</div>
+        <div v-if="isGlyphsAvailable" class="linja-pona">sitelen+pona</div>
+        <div :class="{ dense: isGlyphsAvailable }">toki pona</div>
         <div>significations</div>
       </div>
       <div v-for="word in words" :key="word.id" ref="ref-words" class="word">
-        <div>{{ word.name }}</div>
+        <div v-if="isGlyphsAvailable" class="linja-pona">{{ word.name }}</div>
+        <div :class="{ dense: isGlyphsAvailable }">{{ word.name }}</div>
         <div>{{ getMeanings(word) }}</div>
       </div>
     </div>
@@ -26,7 +28,6 @@
 </template>
 
 <script setup lang="ts">
-// TODO rajouter les sitelen pona
   import { ref, useTemplateRef, onMounted } from 'vue'
   import router from '@/router'
   import { storeToRefs } from 'pinia'
@@ -36,6 +37,7 @@
   import { useMainStore } from '@/stores/mainStore'
 
   const { debugMode } = storeToRefs(useDebugStore())
+  const { isGlyphsAvailable } = storeToRefs(useMainStore())
   const { getGlossary, getProgress } = useMainStore()
 
   const searchTextTp = ref('')
@@ -149,13 +151,30 @@
   }
 
   .headings > div, .word > div {
-    width: 50%;
     text-align: center;
     line-height: var(--medium-height);
     vertical-align: middle;
   }
 
-  .headings > div:first-child, .word > div:first-child {
+  .headings > div:nth-last-child(3), .word > div:nth-last-child(3) {
+    width: 15%;
+    font-size: var(--subtitle-size);
+    font-weight: normal;
+  }
+
+  .headings > div:nth-last-child(2), .word > div:nth-last-child(2) {
+    width: 49%;
+  }
+
+  .headings > .dense, .word > .dense {
+    width: 34% !important;
+  }
+
+  .headings > div:last-child, .word > div:last-child {
+    width: 50%;
+  }
+
+  .headings > div:nth-last-child(3), .word > div:nth-last-child(3), .headings > div:nth-last-child(2), .word > div:nth-last-child(2) {
     border-right: 1px rgba(0, 0, 0, 0.3) solid;
   }
 
@@ -170,7 +189,7 @@
     font-weight: bold;
   }
   
-  .headings :first-child {
+  .headings :nth-last-child(2) {
     color: var(--subject-color);
   }
   
@@ -178,11 +197,12 @@
     color: var(--object-color);
   }
 
-  .word > div {
+  .word :last-child {
     padding: var(--gap-xs);
+    box-sizing: border-box;
   }
 
-  .word :first-child {
+  .word :nth-last-child(3), .word :nth-last-child(2) {
     display: flex;
     justify-content: center;
     align-items: center;

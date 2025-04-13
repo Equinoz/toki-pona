@@ -231,8 +231,8 @@
   .available-word {
     height: var(--small-height);
     margin: var(--gap-xxs);
-    margin-top: 5px;
-    font-size: var(--glossary-word-size);
+    margin-top: 10px;
+    font-size: var(--subsubtitle-size);
   }
 
   .suggestion, .available-word, .response-choose-word {
@@ -286,5 +286,6 @@
 
   .sentence-word {
     margin: var(--gap-xxs);
+    font-size: var(--subsubtitle-size);
   }
 </style>
