@@ -7,6 +7,7 @@ export interface Exercise {
   question: string
   suggestions: string[]
   answer?: string
+  otherAnswer?: string
   meaning?: string
   index?: number
 }

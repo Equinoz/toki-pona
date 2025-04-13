@@ -131,14 +131,16 @@
     wordToChoose.value = ''
 
     const newSuggestions = []
-    if (isExerciseType2.value && newExercise.answer) {
+    if (isExerciseType1.value && newExercise.answer) {
+      newSuggestions.push(newExercise.answer)
+    } else if (isExerciseType2.value && newExercise.answer) {
       newSuggestions.push(...newExercise.answer.split(' '))
     }
     newSuggestions.push(... newExercise.suggestions)
     shuffle(newSuggestions)
     suggestions.value = newSuggestions
 
-    if (isExerciseType3.value && newExercise.index) {
+    if (isExerciseType3.value && newExercise.index != undefined) {
       const sentenceToCompleted = newExercise.question.split(' ')
       endSentenceToCompleted.value = sentenceToCompleted.splice(newExercise.index + 1, sentenceToCompleted.length - 1)
       beginSentenceToCompleted.value = sentenceToCompleted.splice(0, newExercise.index)
@@ -168,6 +170,9 @@
           exerciseValidated = suggestions.value[selectedElement.value] == props.exercise.value?.answer
         } else if (isExerciseType2.value) {
           exerciseValidated = currentAnswer.value.join(' ') == props.exercise.value?.answer
+          if (!exerciseValidated && props.exercise.value?.otherAnswer) {
+            exerciseValidated = currentAnswer.value.join(' ') == props.exercise.value?.otherAnswer
+          }
         } else if (props.exercise.value.index != undefined) {
           exerciseValidated = props.exercise.value.question?.split(' ')[props.exercise.value.index] == wordToChoose.value
         }
