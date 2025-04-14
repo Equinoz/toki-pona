@@ -54,7 +54,7 @@
       </div>
       <h3>omission de la particule li</h3>
       <p class="content">
-        lorsque le sujet est <span class="new-word">mi</span> ou <span class="new-word">sina</span> (et uniquement dans ces deux cas-là), il y a peu d'ambiguïté : on peut omettre la particule <span class="new-word">li</span>.
+        lorsque le sujet est <span class="new-word">mi</span> ou <span class="new-word">sina</span> (et uniquement dans ces deux cas-là), il y a peu d'ambiguïté : on ne doit pas ajouter la particule <span class="new-word">li</span>.
       </p>
       <h3>exemples</h3>
       <div class="content">

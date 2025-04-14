@@ -15,7 +15,7 @@
         <span class="linja-pona new-glyph">olin</span><span class="new-word">olin</span> amour, affection, aimer, respecter, compatir, montrer de l'affection pour<br />
         <span class="linja-pona new-glyph">ma</span><span class="new-word">ma</span> terre, sol, monde, pays, région, territoire, lieu en plein air<br />
         <span class="linja-pona new-glyph">tomo</span><span class="new-word">tomo</span> construction, habitation, espace intérieur, lieu couvert, maison, bâtiment, édifice, pièce, chambre, demeure, chez soi<br />
-        <span class="linja-pona new-glyph">toki</span><span class="new-word">toki</span> langage, communiquer, dire, parler, penser<br />
+        <span class="linja-pona new-glyph">toki</span><span class="new-word">toki</span> langage, communiquer, dire, parler, réfléchir<br />
       </p>
       <h2>leçon</h2>
       <h3>noms</h3>

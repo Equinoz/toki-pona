@@ -9,7 +9,7 @@
       <p class="content">
         <span class="linja-pona new-glyph">suno</span><span class="new-word">suno</span> soleil, lumière, lueur, brillant<br />
         <span class="linja-pona new-glyph">mun</span><span class="new-word">mun</span> lune, astre, étoile<br />
-        <span class="linja-pona new-glyph">sin</span><span class="new-word">sin</span> nouveau, frais, encore, encore un, de plus, en plus<br />
+        <span class="linja-pona new-glyph">sin</span><span class="new-word">sin</span> nouveau, récent, encore, encore un, de plus, en plus<br />
         <span class="linja-pona new-glyph">nasin</span><span class="new-word">nasin</span> chemin, voie, manière, façon, coutume, méthode, doctrine, rue<br />
         <span class="linja-pona new-glyph">pu</span><span class="new-word">pu</span> interaction avec le livre officiel du toki pona
       </p>

@@ -6,8 +6,8 @@
 
     <main>
       <h2>pour finir...</h2>
-      <p class="content">merci d'avoir suivi ce cours jusqu'au bout ! bien sûr ceci n'est qu'une introduction au toki pona, tout l'intérêt est maintenant de le pratiquer. un bon début pour poursuivre est de visiter le <a href="https://tokipona.org/">site officiel</a>. de fait, il y a actuellement peu de locuteurs, mais il existe des communautés actives sur les réseaux sociaux, particulièrement sur Discord... comme toute langue, le toki pona doit être pratiqué pour avoir réellement de l'intérêt !</p>
-      <p class="content linja-pona sitelen">mi wile e ni : toki pona li pona tawa sina. pona tawa sina a</p>
+      <p class="content">merci d'avoir suivi ce cours jusqu'au bout ! bien sûr ceci n'est qu'une introduction au toki pona, tout l'intérêt est maintenant de le pratiquer. un bon début pour poursuivre est de visiter le <a href="https://tokipona.org/">site officiel</a>. de fait, il y a actuellement relativement peu de locuteurs, mais il existe des communautés actives sur les réseaux sociaux, particulièrement sur Discord... comme toute langue, le toki pona doit être pratiqué pour avoir réellement de l'intérêt !</p>
+      <p class="content linja-pona sitelen">mi wile e ni : toki+pona li pona tawa sina. pona tawa sina a</p>
     </main>
 
     <footer class="buttons">
